@@ -104,10 +104,30 @@ body
       display: flex
       align-items: flex-end
       border-right: 1px solid #fff
+      cursor: pointer
       &:last-child
         border-right: none
       .text
         padding: 15px
+        position: relative
+        h3
+          font-size: 24px
+          font-weight: bold
+          color: #fff 
+          text-transform: uppercase
+        .hover
+          transition: 0.1s ease-out
+          margin-bottom: -170px
+          p
+            font-size: 16px 
+            font-weight: 300
+            color: #fff
+            height: 96px
+            overflow: hidden
+      &:hover
+        .hover
+          margin-bottom: 0
+          transition: 1s ease-out
 .textbg
   position: relative
   &::before
@@ -180,7 +200,7 @@ a
   font-family: 'SFU Futura'
   font-weight: 300
   color: #333333
-  font-size: 20px
+  font-size: 16px
 .fontstyle4
   font-family: 'SFU Futura'
   font-weight: bold

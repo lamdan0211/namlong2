@@ -128,12 +128,37 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   border-right: 1px solid #fff;
+  cursor: pointer;
 }
 #section5 .row.bg .item:last-child {
   border-right: none;
 }
 #section5 .row.bg .item .text {
   padding: 15px;
+  position: relative;
+}
+#section5 .row.bg .item .text h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+#section5 .row.bg .item .text .hover {
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  margin-bottom: -170px;
+}
+#section5 .row.bg .item .text .hover p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  height: 96px;
+  overflow: hidden;
+}
+#section5 .row.bg .item:hover .hover {
+  margin-bottom: 0;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
 }
 
 .textbg {
@@ -238,7 +263,7 @@ a:hover {
   font-family: "SFU Futura";
   font-weight: 300;
   color: #333333;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .fontstyle4 {
