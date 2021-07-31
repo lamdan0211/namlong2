@@ -1,25 +1,7 @@
 body
 	font-family: 'SFU Futura', sans-serif
 	font-style: normal
-#header
-	position: fixed
-	top: 0
-	left: 0
-	padding: 0 30px
-	width: 100%
-	z-index: 100
-	.navbar.navbar-light 
-		.navbar-nav
-			padding-right: 70px
-			.nav-link
-				font-size: 18px
-				font-weight: 300
-				color: #10768a
-				text-transform: uppercase
-	.navbar-collapse
-		flex-grow: unset
-	&.active
-		background: #fff
+
 .home_mouse
 	width: 30px
 	height: 45px
@@ -553,14 +535,41 @@ ul
 	align-items: center
 	justify-content: center
 	text-transform: uppercase
+// Desktop
+.container
+	display: flex
+	height: 100%
+@media(max-width: 1280px)
+	#header
+		.navbar.navbar-light 
+			.navbar-nav
+				.nav-link
+					font-size: 16px
+@media(min-width: 1280px)
+	#header
+		position: fixed
+		top: 0
+		left: 0
+		padding: 0 30px
+		width: 100%
+		z-index: 100
+		.navbar.navbar-light 
+			.navbar-nav
+				padding-right: 70px
+				.nav-link
+					font-size: 18px
+					font-weight: 300
+					color: #10768a
+					text-transform: uppercase
+		.navbar-collapse
+			flex-grow: unset
+		&.active
+			background: #fff
 @media(min-width: 1440px)
 	.container-fluid
 		padding: 0 30px
 	.container
 		padding: 0 50px
-		display: flex
-		height: 100%
-
 @media(min-width: 1900px)
 	.container
 		min-width: 1600px
@@ -571,3 +580,32 @@ ul
 		font-size: 40px
 	.fontstyle3
 		font-size: 18px
+//Mobile
+@media(max-width: 1179px)
+	.hidden
+		display: none
+	.container
+		padding: 0 15px
+	.ctleft, .ctright
+		padding: 0
+	.navbar-expand-lg .navbar-toggler
+		display: block !important
+	.navbar-expand-lg .navbar-collapse
+		display: none !important
+	.navbar-expand-lg .navbar-collapse.in
+		display: flex !important
+		flex: 0 0 100%
+	.navbar-expand-lg .navbar-nav
+		flex-direction: column !important
+	#header
+		background: #daf6f7
+		padding: 0 15px
+		position: fixed
+		top: 0
+		width: 100%
+		.navbar
+			display: block
+			padding: 10px 0
+	#section1
+		min-height: 300px
+

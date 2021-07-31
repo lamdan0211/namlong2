@@ -3,32 +3,6 @@ body {
   font-style: normal;
 }
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 30px;
-  width: 100%;
-  z-index: 100;
-}
-#header .navbar.navbar-light .navbar-nav {
-  padding-right: 70px;
-}
-#header .navbar.navbar-light .navbar-nav .nav-link {
-  font-size: 18px;
-  font-weight: 300;
-  color: #10768a;
-  text-transform: uppercase;
-}
-#header .navbar-collapse {
-  -webkit-box-flex: unset;
-      -ms-flex-positive: unset;
-          flex-grow: unset;
-}
-#header.active {
-  background: #fff;
-}
-
 .home_mouse {
   width: 30px;
   height: 45px;
@@ -734,6 +708,45 @@ ul {
   text-transform: uppercase;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media (max-width: 1280px) {
+  #header .navbar.navbar-light .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 30px;
+    width: 100%;
+    z-index: 100;
+  }
+  #header .navbar.navbar-light .navbar-nav {
+    padding-right: 70px;
+  }
+  #header .navbar.navbar-light .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 300;
+    color: #10768a;
+    text-transform: uppercase;
+  }
+  #header .navbar-collapse {
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+  }
+  #header.active {
+    background: #fff;
+  }
+}
 @media (min-width: 1440px) {
   .container-fluid {
     padding: 0 30px;
@@ -741,10 +754,6 @@ ul {
 
   .container {
     padding: 0 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
   }
 }
 @media (min-width: 1900px) {
@@ -763,5 +772,58 @@ ul {
 
   .fontstyle3 {
     font-size: 18px;
+  }
+}
+@media (max-width: 1179px) {
+  .hidden {
+    display: none;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .ctleft, .ctright {
+    padding: 0;
+  }
+
+  .navbar-expand-lg .navbar-toggler {
+    display: block !important;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+  }
+
+  .navbar-expand-lg .navbar-collapse.in {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  #header {
+    background: #daf6f7;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #header .navbar {
+    display: block;
+    padding: 10px 0;
+  }
+
+  #section1 {
+    min-height: 300px;
   }
 }
