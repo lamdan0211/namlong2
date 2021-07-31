@@ -161,6 +161,64 @@ body {
   transition: 1s ease-out;
 }
 
+#section6 .col-lg-8 {
+  position: relative;
+}
+#section6 .tab {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 350px;
+}
+#section6 .tab li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+#section6 .tab li .open {
+  display: none;
+}
+#section6 .tab li a {
+  background: #dff0e8;
+  color: #74ba45;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+}
+#section6 .tab li.active {
+  background: #dff0e8;
+  padding: 5px;
+  border-raidus: 5px;
+}
+#section6 .tab li.active a {
+  background: #077841;
+  color: #fff;
+}
+#section6 .tab li.active .open {
+  display: block;
+  padding: 10px;
+}
+#section6 .tab li.active .open p {
+  font-weight: 300;
+  color: #077841;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+#section6 .tab li.active .open p span {
+  width: 25px;
+  height: 25px;
+  background: #1b7436;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 10px;
+}
+
 .textbg {
   position: relative;
 }
@@ -197,6 +255,11 @@ a {
 }
 a:hover {
   color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 .bgwhite {
@@ -244,7 +307,7 @@ a:hover {
 
 .fontstyle1 {
   color: #2eabae;
-  font-size: 80px;
+  font-size: 70px;
   font-family: "MTD Adventures Unlimited Script";
   font-weight: bold;
   font-style: italic;
@@ -252,7 +315,7 @@ a:hover {
 
 .fontstyle2 {
   color: #166379;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "SFU Futura";
   font-weight: bold;
   font-style: normal;
@@ -362,5 +425,22 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+  }
+}
+@media (min-width: 1900px) {
+  .container {
+    min-width: 1600px;
+  }
+
+  .fontstyle1 {
+    font-size: 80px;
+  }
+
+  .fontstyle2 {
+    font-size: 40px;
+  }
+
+  .fontstyle3 {
+    font-size: 18px;
   }
 }

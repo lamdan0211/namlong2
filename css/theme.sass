@@ -128,6 +128,54 @@ body
         .hover
           margin-bottom: 0
           transition: 1s ease-out
+#section6
+  .col-lg-8
+    position: relative
+  .tab
+    position: absolute
+    right: 0
+    top: 55px
+    width: 350px
+    li
+      list-style: none
+      margin-bottom: 10px
+      .open
+        display: none
+      a
+        background: #dff0e8
+        color: #74ba45
+        font-weight: bold
+        font-size: 20px
+        display: block
+        text-transform: uppercase
+        padding: 10px
+        border-radius: 5px
+      &.active
+        background: #dff0e8
+        padding: 5px
+        border-raidus: 5px
+        a
+          background: #077841
+          color: #fff
+        .open
+          display: block
+          padding: 10px
+          p
+            font-weight: 300
+            color: #077841
+            margin-bottom: 5px
+            font-size: 16px
+            span
+              width: 25px
+              height: 25px
+              background: #1b7436
+              border-radius: 50%
+              font-size: 14px
+              color: #fff
+              display: inline-block
+              text-align: center
+              line-height: 25px
+              margin-right: 10px
 .textbg
   position: relative
   &::before
@@ -158,6 +206,9 @@ a
   text-decoration: none
   &:hover
     color: inherit
+ul
+  padding: 0
+  margin: 0
 .bgwhite
   background: #fff
   padding: 5px
@@ -185,13 +236,13 @@ a
   transform: scale(1.1)
 .fontstyle1
   color: #2eabae
-  font-size: 80px
+  font-size: 70px
   font-family: 'MTD Adventures Unlimited Script'
   font-weight: bold
   font-style: italic
 .fontstyle2
   color: #166379
-  font-size: 40px
+  font-size: 30px
   font-family: 'SFU Futura'
   font-weight: bold
   font-style: normal
@@ -261,3 +312,13 @@ a
     padding: 0 50px
     display: flex
     height: 100%
+
+@media(min-width: 1900px)
+  .container
+    min-width: 1600px
+  .fontstyle1
+    font-size: 80px
+  .fontstyle2
+    font-size: 40px
+  .fontstyle3
+    font-size: 18px
