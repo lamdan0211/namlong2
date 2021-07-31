@@ -22,6 +22,29 @@
         $('#section5 .t3').addClass('animate__flipInX animate__delay-3s');
         $('#section5 .t4').addClass('animate__flipInX animate__delay-4s');
       }
+      if( index == 5 ) { 
+        $('#section6 .ctright').addClass('animate__fadeInLeft animate__delay-1s');
+        $('#section6 .img').addClass('animate__fadeInRight animate__delay-1s');
+        $('#section6 .tab').addClass('animate__lightSpeedInRight animate__delay-2s');
+      }
+      if( index == 6 ) { 
+        $('#section7 .t1').addClass('animate__bounceIn animate__delay-1s');
+        $('#section7 .t2').addClass('animate__bounceIn animate__delay-1s');
+        $('#section7 .t3').addClass('animate__bounceIn animate__delay-2s');
+        $('#section7 .t4').addClass('animate__bounceIn animate__delay-2s');
+        $('#section7 .t5').addClass('animate__bounceIn animate__delay-3s');
+        $('#section7 .t6').addClass('animate__bounceIn animate__delay-3s');
+        $('#section7 .ctleft').addClass('animate__fadeInRight animate__delay-4s');
+      }
+      if( index == 7 ) { 
+        $('#section8 .t1').addClass('animate__bounceIn animate__delay-1s');
+        $('#section8 .t2').addClass('animate__bounceIn animate__delay-2s');
+        $('#section8 .t3').addClass('animate__bounceIn animate__delay-3s');
+      }
     }
   });
+  $("#section6 .tab li").click(function(e){
+    $("#section6 .tab li").removeClass("active");
+    $(this).addClass("active");
+  })
 })(jQuery);

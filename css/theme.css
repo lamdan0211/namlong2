@@ -112,6 +112,9 @@ body {
   z-index: 1;
 }
 
+#section5 .heading h2 {
+  margin-left: -200px;
+}
 #section5 .row.bg {
   background-image: url("../img/3.jpg");
   width: 100%;
@@ -136,6 +139,7 @@ body {
 #section5 .row.bg .item .text {
   padding: 15px;
   position: relative;
+  overflow: hidden;
 }
 #section5 .row.bg .item .text h3 {
   font-size: 24px;
@@ -146,7 +150,7 @@ body {
 #section5 .row.bg .item .text .hover {
   -webkit-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
-  margin-bottom: -170px;
+  margin-bottom: -175px;
 }
 #section5 .row.bg .item .text .hover p {
   font-size: 16px;
@@ -173,6 +177,7 @@ body {
 #section6 .tab li {
   list-style: none;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 #section6 .tab li .open {
   display: none;
@@ -190,7 +195,7 @@ body {
 #section6 .tab li.active {
   background: #dff0e8;
   padding: 5px;
-  border-raidus: 5px;
+  border-radius: 5px;
 }
 #section6 .tab li.active a {
   background: #077841;
@@ -219,10 +224,56 @@ body {
   margin-right: 10px;
 }
 
-.textbg {
+#section7 {
+  position: relative;
   position: relative;
 }
-.textbg::before {
+#section7 .bg {
+  position: relative;
+  height: 100%;
+}
+#section7 .bg::before {
+  content: "";
+  background: #10768a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 0;
+}
+#section7 .bg::after {
+  content: "";
+  background: #c1f0f1;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  z-index: 0;
+}
+#section7 .bg .container .row .col-lg-9 {
+  position: relative;
+  z-index: 1;
+  margin: 0 -10px;
+}
+#section7 .bg .container .row .col-lg-9 .img img {
+  width: 100%;
+}
+#section7 .bg .container .row .col-lg-9 .row .img {
+  margin-bottom: 20px;
+}
+#section7 .bg .container .row .col-lg-9 .col-lg-4 {
+  padding: 10px;
+}
+#section7 .bg .container .row .col-lg-9 .col-lg-4:nth-child(2) {
+  margin-top: 90px;
+}
+#section7 .bg .container .row .col-lg-3 {
+  position: relative;
+  z-index: 1;
+}
+#section7::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -235,15 +286,45 @@ body {
   content: "";
 }
 
+#section8 .heading h2 {
+  margin-left: -300px;
+}
+#section8 .row .item {
+  padding: 15px;
+}
+#section8 .row .item .img {
+  margin-bottom: 10px;
+}
+#section8 .row .item h3 {
+  font-weight: bold;
+  color: #166379;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+#section8 .row .item span {
+  font-weight: 300;
+  color: #2eabae;
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: block;
+}
+#section8 .row .item p {
+  font-size: 16px;
+  color: #333333;
+}
+#section8 .xt2 {
+  margin: 0 auto;
+}
+
 .heading {
   position: relative;
   width: 100%;
+  margin-bottom: 10px;
 }
 .heading h2 {
   left: 0;
   position: absolute;
   right: 0;
-  margin-left: -200px;
 }
 .heading h3 {
   margin-top: 30px;
@@ -254,7 +335,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: inherit;
+  color: #2eabae;
 }
 
 ul {
@@ -311,6 +392,7 @@ ul {
   font-family: "MTD Adventures Unlimited Script";
   font-weight: bold;
   font-style: italic;
+  margin: 0;
 }
 
 .fontstyle2 {

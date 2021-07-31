@@ -93,6 +93,9 @@ body
       h3
         z-index: 1
 #section5
+  .heading
+    h2
+      margin-left: -200px
   .row.bg
     background-image: url('../img/3.jpg')
     width: 100%
@@ -110,6 +113,7 @@ body
       .text
         padding: 15px
         position: relative
+        overflow: hidden
         h3
           font-size: 24px
           font-weight: bold
@@ -117,7 +121,7 @@ body
           text-transform: uppercase
         .hover
           transition: 0.1s ease-out
-          margin-bottom: -170px
+          margin-bottom: -175px
           p
             font-size: 16px 
             font-weight: 300
@@ -139,6 +143,7 @@ body
     li
       list-style: none
       margin-bottom: 10px
+      cursor: pointer
       .open
         display: none
       a
@@ -153,7 +158,7 @@ body
       &.active
         background: #dff0e8
         padding: 5px
-        border-raidus: 5px
+        border-radius: 5px
         a
           background: #077841
           color: #fff
@@ -176,7 +181,48 @@ body
               text-align: center
               line-height: 25px
               margin-right: 10px
-.textbg
+#section7
+  position: relative
+  .bg
+    position: relative
+    height: 100%
+    &::before
+      content: ""
+      background: #10768a
+      position: absolute
+      top: 0
+      left: 0
+      width: 30%
+      height: 100%
+      z-index: 0
+    &::after
+      content: ""
+      background: #c1f0f1
+      position: absolute
+      top: 0
+      left: 30%
+      width: 70%
+      height: 100%
+      z-index: 0
+    .container
+      .row
+        .col-lg-9
+          position: relative
+          z-index: 1
+          margin: 0 -10px
+          .img
+            img
+              width: 100%
+          .row
+            .img
+              margin-bottom: 20px
+          .col-lg-4
+            padding: 10px
+            &:nth-child(2)
+              margin-top: 90px
+        .col-lg-3
+          position: relative
+          z-index: 1
   position: relative
   &::before
     position: absolute
@@ -191,21 +237,46 @@ body
     background: -o-linear-gradient(top, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
     background: linear-gradient(180deg, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
     content: ""
+#section8
+  .heading
+    h2
+      margin-left: -300px
+  .row
+    .item
+      padding: 15px
+      .img
+        margin-bottom: 10px
+      h3
+        font-weight: bold
+        color: #166379
+        margin-bottom: 10px
+        font-size: 20px
+      span
+        font-weight: 300
+        color: #2eabae
+        margin-bottom: 10px
+        font-size: 16px
+        display: block
+      p
+        font-size: 16px
+        color: #333333
+  .xt2
+    margin: 0 auto
 .heading
   position: relative
   width: 100%
+  margin-bottom: 10px
   h2
     left: 0
     position: absolute
     right: 0
-    margin-left: -200px
   h3
     margin-top: 30px
     display: inline-block
 a
   text-decoration: none
   &:hover
-    color: inherit
+    color: #2eabae
 ul
   padding: 0
   margin: 0
@@ -240,6 +311,7 @@ ul
   font-family: 'MTD Adventures Unlimited Script'
   font-weight: bold
   font-style: italic
+  margin: 0
 .fontstyle2
   color: #166379
   font-size: 30px
