@@ -388,22 +388,22 @@ body {
   background: #c1f0f1;
 }
 #footer h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   color: #10768a;
   text-transform: uppercase;
 }
 #footer .box {
   margin-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 #footer .box p.title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #333333;
 }
 #footer .box p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   color: #333333;
   margin-bottom: 5px;
@@ -412,7 +412,7 @@ body {
   color: #333333;
 }
 #footer .ctright .box2 {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,7 +426,7 @@ body {
 }
 #footer .ctright .box2 p {
   width: calc(100% - 56px);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 #footer .ctright .box2 p span {
