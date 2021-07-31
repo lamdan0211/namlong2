@@ -1,396 +1,463 @@
 body
-  font-family: 'SFU Futura', sans-serif
-  font-style: normal
+	font-family: 'SFU Futura', sans-serif
+	font-style: normal
 #header
-  position: fixed
-  top: 0
-  left: 0
-  padding: 0 30px
-  width: 100%
-  z-index: 100
-  .navbar.navbar-light 
-    .navbar-nav
-      .nav-link
-        font-size: 18px
-        font-weight: 300
-        color: #10768a
-        text-transform: uppercase
-  .navbar-collapse
-    flex-grow: unset
-  &.active
-    background: #fff
+	position: fixed
+	top: 0
+	left: 0
+	padding: 0 30px
+	width: 100%
+	z-index: 100
+	.navbar.navbar-light 
+		.navbar-nav
+			padding-right: 70px
+			.nav-link
+				font-size: 18px
+				font-weight: 300
+				color: #10768a
+				text-transform: uppercase
+	.navbar-collapse
+		flex-grow: unset
+	&.active
+		background: #fff
+.home_mouse
+	width: 30px
+	height: 45px
+	border: 2px solid #fff
+	border-radius: 60px
+	position: absolute
+	bottom: 30px
+	left: 50%
+	-webkit-transform: translateX(-50%)
+	transform: translateX(-50%)
+	z-index: 9
+	cursor: pointer
+.home_mouse::before
+	content: ''
+	width: 5px
+	height: 5px
+	position: absolute
+	top: 10px
+	left: 50%
+	transform: translateX(-50%)
+	background-color: #fff
+	border-radius: 50%
+	opacity: 1
+	animation: wheel 2s infinite
+	-webkit-animation: wheel 2s infinite
+@keyframes wheel
+	to
+		opacity: 0
+		top: 30px
+
+@-webkit-keyframes wheel
+	to
+		opacity: 0
+		top: 30px
 #section1
-  width: 100%
-  height: 100%
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: cover
-  z-index: 0
-  background-image: url('../img/home1.png')
-  position: relative
-  .text
-    position: absolute
-    padding-bottom: 30px
-    bottom: 0
-    width: 100%
-    .xt1
-      img
-        margin-right: 10px
-  .social
-    li
-      list-style: none
-      margin-left: 10px
+	width: 100%
+	height: 100%
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	z-index: 0
+	background-image: url('../img/home1.png')
+	position: relative
+	.text
+		position: absolute
+		padding-bottom: 30px
+		bottom: 0
+		width: 100%
+		.xt1
+			img
+				margin-right: 10px
+	.social
+		li
+			list-style: none
+			margin-left: 10px
+	.social_right
+		position: absolute
+		right: 30px
+		top: 30px
+		li
+			list-style: none
+			margin-bottom: 10px
+			a
+				width: 50px
+				height: 50px
+				background: #20586c
+				border-radius: 50%
+				line-height:50px
+				text-align: center
+				display: block
 #section2
-  position: relative
-  .bg
-    position: relative
-    height: 100%
-    &::before
-      content: ""
-      background: #10768a
-      position: absolute
-      top: 0
-      left: 0
-      width: 30%
-      height: 100%
-      z-index: 0
-    &::after
-      content: ""
-      background: #c1f0f1
-      position: absolute
-      top: 0
-      left: 30%
-      width: 70%
-      height: 100%
-      z-index: 0
-    .container
-      .row
-        .col-lg-6
-          position: relative
-          z-index: 1
-          .img
-            img
-              width: 100%
+	position: relative
+	.bg
+		position: relative
+		height: 100%
+		&::before
+			content: ""
+			background: #10768a
+			position: absolute
+			top: 0
+			left: 0
+			width: 30%
+			height: 100%
+			z-index: 0
+		&::after
+			content: ""
+			background: #c1f0f1
+			position: absolute
+			top: 0
+			left: 30%
+			width: 70%
+			height: 100%
+			z-index: 0
+		.container
+			.row
+				.col-lg-6
+					position: relative
+					z-index: 1
+					.img
+						img
+							width: 100%
 #section4
-  width: 100%
-  height: 100%
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: cover
-  z-index: 0
-  background-image: url('../img/bg4.jpg')
-  .fp-tableCell
-    position: relative
-    .text
-      position: absolute
-      bottom: 30px
-      right: 30px
-      h2
-        position: absolute
-        left: -100px
-        top: -55px
-        z-index: 5
-      h3
-        z-index: 1
+	width: 100%
+	height: 100%
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	z-index: 0
+	background-image: url('../img/bg4.jpg')
+	.fp-tableCell
+		position: relative
+		.text
+			position: absolute
+			bottom: 30px
+			right: 30px
+			h2
+				position: absolute
+				left: -100px
+				top: -55px
+				z-index: 5
+			h3
+				z-index: 1
 #section5
-  .heading
-    h2
-      margin-left: -200px
-  .row.bg
-    background-image: url('../img/3.jpg')
-    width: 100%
-    height: 500px
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: cover
-    .item
-      display: flex
-      align-items: flex-end
-      border-right: 1px solid #fff
-      cursor: pointer
-      &:last-child
-        border-right: none
-      .text
-        padding: 15px
-        position: relative
-        overflow: hidden
-        h3
-          font-size: 24px
-          font-weight: bold
-          color: #fff 
-          text-transform: uppercase
-        .hover
-          transition: 0.1s ease-out
-          margin-bottom: -175px
-          p
-            font-size: 16px 
-            font-weight: 300
-            color: #fff
-            height: 96px
-            overflow: hidden
-      &:hover
-        .hover
-          margin-bottom: 0
-          transition: 1s ease-out
+	.heading
+		h2
+			margin-left: -200px
+	.row.bg
+		background-image: url('../img/3.jpg')
+		width: 100%
+		height: 500px
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+		.item
+			display: flex
+			align-items: flex-end
+			border-right: 1px solid #fff
+			cursor: pointer
+			&:last-child
+				border-right: none
+			.text
+				padding: 15px
+				position: relative
+				overflow: hidden
+				h3
+					font-size: 24px
+					font-weight: bold
+					color: #fff 
+					text-transform: uppercase
+				.hover
+					transition: 0.1s ease-out
+					margin-bottom: -175px
+					p
+						font-size: 16px 
+						font-weight: 300
+						color: #fff
+						height: 96px
+						overflow: hidden
+			&:hover
+				.hover
+					margin-bottom: 0
+					transition: 1s ease-out
 #section6
-  .col-lg-8
-    position: relative
-  .tab
-    position: absolute
-    right: 0
-    top: 55px
-    width: 350px
-    li
-      list-style: none
-      margin-bottom: 10px
-      cursor: pointer
-      .open
-        display: none
-      a
-        background: #dff0e8
-        color: #74ba45
-        font-weight: bold
-        font-size: 20px
-        display: block
-        text-transform: uppercase
-        padding: 10px
-        border-radius: 5px
-      &.active
-        background: #dff0e8
-        padding: 5px
-        border-radius: 5px
-        a
-          background: #077841
-          color: #fff
-        .open
-          display: block
-          padding: 10px
-          p
-            font-weight: 300
-            color: #077841
-            margin-bottom: 5px
-            font-size: 16px
-            span
-              width: 25px
-              height: 25px
-              background: #1b7436
-              border-radius: 50%
-              font-size: 14px
-              color: #fff
-              display: inline-block
-              text-align: center
-              line-height: 25px
-              margin-right: 10px
+	.col-lg-8
+		position: relative
+	.tab
+		position: absolute
+		right: 0
+		top: 55px
+		width: 350px
+		li
+			list-style: none
+			margin-bottom: 10px
+			cursor: pointer
+			.open
+				display: none
+			a
+				background: #dff0e8
+				color: #74ba45
+				font-weight: bold
+				font-size: 20px
+				display: block
+				text-transform: uppercase
+				padding: 10px
+				border-radius: 5px
+			&.active
+				background: #dff0e8
+				padding: 5px
+				border-radius: 5px
+				a
+					background: #077841
+					color: #fff
+				.open
+					display: block
+					padding: 10px
+					p
+						font-weight: 300
+						color: #077841
+						margin-bottom: 5px
+						font-size: 16px
+						span
+							width: 25px
+							height: 25px
+							background: #1b7436
+							border-radius: 50%
+							font-size: 14px
+							color: #fff
+							display: inline-block
+							text-align: center
+							line-height: 25px
+							margin-right: 10px
 #section7
-  position: relative
-  .bg
-    position: relative
-    height: 100%
-    &::before
-      content: ""
-      background: #10768a
-      position: absolute
-      top: 0
-      left: 0
-      width: 30%
-      height: 100%
-      z-index: 0
-    &::after
-      content: ""
-      background: #c1f0f1
-      position: absolute
-      top: 0
-      left: 30%
-      width: 70%
-      height: 100%
-      z-index: 0
-    .container
-      .row
-        .col-lg-9
-          position: relative
-          z-index: 1
-          margin: 0 -10px
-          .img
-            img
-              width: 100%
-          .row
-            .img
-              margin-bottom: 20px
-          .col-lg-4
-            padding: 10px
-            &:nth-child(2)
-              margin-top: 90px
-        .col-lg-3
-          position: relative
-          z-index: 1
-  position: relative
-  &::before
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.62%, rgba(16, 118, 138, 0)), to(rgba(16, 118, 138, 0.6)))
-    background: -webkit-linear-gradient(top, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
-    background: -o-linear-gradient(top, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
-    background: linear-gradient(180deg, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
-    content: ""
+	position: relative
+	.bg
+		position: relative
+		height: 100%
+		&::before
+			content: ""
+			background: #10768a
+			position: absolute
+			top: 0
+			left: 0
+			width: 30%
+			height: 100%
+			z-index: 0
+		&::after
+			content: ""
+			background: #c1f0f1
+			position: absolute
+			top: 0
+			left: 30%
+			width: 70%
+			height: 100%
+			z-index: 0
+		.container
+			.row
+				.col-lg-9
+					position: relative
+					z-index: 1
+					margin: 0 -10px
+					.img
+						img
+							width: 100%
+					.row
+						.img
+							margin-bottom: 20px
+					.col-lg-4
+						padding: 10px
+						&:nth-child(2)
+							margin-top: 90px
+				.col-lg-3
+					position: relative
+					z-index: 1
+	position: relative
+	&::before
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(51.62%, rgba(16, 118, 138, 0)), to(rgba(16, 118, 138, 0.6)))
+		background: -webkit-linear-gradient(top, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
+		background: -o-linear-gradient(top, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
+		background: linear-gradient(180deg, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
+		content: ""
 #section8
-  .heading
-    h2
-      margin-left: -300px
-  .row
-    .item
-      padding: 15px
-      .img
-        margin-bottom: 10px
-      h3
-        font-weight: bold
-        color: #166379
-        margin-bottom: 10px
-        font-size: 20px
-      span
-        font-weight: 300
-        color: #2eabae
-        margin-bottom: 10px
-        font-size: 16px
-        display: block
-      p
-        font-size: 16px
-        color: #333333
-  .xt2
-    margin: 0 auto
+	.heading
+		h2
+			margin-left: -300px
+	.row
+		.item
+			padding: 15px
+			.img
+				margin-bottom: 10px
+			h3
+				font-weight: bold
+				color: #166379
+				margin-bottom: 10px
+				font-size: 20px
+			span
+				font-weight: 300
+				color: #2eabae
+				margin-bottom: 10px
+				font-size: 16px
+				display: block
+			p
+				font-size: 16px
+				color: #333333
+	.xt2
+		margin: 0 auto
+#footer
+	background: #c1f0f1
+	.form
+#top
+	-webkit-transition: right 2s
+	-o-transition: right 2s
+	transition: right 2s
+	right: -100%
+	position: fixed
+	bottom: 180px
+	z-index: 10
+	width: 45px
+	height: 45px
+	text-align: center
+	padding: 5px
+	&.active
+		right: 30px
 .heading
-  position: relative
-  width: 100%
-  margin-bottom: 10px
-  h2
-    left: 0
-    position: absolute
-    right: 0
-  h3
-    margin-top: 30px
-    display: inline-block
+	position: relative
+	width: 100%
+	margin-bottom: 10px
+	h2
+		left: 0
+		position: absolute
+		right: 0
+	h3
+		margin-top: 30px
+		display: inline-block
 a
-  text-decoration: none
-  &:hover
-    color: #2eabae
+	text-decoration: none
+	&:hover
+		color: #2eabae
 ul
-  padding: 0
-  margin: 0
+	padding: 0
+	margin: 0
 .bgwhite
-  background: #fff
-  padding: 5px
-  border-radius: 5px
+	background: #fff
+	padding: 5px
+	border-radius: 5px
 .imghover
-  overflow: hidden
-  position: relative
+	overflow: hidden
+	position: relative
 .imghover:after
-  transition: .3s
-  content: ''
-  position: absolute
-  left: 0px
-  top: 0px
-  width: 100%
-  height: 100%
+	transition: .3s
+	content: ''
+	position: absolute
+	left: 0px
+	top: 0px
+	width: 100%
+	height: 100%
 .imghover 
-  img 
-    width: 100%
+	img 
+		width: 100%
 .imghover img
-  transition: -webkit-transform 3s cubic-bezier(0,.6,.45,1)
-  transition: transform 3s cubic-bezier(0,.6,.45,1)
+	transition: -webkit-transform 3s cubic-bezier(0,.6,.45,1)
+	transition: transform 3s cubic-bezier(0,.6,.45,1)
 .imghover:hover:after
-  box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.5) 
+	box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.5) 
 .imghover:hover img 
-  transform: scale(1.1)
+	transform: scale(1.1)
 .fontstyle1
-  color: #2eabae
-  font-size: 70px
-  font-family: 'MTD Adventures Unlimited Script'
-  font-weight: bold
-  font-style: italic
-  margin: 0
+	color: #2eabae
+	font-size: 70px
+	font-family: 'MTD Adventures Unlimited Script'
+	font-weight: bold
+	font-style: italic
+	margin: 0
 .fontstyle2
-  color: #166379
-  font-size: 30px
-  font-family: 'SFU Futura'
-  font-weight: bold
-  font-style: normal
-  text-transform: uppercase
+	color: #166379
+	font-size: 30px
+	font-family: 'SFU Futura'
+	font-weight: bold
+	font-style: normal
+	text-transform: uppercase
 .fontstyle3
-  font-family: 'SFU Futura'
-  font-weight: 300
-  color: #333333
-  font-size: 16px
+	font-family: 'SFU Futura'
+	font-weight: 300
+	color: #333333
+	font-size: 16px
 .fontstyle4
-  font-family: 'SFU Futura'
-  font-weight: bold
-  color: #333333
+	font-family: 'SFU Futura'
+	font-weight: bold
+	color: #333333
 .fontstyle5
-  font-family: 'SFU Futura'
-  font-weight: bold
-  font-size: 42px
-  text-transform: uppercase
-  background: #10768a
-  color: #fff
-  padding: 10px 20px
-  display: inline-block
+	font-family: 'SFU Futura'
+	font-weight: bold
+	font-size: 42px
+	text-transform: uppercase
+	background: #10768a
+	color: #fff
+	padding: 10px 20px
+	display: inline-block
 .fontstyle6
-  font-size: 70px
-  font-family: 'MTD Adventures Unlimited Script'
-  font-style: italic
-  color: #fff
-  background: #2eabae
-  padding: 0 20px
-  display: inline-block
+	font-size: 70px
+	font-family: 'MTD Adventures Unlimited Script'
+	font-style: italic
+	color: #fff
+	background: #2eabae
+	padding: 0 20px
+	display: inline-block
 .marginbt20
-  margin-bottom: 20px
+	margin-bottom: 20px
 .marginbt30
-  margin-bottom: 30px
+	margin-bottom: 30px
 .ctleft
-  padding-left: 50px
+	padding-left: 50px
 .ctright
-  padding-right: 50px
+	padding-right: 50px
 .text-justify
-  text-align: justify
+	text-align: justify
 .xt1
-  background: url("../img/xt1.png") no-repeat
-  display: flex
-  font-weight: 300
-  color: #fff
-  font-size: 20px
-  width: 150px
-  height: 49px
-  align-items: center
-  justify-content: center
-  text-transform: uppercase
+	background: url("../img/xt1.png") no-repeat
+	display: flex
+	font-weight: 300
+	color: #fff
+	font-size: 20px
+	width: 150px
+	height: 49px
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
 .xt2
-  background: url("../img/xt2.png") no-repeat
-  display: flex
-  font-weight: 300
-  color: #10768a
-  font-size: 20px
-  width: 150px
-  height: 49px
-  align-items: center
-  justify-content: center
-  text-transform: uppercase
+	background: url("../img/xt2.png") no-repeat
+	display: flex
+	font-weight: 300
+	color: #10768a
+	font-size: 20px
+	width: 150px
+	height: 49px
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
 @media(min-width: 1440px)
-  .container-fluid
-    padding: 0 30px
-  .container
-    padding: 0 50px
-    display: flex
-    height: 100%
+	.container-fluid
+		padding: 0 30px
+	.container
+		padding: 0 50px
+		display: flex
+		height: 100%
 
 @media(min-width: 1900px)
-  .container
-    min-width: 1600px
-  .fontstyle1
-    font-size: 80px
-  .fontstyle2
-    font-size: 40px
-  .fontstyle3
-    font-size: 18px
+	.container
+		min-width: 1600px
+	.fontstyle1
+		font-size: 80px
+	.fontstyle2
+		font-size: 40px
+	.fontstyle3
+		font-size: 18px

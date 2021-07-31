@@ -2,8 +2,11 @@
   'use strict';
   // initialize fullPage
   $('#fullpage').fullpage({
+    anchors: ['section1','section2','section3','section4','section5','section6','section7','section8','section9'],
+    menu: '#top',
     navigation: false,
     onLeave: function(index, nextIndex, direction) {
+
       if( index == 1 ) { 
         $('#section2 .img').addClass('animate__fadeInLeft animate__delay-1s');
         $('#section2 .ctleft').addClass('animate__fadeInRight animate__delay-1s');
@@ -41,10 +44,20 @@
         $('#section8 .t2').addClass('animate__bounceIn animate__delay-2s');
         $('#section8 .t3').addClass('animate__bounceIn animate__delay-3s');
       }
+      if(nextIndex == 2 ){
+        $('#header').addClass('active');
+        $('#top').addClass('active');
+      }
+      if(nextIndex == 1)
+      {
+        $('#header').removeClass('active');
+        $('#top').removeClass('active');
+      }
     }
   });
   $("#section6 .tab li").click(function(e){
     $("#section6 .tab li").removeClass("active");
     $(this).addClass("active");
-  })
+  });
+
 })(jQuery);
