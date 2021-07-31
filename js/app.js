@@ -2,7 +2,6 @@
   'use strict';
   // initialize fullPage
   $('#fullpage').fullpage({
-    anchors: ['section1','section2','section3','section4','section5','section6','section7','section8','section9'],
     menu: '#top',
     navigation: false,
     onLeave: function(index, nextIndex, direction) {
@@ -44,7 +43,7 @@
         $('#section8 .t2').addClass('animate__bounceIn animate__delay-2s');
         $('#section8 .t3').addClass('animate__bounceIn animate__delay-3s');
       }
-      if(nextIndex == 2 ){
+      if(nextIndex == 2 || nextIndex == 3||nextIndex == 4||nextIndex == 5||nextIndex == 6||nextIndex == 7||nextIndex == 8||nextIndex == 9){
         $('#header').addClass('active');
         $('#top').addClass('active');
       }
@@ -55,9 +54,11 @@
       }
     }
   });
-  $("#section6 .tab li").click(function(e){
+  $("#section6 .tab li").on('click',function(){
     $("#section6 .tab li").removeClass("active");
     $(this).addClass("active");
   });
-
+  $('#top').on('click',function() {
+    $("#fullpage").fullpage.moveTo(1);
+});
 })(jQuery);

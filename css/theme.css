@@ -315,24 +315,24 @@ body {
   height: 100%;
   z-index: 0;
 }
-#section7 .bg .container .row .col-lg-9 {
+#section7 .bg .container .row .col-lg-8 {
   position: relative;
   z-index: 1;
   margin: 0 -10px;
 }
-#section7 .bg .container .row .col-lg-9 .img img {
+#section7 .bg .container .row .col-lg-8 .img img {
   width: 100%;
 }
-#section7 .bg .container .row .col-lg-9 .row .img {
+#section7 .bg .container .row .col-lg-8 .row .img {
   margin-bottom: 20px;
 }
-#section7 .bg .container .row .col-lg-9 .col-lg-4 {
+#section7 .bg .container .row .col-lg-8 .col-lg-4 {
   padding: 10px;
 }
-#section7 .bg .container .row .col-lg-9 .col-lg-4:nth-child(2) {
+#section7 .bg .container .row .col-lg-8 .col-lg-4:nth-child(2) {
   margin-top: 90px;
 }
-#section7 .bg .container .row .col-lg-3 {
+#section7 .bg .container .row .col-lg-4 {
   position: relative;
   z-index: 1;
 }
@@ -353,7 +353,7 @@ body {
   margin-left: -300px;
 }
 #section8 .row .item {
-  padding: 15px;
+  padding: 0 15px;
 }
 #section8 .row .item .img {
   margin-bottom: 10px;
@@ -374,6 +374,11 @@ body {
 #section8 .row .item p {
   font-size: 16px;
   color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 #section8 .xt2 {
   margin: 0 auto;
@@ -382,6 +387,152 @@ body {
 #footer {
   background: #c1f0f1;
 }
+#footer h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #10768a;
+  text-transform: uppercase;
+}
+#footer .box {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+#footer .box p.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+#footer .box p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #333333;
+  margin-bottom: 5px;
+}
+#footer .box p a {
+  color: #333333;
+}
+#footer .ctright .box2 {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#footer .ctright .box2 .img {
+  width: 46px;
+  margin-right: 10px;
+}
+#footer .ctright .box2 p {
+  width: calc(100% - 56px);
+  font-size: 20px;
+  font-weight: bold;
+}
+#footer .ctright .box2 p span {
+  font-weight: 300;
+  display: block;
+}
+#footer .ctright .social {
+  margin-bottom: 10px;
+}
+#footer .ctright .social li {
+  list-style: none;
+  margin-right: 10px;
+}
+#footer .ctright p.style1 {
+  color: #10768a;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+}
+#footer .ctright p.style2 {
+  color: #2eabae;
+  font-size: 16px;
+  font-weight: 300;
+}
+#footer .form {
+  background: #10768a;
+  padding: 30px;
+  border-radius: 5px;
+}
+#footer .form p.style1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#footer .form p.style1 span {
+  font-weight: 300;
+  display: block;
+}
+#footer .form a.style1 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+}
+#footer .form a.style1 img {
+  margin-right: 10px;
+}
+#footer .form h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#footer .form p.style2 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 20px;
+}
+#footer .form .input {
+  background: #0a4c59;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+#footer .form .input::-webkit-input-placeholder {
+  font-family: "SFU Futura", sans-serif;
+  color: #fff;
+}
+#footer .form .input::-moz-placeholder {
+  font-family: "SFU Futura", sans-serif;
+  color: #fff;
+}
+#footer .form .input:-ms-input-placeholder {
+  font-family: "SFU Futura", sans-serif;
+  color: #fff;
+}
+#footer .form .input::-ms-input-placeholder {
+  font-family: "SFU Futura", sans-serif;
+  color: #fff;
+}
+#footer .form .input::placeholder {
+  font-family: "SFU Futura", sans-serif;
+  color: #fff;
+}
+#footer .form textarea.input {
+  height: 50px;
+}
+#footer .form button {
+  border: none;
+}
+#footer .form button img {
+  margin-right: 10px;
+}
+
 #top {
   -webkit-transition: right 2s;
   transition: right 2s;
@@ -393,6 +544,7 @@ body {
   height: 45px;
   text-align: center;
   padding: 5px;
+  cursor: pointer;
 }
 #top.active {
   right: 30px;
@@ -429,6 +581,10 @@ ul {
   background: #fff;
   padding: 5px;
   border-radius: 5px;
+}
+
+.width100 {
+  width: 100%;
 }
 
 .imghover {
@@ -594,6 +750,7 @@ ul {
 @media (min-width: 1900px) {
   .container {
     min-width: 1600px;
+    padding: 0;
   }
 
   .fontstyle1 {
