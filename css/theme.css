@@ -68,24 +68,6 @@ body {
   list-style: none;
   margin-left: 10px;
 }
-#section1 .social_right {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-}
-#section1 .social_right li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-#section1 .social_right li a {
-  width: 50px;
-  height: 50px;
-  background: #20586c;
-  border-radius: 50%;
-  line-height: 50px;
-  text-align: center;
-  display: block;
-}
 
 #section2 {
   position: relative;
@@ -510,9 +492,9 @@ body {
 #top {
   -webkit-transition: right 2s;
   transition: right 2s;
-  right: -100%;
+  right: 30px;
   position: fixed;
-  bottom: 180px;
+  bottom: 30px;
   z-index: 10;
   width: 45px;
   height: 45px;
@@ -520,8 +502,24 @@ body {
   padding: 5px;
   cursor: pointer;
 }
-#top.active {
+
+.social_right {
+  position: fixed;
   right: 30px;
+  top: 100px;
+}
+.social_right li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.social_right li a {
+  width: 50px;
+  height: 50px;
+  background: #20586c;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  display: block;
 }
 
 .textbg {
@@ -751,12 +749,6 @@ ul {
   height: 100%;
 }
 
-@media (max-width: 1280px) {
-  #header .navbar.navbar-light .navbar-nav .nav-link {
-    font-size: 16px;
-    font-weight: 300;
-  }
-}
 @media (min-width: 1280px) {
   #header {
     position: fixed;
@@ -766,14 +758,24 @@ ul {
     width: 100%;
     z-index: 100;
   }
-  #header .navbar.navbar-light .navbar-nav {
-    padding-right: 70px;
-  }
   #header .navbar.navbar-light .navbar-nav .nav-link {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
     color: #10768a;
     text-transform: uppercase;
+    margin: 0 10px 0 0;
+  }
+  #header .navbar.navbar-light .navbar-nav .nav-item.active {
+    position: relative;
+  }
+  #header .navbar.navbar-light .navbar-nav .nav-item.active::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #10768a;
+    position: absolute;
+    margin: 0 5px;
+    bottom: 15px;
   }
   #header .navbar-collapse {
     -webkit-box-flex: unset;
@@ -832,6 +834,10 @@ ul {
 
   .container {
     padding: 0 50px;
+  }
+
+  #header .navbar.navbar-light .navbar-nav .nav-link {
+    font-size: 18px;
   }
 }
 @media (min-width: 1900px) {
