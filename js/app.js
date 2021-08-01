@@ -64,5 +64,12 @@
   });
   $('#top').on('click',function() {
     $("#fullpage").fullpage.moveTo(1);
-});
+  });
+  if(width < 1279){
+    $('.owl-carousel').owlCarousel({
+      nav:false,
+      dots: true,
+      items: 1
+  })
+  }
 })(jQuery);
