@@ -560,7 +560,8 @@ ul
 		border: 1px solid #fff !important
 		border-radius: 50%
 		margin: 0 5px
-
+		&.active
+			background: #fff
 // Desktop
 .container
 	display: flex
@@ -756,6 +757,7 @@ ul
 				.row
 					.col-lg-8
 						position: unset
+						margin: 0
 		.ctleft
 			margin-bottom: 30px
 			h3
@@ -763,6 +765,32 @@ ul
 				margin-left: 50px
 		.owl-item
 			margin: 0 auto
+		.owl-theme
+	#section8
+		padding: 30px 0
+		.heading 
+			h2
+				margin-left: 0
+		.ct
+			width: 100%
+			.owl-dots
+				margin-bottom: 30px
+				.owl-dot
+					border: 1px solid #2b6f83 !important
+					&.active
+						background: #2b6f83
+	#footer
+		padding: 30px 0
+		.ctright
+			margin-top: 30px
+			h1
+				text-align: center
+			.width100
+				width: auto
+				margin: 0 auto 30px
+				display: block 
+			.box
+				padding-left: 0
 @media(max-width: 414px)
 	#section4
 		.text

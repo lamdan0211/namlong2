@@ -2,12 +2,28 @@
 section.section#footer
   .container
     .row.align-items-center
+      .col-lg-5.order-lg-last
+        form.form
+          p.style1 Địa chỉ dự án: 
+            span Phường Hưng Thạnh, quận Cái Răng, TP. Cần Thơ
+          a(href="#").style1
+            img(src="img/map.png", alt="")
+            | Xem google Map
+          h4 Đăng ký nhận thông tin 
+          p.style2 Nếu quan tâm hay cần tư vấn thông tin liên quan dự án, Quý khách vui lòng điền nội dung theo form dưới chúng tôi sẽ trả lời trong thời gian sớm nhất. 
+          input(type="text" placeholder="Họ tên (*)" required).input
+          input(type="email" placeholder="Email" required).input
+          input(type="phone" placeholder="Điện thoại (*)" required).input
+          textarea( placeholder="Nội dung" required).input
+          button(type="submit").xt1
+            img(src='img/icon4.png', alt='')
+            | Đăng ký
       .col-lg-7.ctright
         h1.marginbt20 Thông tin chủ đầu tư
         .row
-          .col-lg-4
+          .col-lg-4.col-12
             img(src='img/logo_footer.png',alt='').width100
-          .col-lg-8
+          .col-lg-8.col-12
             .box
               p.title TRỤ SỞ CÔNG TY CỔ PHẦN ĐẦU TƯ NAM LONG
               p Số 6 Nguyễn Khắc Viện, P. Tân Phú, Quận 7, TP.HCM
@@ -39,19 +55,4 @@ section.section#footer
           br 
           | Chủ đầu tư dự án Nam Long II Central Lake
         p.style2 © 2021 Nam Long II Central Lake. All Rights Reserved. Made with heart by THEMAX
-      .col-lg-5
-        form.form
-          p.style1 Địa chỉ dự án: 
-            span Phường Hưng Thạnh, quận Cái Răng, TP. Cần Thơ
-          a(href="#").style1
-            img(src="img/map.png", alt="")
-            | Xem google Map
-          h4 Đăng ký nhận thông tin 
-          p.style2 Nếu quan tâm hay cần tư vấn thông tin liên quan dự án, Quý khách vui lòng điền nội dung theo form dưới chúng tôi sẽ trả lời trong thời gian sớm nhất. 
-          input(type="text" placeholder="Họ tên (*)" required).input
-          input(type="email" placeholder="Email" required).input
-          input(type="phone" placeholder="Điện thoại (*)" required).input
-          textarea( placeholder="Nội dung" required).input
-          button(type="submit").xt1
-            img(src='img/icon4.png', alt='')
-            | Đăng ký
+      
