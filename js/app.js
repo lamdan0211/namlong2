@@ -46,7 +46,11 @@
           $('#section8 .t2').addClass('animate__fadeInLeft delay-250');
           $('#section8 .t3').addClass('animate__fadeInRight delay-250');
         }
-        if(nextIndex == 2 || nextIndex == 3||nextIndex == 4||nextIndex == 5||nextIndex == 6||nextIndex == 7||nextIndex == 8||nextIndex == 9){
+        if( index == 8 ) { 
+          $('#footer .ctright').addClass('animate__fadeInRight delay-250');
+          $('#footer .form').addClass('animate__fadeInLeft delay-250');
+        }
+        if(nextIndex == 2 || nextIndex == 3||nextIndex == 4||nextIndex == 5||nextIndex == 6||nextIndex == 7||nextIndex == 8){
           $('#header').addClass('active');
         }
         if(nextIndex == 1)
