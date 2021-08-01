@@ -489,6 +489,27 @@ body {
   margin-right: 10px;
 }
 
+#section_intro1 .item {
+  border: 1px solid #daf6f7;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  algin-items: center;
+  padding: 10px;
+}
+#section_intro1 .item .img {
+  width: 90px;
+}
+#section_intro1 .item p {
+  width: calc(100% - 90px);
+  margin: 0;
+  padding: 0;
+}
+#section_intro1 .item p span {
+  display: block;
+}
+
 #top {
   -webkit-transition: right 2s;
   transition: right 2s;
@@ -757,6 +778,9 @@ ul {
     padding: 0 30px;
     width: 100%;
     z-index: 100;
+  }
+  #header.bg-header {
+    background: #daf6f7;
   }
   #header .navbar.navbar-light .navbar-nav .nav-link {
     font-size: 14px;
