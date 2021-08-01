@@ -763,6 +763,11 @@ ul {
   background: #fff;
 }
 
+.delay-250 {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -807,7 +812,7 @@ ul {
             flex-grow: unset;
   }
   #header.active {
-    background: #fff;
+    background: #daf6f7;
   }
 
   .col-lg-6 {
