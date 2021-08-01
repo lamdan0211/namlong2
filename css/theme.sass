@@ -113,17 +113,17 @@ body
 	background-image: url('../img/bg4.jpg')
 	.fp-tableCell
 		position: relative
-		.text
+	.text
+		position: absolute
+		bottom: 30px
+		right: 30px
+		h2
 			position: absolute
-			bottom: 30px
-			right: 30px
-			h2
-				position: absolute
-				left: -100px
-				top: -55px
-				z-index: 5
-			h3
-				z-index: 1
+			left: -100px
+			top: -55px
+			z-index: 5
+		h3
+			z-index: 1
 #section5
 	.heading
 		h2
@@ -565,6 +565,25 @@ ul
 			flex-grow: unset
 		&.active
 			background: #fff
+
+	.col-lg-6 
+		flex: 0 0 auto
+		width: 50%
+	.order-lg-last
+		order: 6 !important
+
+	.col-lg-4 
+		flex: 0 0 auto
+		width: 33.3333333333%
+
+	.col-lg-8 
+		flex: 0 0 auto
+		width: 66.6666666667%
+
+	.col-lg-3 
+		flex: 0 0 auto
+		width: 25%
+	
 @media(min-width: 1440px)
 	.container-fluid
 		padding: 0 30px
@@ -586,6 +605,9 @@ ul
 		display: none
 	.container
 		padding: 0 15px
+		max-width: 100%
+		width: 100%
+		display: block
 	.ctleft, .ctright
 		padding: 0
 	.navbar-expand-lg .navbar-toggler
@@ -597,6 +619,16 @@ ul
 		flex: 0 0 100%
 	.navbar-expand-lg .navbar-nav
 		flex-direction: column !important
+	.fontstyle1
+		font-size: 48px
+	.fontstyle2
+		font-size: 24px
+	.xt1, .xt2
+		font-size: 16px
+	.fontstyle5
+		font-size: 24px
+	.fontstyle6
+		font-size: 48px
 	#header
 		background: #daf6f7
 		padding: 0 15px
@@ -606,6 +638,53 @@ ul
 		.navbar
 			display: block
 			padding: 10px 0
-	#section1
+	#section1, #section4
 		min-height: 300px
+	#section2
+		.bg
+			padding: 30px 0
+			&::before
+				bottom: 0
+				top: auto
+				height: 30%
+				width: 100%
+			&::after
+				width: 100%
+				height: 70%
+				left: 0
+		.ctleft
+			padding-bottom: 30px
+	#section3
+		padding: 30px 0
+		.ctright
+			padding-bottom: 30px
+	#section4
+		position: relative
+		.text
+			left: 15px 
+			right: 15px
+			bottom: 0
+			h2
+				left: auto
+				right: 0
+				top: -45px
+			h3
+				position: absolute
+				right: 0
+	#section5
+		padding: 60px 0 30px 0
+		.row.bg
+			background-image: none
+			height: auto
+			.item
+				&:nth-child(1)
+					background: url('../img/mobile/mobile1.png') no-repeat
+					width: 100%
+					height: 142px
+@media(max-width: 414px)
+	#section4
+		.text
+			h2
+				left: 0
+				right: auto
 
