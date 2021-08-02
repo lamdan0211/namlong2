@@ -585,7 +585,69 @@ body
 			position: absolute
 			left: 0
 			right: 0
-
+#position1
+	.bg
+		position: relative
+		height: 100%
+		padding: 100px 0
+		&::before
+			content: ""
+			background: #10768a
+			position: absolute
+			top: 0
+			left: 0
+			width: 30%
+			height: 100%
+			z-index: 0
+		&::after
+			content: ""
+			background: #c1f0f1
+			position: absolute
+			top: 0
+			left: 30%
+			width: 70%
+			height: 100%
+			z-index: 0
+		.container
+			position: relative
+			z-index: 1
+#position2
+	padding: 50px 0
+	.bg
+		background: url("../img/bgposition.png") no-repeat top center
+		height: 300px
+		margin: 0 auto
+		width: 1040px
+		& + .row
+			margin-top: -50px
+	.heading2
+		margin-bottom: 30px
+	.item
+		width: 125px
+		position: relative
+		height: 125px
+		margin: 0 5px
+		img
+			width: 100%
+		.hover
+			position: absolute
+			background: rgba(16,118,138,0.5)
+			width: 100%
+			height: 100%
+			border-radius: 50% 
+			top: 0
+			left: 0
+			text-align: center
+			padding: 20px 0
+			p
+				font-size: 16px
+				font-weight: 300
+				color: #fff
+				margin-bottom: 5px
+			span
+				font-weight: bold
+				font-size: 20px
+				color: #fff
 #top
 	-webkit-transition: right 2s
 	-o-transition: right 2s
@@ -638,6 +700,13 @@ body
 	h3
 		margin-top: 30px
 		display: inline-block
+.heading2
+	
+	p.text
+		font-size: 20px
+		color: #333333
+		font-weight: 300
+		margin-top: 30px
 a
 	text-decoration: none
 	&:hover
@@ -881,6 +950,7 @@ ul
 					right: 190px
 				&.item5
 					right: 65px
+
 //Mobile
 @media(max-width: 1179px)
 	.hidden
@@ -1102,7 +1172,30 @@ ul
 			position: unset !important
 			width: 100% !important
 			border-radius: 10px !important
-			margin-bottom: 30px 
+			margin-bottom: 30px
+	#position1
+		h3
+			text-align: left !important
+		.bg
+			padding: 30px 0
+			&::before
+				height:30%
+				width: 100%
+				top: 70%
+				bottom: 0
+			&::after
+				width: 100%
+				height: 70%
+				left: 0
+				top: 0
+	#position2 
+		.item
+			margin: 15px
+		.bg
+			& + .row
+				background: url("../img/bgpositionmobile.png") no-repeat top center 
+				padding: 120px 0 0 0
+				margin: 30px 0
 @media(max-width: 414px)
 	#section4
 		.text
