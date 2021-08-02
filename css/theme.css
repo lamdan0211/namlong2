@@ -615,8 +615,7 @@ body {
   padding: 50px 0;
 }
 #intro3 .ct {
-  width: 1280px;
-  padding: 0 145px;
+  width: 1002px;
 }
 #intro3 .ct .row {
   margin-bottom: 30px;
@@ -627,8 +626,8 @@ body {
 #intro3 .text-center {
   margin-bottom: 30px;
 }
-#intro3 .col-lg-12 .item img {
-  margin: 0 10px;
+#intro3 .item img {
+  margin: 0 10px 10px 10px;
 }
 #intro3 .item {
   padding: 0 15px;
@@ -704,7 +703,9 @@ body {
 }
 #intro4 .ct .item.item3 {
   top: 300px;
-  left: 470px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 #intro4 .ct .item.item4 {
   top: 200px;
@@ -1156,6 +1157,19 @@ ul {
     left: 63.45%;
     width: 36.55%;
   }
+
+  #intro4 .ct .item.item1 {
+    left: 65px;
+  }
+  #intro4 .ct .item.item2 {
+    left: 190px;
+  }
+  #intro4 .ct .item.item4 {
+    right: 190px;
+  }
+  #intro4 .ct .item.item5 {
+    right: 65px;
+  }
 }
 @media (max-width: 1179px) {
   .hidden {
@@ -1425,10 +1439,59 @@ ul {
   #intro1 h3 {
     text-align: left !important;
   }
+
+  #intro2 h3 {
+    text-align: left !important;
+  }
+  #intro2 .bg {
+    padding: 30px 0;
+  }
+  #intro2 .bg::before {
+    height: 70%;
+    width: 100%;
+  }
+  #intro2 .bg::after {
+    width: 100%;
+    height: 30%;
+    left: 0;
+    top: 70%;
+  }
+  #intro2 .ctright {
+    margin-bottom: 30px;
+  }
+  #intro2 .item_right {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #intro4 {
+    background: #10768a;
+    height: auto;
+    padding: 50px 0;
+  }
+  #intro4 .bg {
+    background: none;
+    width: auto;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  #intro4 .bg h2, #intro4 .bg h3 {
+    position: unset;
+  }
+  #intro4 .item {
+    position: unset !important;
+    width: 100% !important;
+    border-radius: 10px !important;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 414px) {
   #section4 .text h2 {
     left: 0;
     right: auto;
+  }
+
+  #intro1 .row.ct .col-lg-6 {
+    width: 100%;
   }
 }
