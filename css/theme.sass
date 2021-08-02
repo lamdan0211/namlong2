@@ -16,6 +16,10 @@ body
 	cursor: pointer
 	animation: slideInDown 2s infinite
 	-webkit-animation: slideInDown 2s infinite
+	&.style1
+		border: 2px solid #166379
+		&::before
+			background-color: #166379
 .home_mouse::before
 	content: ''
 	width: 5px
@@ -403,7 +407,8 @@ body
 			img
 				margin-right: 10px
 #intro1
-	padding: 110px 0 0 0
+	padding: 110px 0 90px 0
+	position: relative
 	.row
 		&.ct
 			margin: 0 -10px
@@ -411,7 +416,7 @@ body
 				padding: 0 10px
 			.item
 				height: 96px
-				margin-bottom: 30px
+				margin-bottom: 20px
 				display: flex
 				align-items: center
 				.img
@@ -438,6 +443,8 @@ body
 			padding: 0
 			span
 				display: block
+	.home_mouse
+		bottom: 0
 
 #top
 	-webkit-transition: right 2s

@@ -3,13 +3,14 @@
   // initialize fullPage
   var width = $(window).width();
   var height = $(window).height();
-  if(width > 1279)
+  if(width > 1264)
   {
+    $("#intro1").css("height", height);
     $("#section1").css("height", height);
     $("#section4").css("height", height);
     $(window).scroll(function() {
       var x = $(this).scrollTop();
-      if($('body').hasClass('home')){
+      if($('body').hasClass('home')){       
         var section2 = $("#section2").position().top - 150;
         var section3 = $("#section3").position().top - 150;
         var section4 = $("#section4").position().top - 150;
@@ -109,7 +110,7 @@
 			scrollTop: 0
 		}, "fast");
   });
-  if(width < 1279){
+  if(width < 1264){
     $('.owl-carousel').owlCarousel({
       nav:false,
       dots: true,

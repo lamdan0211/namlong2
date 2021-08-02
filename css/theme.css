@@ -18,6 +18,12 @@ body {
   animation: slideInDown 2s infinite;
   -webkit-animation: slideInDown 2s infinite;
 }
+.home_mouse.style1 {
+  border: 2px solid #166379;
+}
+.home_mouse.style1::before {
+  background-color: #166379;
+}
 
 .home_mouse::before {
   content: "";
@@ -511,7 +517,8 @@ body {
 }
 
 #intro1 {
-  padding: 110px 0 0 0;
+  padding: 110px 0 90px 0;
+  position: relative;
 }
 #intro1 .row.ct {
   margin: 0 -10px;
@@ -521,7 +528,7 @@ body {
 }
 #intro1 .row.ct .item {
   height: 96px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,6 +567,9 @@ body {
 }
 #intro1 .item p span {
   display: block;
+}
+#intro1 .home_mouse {
+  bottom: 0;
 }
 
 #top {
