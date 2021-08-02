@@ -79,6 +79,8 @@
       nav:false,
       dots: true,
       items: 1
-  })
+    });
+    $("._left").removeClass('animate__animated animate__fadeInLeft delay-250');
+    $("._right").removeClass('animate__animated animate__fadeInRight delay-250');
   }
 })(jQuery);
