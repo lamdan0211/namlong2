@@ -3,6 +3,7 @@
   // initialize fullPage
   var width = $(window).width();
   var height = $(window).height();
+  var top = 200;
   if(width > 1264)
   {
     $("#intro1").css("height", height);
@@ -11,53 +12,53 @@
     $(window).scroll(function() {
       var x = $(this).scrollTop();
       if($('body').hasClass('home')){       
-        var section2 = $("#section2").position().top - 150;
-        var section3 = $("#section3").position().top - 150;
-        var section4 = $("#section4").position().top - 150;
-        var section5 = $("#section5").position().top - 150;
-        var section6 = $("#section6").position().top - 150;
-        var section7 = $("#section7").position().top - 150;
-        var section8 = $("#section8").position().top - 150;
+        var section2 = $("#section2").position().top - top;
+        var section3 = $("#section3").position().top - top;
+        var section4 = $("#section4").position().top - top;
+        var section5 = $("#section5").position().top - top;
+        var section6 = $("#section6").position().top - top;
+        var section7 = $("#section7").position().top - top;
+        var section8 = $("#section8").position().top - top;
         if(x > section2){
           $("#header").addClass("active");
-          $("#section2 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section2 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section2 ._right").addClass("go");
+          $("#section2 ._left").addClass("go");
         }
         else
         {
           $("#header").removeClass("active");
         }
         if(x > section3){
-          $("#section3 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section3 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section3 ._right").addClass("go");
+          $("#section3 ._left").addClass("go");
         }
         if(x > section4){
-          $("#section4 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section4 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section4 ._right").addClass("go");
+          $("#section4 ._left").addClass("go");
         }
         if(x > section5){
-          $("#section5 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section5 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section5 ._right").addClass("go");
+          $("#section5 ._left").addClass("go");
         }
         if(x > section6){
-          $("#section6 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section6 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section6 ._right").addClass("go");
+          $("#section6 ._left").addClass("go");
         }
         if(x > section7){
-          $("#section7 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section7 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section7 ._right").addClass("go");
+          $("#section7 ._left").addClass("go");
         }
         if(x > section8){
-          $("#section8 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#section8 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#section8 ._right").addClass("go");
+          $("#section8 ._left").addClass("go");
         }
       }
       if($('body').hasClass('intro'))
       {
-        var section2 = $("#intro1").position().top - 150;
+        var section2 = $("#intro1").position().top - top;
         if(x > section2){
-          $("#intro1 ._right").addClass("animate__fadeInRight delay-250 ");
-          $("#intro1 ._left").addClass("animate__fadeInLeft delay-250 ");
+          $("#intro1 ._right").addClass("go");
+          $("#intro1 ._left").addClass("go");
         }
       }
       
