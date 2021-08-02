@@ -53,16 +53,6 @@
           $("#section8 ._left").addClass("go");
         }
       }
-      if($('body').hasClass('intro'))
-      {
-        var section2 = $("#intro1").position().top - top;
-        if(x > section2){
-          $("#intro1 ._right").addClass("go");
-          $("#intro1 ._left").addClass("go");
-        }
-      }
-      
-      
     });
   }
   $("#section6 .tab li").on('click',function(){
