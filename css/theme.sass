@@ -58,6 +58,8 @@ body
 		.xt1
 			img
 				margin-right: 10px
+		.container-fluid
+			position: relative
 	.social
 		li
 			list-style: none
@@ -301,6 +303,7 @@ body
 				font-weight: 300
 	.xt2
 		margin: 0 auto
+		display: inline-flex
 #footer
 	background: #c1f0f1
 	padding: 50px 0
@@ -407,7 +410,7 @@ body
 			img
 				margin-right: 10px
 #intro1
-	padding: 110px 0 90px 0
+	padding: 110px 0
 	position: relative
 	.row
 		&.ct
@@ -443,9 +446,37 @@ body
 			padding: 0
 			span
 				display: block
-	.home_mouse
-		bottom: 0
 
+#intro2
+	.bg
+		position: relative
+		height: 100%
+		padding: 50px 0
+		&::before
+			content: ""
+			background: #c1f0f1
+			position: absolute
+			top: 0
+			left: 0
+			width: 56.86%
+			height: 100%
+			z-index: 0
+		&::after
+			content: ""
+			background: #10768a
+			position: absolute
+			top: 0
+			left: 56.86%
+			width: 43.14%
+			height: 100%
+			z-index: 0
+	.container
+		position: relative
+		z-index: 1
+		.item_left
+			padding: 0 30px 0 0
+		.item_right
+			//margin: 0 0 30px 0
 #top
 	-webkit-transition: right 2s
 	-o-transition: right 2s
@@ -588,22 +619,22 @@ ul
 	font-weight: 300
 	color: #fff
 	font-size: 20px
-	width: 150px
+	width: auto
 	height: 49px
 	align-items: center
-	justify-content: center
 	text-transform: uppercase
+	padding: 0 20px
 .xt2
 	background: url("../img/xt2.png") no-repeat
 	display: flex
 	font-weight: 300
 	color: #10768a
 	font-size: 20px
-	width: 150px
+	width: auto
 	height: 49px
 	align-items: center
-	justify-content: center
 	text-transform: uppercase
+	padding: 0 20px
 .owl-dots
 	display: flex
 	justify-content: center
@@ -723,6 +754,13 @@ ul
 				p
 					font-weight: bold
 					font-size: 18px
+	#intro2
+		.bg
+			&::before
+				width: 63.45%
+			&::after
+				left: 63.45%
+				width: 36.55%	
 //Mobile
 @media(max-width: 1179px)
 	.hidden
