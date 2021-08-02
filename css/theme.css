@@ -692,6 +692,7 @@ body {
           align-items: center;
   position: absolute;
   text-align: center;
+  padding: 30px;
 }
 #intro4 .ct .item.item1 {
   top: -180px;
@@ -712,6 +713,21 @@ body {
 #intro4 .ct .item.item5 {
   top: -180px;
   right: -40px;
+}
+#intro4 .ct .item h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #10768a;
+  text-transform: uppercase;
+}
+#intro4 .ct .item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+#intro4 .ct .item p {
+  font-size: 16px;
+  color: #10768a;
+  font-weight: 300;
 }
 #intro4 .bg {
   background: url("../img/introbg.png") no-repeat center center;
