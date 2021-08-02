@@ -64,6 +64,7 @@ body
 	.bg
 		position: relative
 		height: 100%
+		padding: 50px 0
 		&::before
 			content: ""
 			background: #10768a
@@ -90,12 +91,15 @@ body
 					.img
 						img
 							width: 100%
+#section3
+	padding: 50px 0
 #section4
 	width: 100%
 	height: 100%
 	background-repeat: no-repeat
 	background-position: center center
 	background-size: cover
+	position: relative
 	z-index: 0
 	background-image: url('../img/bg4.jpg')
 	.fp-tableCell
@@ -112,6 +116,7 @@ body
 		h3
 			z-index: 1
 #section5
+	padding: 30px 0
 	.heading
 		h2
 			margin-left: -200px
@@ -156,8 +161,12 @@ body
 					background: linear-gradient(to bottom, rgba(16, 118, 138,0) 0%,rgba(16, 118, 138,0.95) 100%)
 				
 #section6
+	padding: 30px 0
 	.col-lg-8
 		position: relative
+	.imghover 
+		img
+			width: auto
 	.tab
 		position: absolute
 		right: 0
@@ -209,6 +218,7 @@ body
 	.bg
 		position: relative
 		height: 100%
+		padding: 30px 0
 		&::before
 			content: ""
 			background: #10768a
@@ -261,6 +271,7 @@ body
 		background: linear-gradient(180deg, rgba(16, 118, 138, 0) 51.62%, rgba(16, 118, 138, 0.6) 100%)
 		content: ""
 #section8
+	padding: 50px 0
 	.heading
 		h2
 			margin-left: -300px
@@ -283,15 +294,12 @@ body
 			p
 				font-size: 16px
 				color: #333333
-				overflow: hidden
-				text-overflow: ellipsis
-				display: -webkit-box
-				-webkit-line-clamp: 3
-				-webkit-box-orient: vertical
+				font-weight: 300
 	.xt2
 		margin: 0 auto
 #footer
 	background: #c1f0f1
+	padding: 50px 0
 	h1
 		font-size: 35px
 		font-weight: bold
@@ -416,7 +424,7 @@ body
 	transition: right 2s
 	right: 30px
 	position: fixed
-	bottom: 30px
+	bottom: 70px
 	z-index: 10
 	width: 45px
 	height: 45px
@@ -624,6 +632,9 @@ ul
 			flex-grow: unset
 		&.active
 			background: #daf6f7
+			.navbar-brand
+				img
+					width: 200px
 
 	.col-lg-6 
 		flex: 0 0 auto
@@ -647,6 +658,13 @@ ul
 		flex: 0 0 auto
 		width: 75%
 
+	.col-lg-5 
+		flex: 0 0 auto
+		width: 41.6666666667%
+	
+	.col-lg-7 
+		flex: 0 0 auto
+		width: 58.3333333333%
 @media(min-width: 1440px)
 	.container-fluid
 		padding: 0 30px
@@ -661,12 +679,6 @@ ul
 	.container
 		min-width: 1600px
 		padding: 0
-	.fontstyle1
-		font-size: 80px
-	.fontstyle2
-		font-size: 40px
-	.fontstyle3
-		font-size: 18px
 //Mobile
 @media(max-width: 1179px)
 	.hidden
@@ -801,6 +813,7 @@ ul
 			top: 0
 			width: 100%
 			margin-top: 30px
+	
 	#section7
 		.bg
 			padding: 30px 0

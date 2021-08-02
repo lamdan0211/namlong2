@@ -2,62 +2,86 @@
   'use strict';
   // initialize fullPage
   var width = $(window).width();
+  var height = $(window).height();
   if(width > 1279)
   {
-    $('#fullpage').fullpage({
-      menu: '#top',
-      navigation: false,
-      onLeave: function(index, nextIndex, direction) {
-  
-        if( index == 1 ) { 
-          $('#section2 .img').addClass('animate__fadeInLeft delay-250 ');
-          $('#section2 .ctleft').addClass('animate__fadeInRight delay-250');
-        }
-        if( index == 2 ) { 
-          $('#section3 .img').addClass(' animate__fadeInRight delay-250');
-          $('#section3 .ctright').addClass(' animate__fadeInLeft delay-250');
-        }
-        if( index == 3 ) { 
-          $('#section4 .text h2').addClass('animate__fadeInRight delay-250');
-          $('#section4 .text h3').addClass('animate__fadeInLeft delay-250');
-        }
-        if( index == 4 ) { 
-          $('#section5 .t1').addClass('animate__fadeInRight delay-250');
-          $('#section5 .t2').addClass('animate__fadeInLeft delay-250');
-          $('#section5 .t3').addClass('animate__fadeInRight delay-250');
-          $('#section5 .t4').addClass('animate__fadeInLeft delay-250');
-        }
-        if( index == 5 ) { 
-          $('#section6 .ctright').addClass('animate__fadeInRight delay-250');
-          $('#section6 .img').addClass('animate__fadeInLeft delay-250');
-          $('#section6 .tab').addClass('animate__fadeInRight delay-250');
-        }
-        if( index == 6 ) { 
-          $('#section7 .t1').addClass('animate__fadeInRight delay-250');
-          $('#section7 .t2').addClass('animate__fadeInLeft delay-250');
-          $('#section7 .t3').addClass('animate__fadeInRight delay-250');
-          $('#section7 .t4').addClass('animate__fadeInLeft delay-250');
-          $('#section7 .t5').addClass('animate__fadeInRight delay-250');
-          $('#section7 .t6').addClass('animate__fadeInLeft delay-250');
-          $('#section7 .ctleft').addClass('animate__fadeInRight delay-250');
-        }
-        if( index == 7 ) { 
-          $('#section8 .t1').addClass('animate__fadeInRight delay-250');
-          $('#section8 .t2').addClass('animate__fadeInLeft delay-250');
-          $('#section8 .t3').addClass('animate__fadeInRight delay-250');
-        }
-        if( index == 8 ) { 
-          $('#footer .ctright').addClass('animate__fadeInRight delay-250');
-          $('#footer .form').addClass('animate__fadeInLeft delay-250');
-        }
-        if(nextIndex == 2 || nextIndex == 3||nextIndex == 4||nextIndex == 5||nextIndex == 6||nextIndex == 7||nextIndex == 8){
-          $('#header').addClass('active');
-        }
-        if(nextIndex == 1)
-        {
-          $('#header').removeClass('active');
-        }
+    $("#section1").css("height", height);
+    $("#section4").css("height", height);
+    $(window).scroll(function() {
+      var x = $(this).scrollTop();
+      var section2 = $("#section2").position().top - 150;
+      var section3 = $("#section3").position().top - 150;
+      var section4 = $("#section4").position().top - 150;
+      var section5 = $("#section5").position().top - 150;
+      var section6 = $("#section6").position().top - 150;
+      var section7 = $("#section7").position().top - 150;
+      var section8 = $("#section8").position().top - 150;
+      if(x > section2){
+        $("#header").addClass("active");
+        $("#section2 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section2 ._left").addClass("animate__fadeInLeft delay-250 ");
       }
+      else
+      {
+        $("#header").removeClass("active");
+        $("#section2 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section2 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      if(x > section3){
+        $("#section3 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section3 ._left").addClass("animate__fadeInLeft delay-250 ");
+      }
+      else
+      {
+        $("#section3 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section3 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      if(x > section4){
+        $("#section4 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section4 ._left").addClass("animate__fadeInLeft delay-250 ");
+      }
+      else
+      {
+        $("#section4 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section4 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      if(x > section5){
+        $("#section5 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section5 ._left").addClass("animate__fadeInLeft delay-250 ");
+      }
+      else
+      {
+        $("#section5 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section5 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      if(x > section6){
+        $("#section6 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section6 ._left").addClass("animate__fadeInLeft delay-250 ");
+      }
+      else 
+      {
+        $("#section6 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section6 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      if(x > section7){
+        $("#section7 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section7 ._left").addClass("animate__fadeInLeft delay-250 ");
+      }
+      else
+      {
+        $("#section7 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section7 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      if(x > section8){
+        $("#section8 ._right").addClass("animate__fadeInRight delay-250 ");
+        $("#section8 ._left").addClass("animate__fadeInLeft delay-250 ");
+      }
+      else
+      {
+        $("#section8 ._right").removeClass("animate__fadeInRight delay-250 ");
+        $("#section8 ._left").removeClass("animate__fadeInLeft delay-250 ");
+      }
+      
     });
   }
   $("#section6 .tab li").on('click',function(){
@@ -65,7 +89,9 @@
     $(this).addClass("active");
   });
   $('#top').on('click',function() {
-    $("#fullpage").fullpage.moveTo(1);
+    $("html, body").animate({
+			scrollTop: 0
+		}, "fast");
   });
   if(width < 1279){
     $('.owl-carousel').owlCarousel({

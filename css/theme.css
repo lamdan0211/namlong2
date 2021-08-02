@@ -75,6 +75,7 @@ body {
 #section2 .bg {
   position: relative;
   height: 100%;
+  padding: 50px 0;
 }
 #section2 .bg::before {
   content: "";
@@ -104,12 +105,17 @@ body {
   width: 100%;
 }
 
+#section3 {
+  padding: 50px 0;
+}
+
 #section4 {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
   z-index: 0;
   background-image: url("../img/bg4.jpg");
 }
@@ -131,6 +137,9 @@ body {
   z-index: 1;
 }
 
+#section5 {
+  padding: 30px 0;
+}
 #section5 .heading h2 {
   margin-left: -200px;
 }
@@ -189,8 +198,14 @@ body {
   background: linear-gradient(to bottom, rgba(16, 118, 138, 0) 0%, rgba(16, 118, 138, 0.95) 100%);
 }
 
+#section6 {
+  padding: 30px 0;
+}
 #section6 .col-lg-8 {
   position: relative;
+}
+#section6 .imghover img {
+  width: auto;
 }
 #section6 .tab {
   position: absolute;
@@ -255,6 +270,7 @@ body {
 #section7 .bg {
   position: relative;
   height: 100%;
+  padding: 30px 0;
 }
 #section7 .bg::before {
   content: "";
@@ -310,6 +326,9 @@ body {
   content: "";
 }
 
+#section8 {
+  padding: 50px 0;
+}
 #section8 .heading h2 {
   margin-left: -300px;
 }
@@ -335,11 +354,7 @@ body {
 #section8 .row .item p {
   font-size: 16px;
   color: #333333;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  font-weight: 300;
 }
 #section8 .xt2 {
   margin: 0 auto;
@@ -347,6 +362,7 @@ body {
 
 #footer {
   background: #c1f0f1;
+  padding: 50px 0;
 }
 #footer h1 {
   font-size: 35px;
@@ -520,7 +536,7 @@ body {
   transition: right 2s;
   right: 30px;
   position: fixed;
-  bottom: 30px;
+  bottom: 70px;
   z-index: 10;
   width: 45px;
   height: 45px;
@@ -819,6 +835,9 @@ ul {
   #header.active {
     background: #daf6f7;
   }
+  #header.active .navbar-brand img {
+    width: 200px;
+  }
 
   .col-lg-6 {
     -webkit-box-flex: 0;
@@ -860,6 +879,20 @@ ul {
             flex: 0 0 auto;
     width: 75%;
   }
+
+  .col-lg-5 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 41.6666666667%;
+  }
+
+  .col-lg-7 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 58.3333333333%;
+  }
 }
 @media (min-width: 1440px) {
   .container-fluid {
@@ -878,18 +911,6 @@ ul {
   .container {
     min-width: 1600px;
     padding: 0;
-  }
-
-  .fontstyle1 {
-    font-size: 80px;
-  }
-
-  .fontstyle2 {
-    font-size: 40px;
-  }
-
-  .fontstyle3 {
-    font-size: 18px;
   }
 }
 @media (max-width: 1179px) {
