@@ -607,6 +607,50 @@ body {
 #intro2 .container .item_left {
   padding: 0 30px 0 0;
 }
+#intro2 .container .item_right {
+  margin: 0 0 30px 0;
+}
+
+#intro3 {
+  padding: 50px 0;
+}
+#intro3 .ct {
+  width: 1280px;
+  padding: 0 145px;
+}
+#intro3 .ct .row {
+  margin-bottom: 30px;
+}
+#intro3 .row {
+  width: 100%;
+}
+#intro3 .heading {
+  margin-bottom: 30px;
+}
+#intro3 .heading h3 {
+  margin-top: 70px;
+}
+#intro3 .col-lg-12 .item img {
+  margin: 0 10px;
+}
+#intro3 .item {
+  padding: 0 15px;
+}
+#intro3 .item h5 {
+  position: relative;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dadada;
+}
+#intro3 .item h5 span {
+  font-size: 18px;
+  font-weight: 300;
+  background: #fff;
+}
+#intro3 .item img {
+  border: 1px solid #dadada;
+  border-radius: 5px;
+}
+
 #top {
   -webkit-transition: right 2s;
   transition: right 2s;
