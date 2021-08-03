@@ -1613,6 +1613,7 @@ h3.fontstyle2_sp {
 /* Thu viện */
 .thuvien_nl{
   padding-bottom: 50px;
+  justify-content: center;
 }
 .thuvien_nl img.thumb_dowload{
   max-width: 100%;
