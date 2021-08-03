@@ -6,6 +6,7 @@
   var top = 200;
   if(width > 1264)
   {
+    $("#intro1").css("height", height);
     $("#section1").css("height", height);
     $("#section4").css("height", height);
     $(window).scroll(function() {
@@ -52,6 +53,16 @@
           $("#section8 ._left").addClass("go");
         }
       }
+      if($('body').hasClass('intro'))
+      {
+        var section2 = $("#intro1").position().top - top;
+        if(x > section2){
+          $("#intro1 ._right").addClass("go");
+          $("#intro1 ._left").addClass("go");
+        }
+      }
+      
+      
     });
   }
   $("#section6 .tab li").on('click',function(){
@@ -68,8 +79,6 @@
       nav:false,
       dots: true,
       items: 1
-    });
-    $("._left").removeClass('animate__animated animate__fadeInLeft delay-250');
-    $("._right").removeClass('animate__animated animate__fadeInRight delay-250');
+  })
   }
 })(jQuery);
