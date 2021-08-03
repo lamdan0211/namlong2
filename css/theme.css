@@ -857,6 +857,7 @@ body {
   position: fixed;
   right: 30px;
   top: 100px;
+  z-index: 999;
 }
 .social_right li {
   list-style: none;
@@ -2033,3 +2034,78 @@ h3.fontstyle2_sp {
   float: right;
 }
 /* End Chi tiết tinh tức */
+
+/* Tiện ích */
+.tienich-nl {
+  background: #FFFFFF;
+  position: relative;
+}
+.tienich-nl .owl-nav button.owl-next {
+  background: url("../img/arrow_right.png") no-repeat !important;
+  width: 48px;
+  height: 44px;
+  position: absolute;
+  bottom: 315px;
+  right: 20%;
+  text-indent: -9999px;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot{
+  border: #166379;
+}
+.tienich-nl .owl-nav .owl-prev {
+  background: url("../img/arrow_left.png") no-repeat !important;
+  width: 49px;
+  height: 45px;
+  position: absolute;
+  bottom: 315px;
+  left: 17%;
+  text-indent: -9999px;
+}
+.tienich-nl .owl-item {
+  padding-bottom: 80px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.tienich-nl .item .img {
+  position: relative;
+  border: 3px solid #10768a;
+  border-radius: 8px;
+}
+.tienich-nl .item .img::before {
+  content: "";
+  background: rgba(16, 118, 138, 0.5);
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tienich-nl .item .img img {
+  border-radius: 5px;
+}
+.tienich-nl .item p {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #10768a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-right: 50px;
+  height: 70px;
+  overflow: hidden;
+  text-transform: uppercase;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "SFUFuturaBook";
+  font-weight: 500;
+}
+.tienich-nl .sub_tienich{
+  margin: 20px auto;
+  width: 75%;
+  text-align: center;
+}
+
+/* End tiện ích */

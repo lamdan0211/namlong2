@@ -1,4 +1,12 @@
 (function($) {
+  var video = $(".tienich-nl .content");
+  video.owlCarousel({
+      center: true,
+      items: 2,
+      loop: true,
+      nav: true,
+      autoplay: true,
+  });
   'use strict';
   // initialize fullPage
   var width = $(window).width();
@@ -82,3 +90,4 @@
   })
   }
 })(jQuery);
+
