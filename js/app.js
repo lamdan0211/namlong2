@@ -63,20 +63,55 @@
       if($('body').hasClass('intro'))
       {
         var section2 = $("#intro1").position().top - top;
+        var section3 = $("#intro2").position().top - top;
+        var section4 = $("#intro3").position().top - top;
+        var section5 = $("#intro4").position().top - top;
         if(x > section2){
           $("#intro1 ._right").addClass("go");
           $("#intro1 ._left").addClass("go");
         }
+        if(x > section3){
+          $("#intro2 ._right").addClass("go");
+          $("#intro2 ._left").addClass("go");
+        }
+        if(x > section4){
+          $("#intro3 ._right").addClass("go");
+          $("#intro3 ._left").addClass("go");
+        }
+        if(x > section5){
+          $("#intro4 ._right").addClass("go");
+          $("#intro4 ._left").addClass("go");
+        }
       }
       if($('body').hasClass('tienich'))
       {
-        $("#section6 ._right").addClass("go");
-        $("#section6 ._left").addClass("go");
+        var section2 = $("#section6").position().top - top;
+        if(x > section2){
+          $("#section6 ._right").addClass("go");
+          $("#section6 ._left").addClass("go");
+        }
       }
       if($('body').hasClass('contact'))
       {
-        $("#contact1 ._right").addClass("go");
-        $("#contact1 ._left").addClass("go");
+        var section2 = $("#contact1").position().top - top;
+        if(x > section2){
+          $("#contact1 ._right").addClass("go");
+          $("#contact1 ._left").addClass("go");
+        }
+      }
+      if($('body').hasClass('position'))
+      {
+        var section2 = $("#position1").position().top - top;
+        var section3 = $("#position2").position().top - top;
+    
+        if(x > section2){
+          $("#position1 ._right").addClass("go");
+          $("#position1 ._left").addClass("go");
+        }
+        if(x > section3){
+          $("#position2 ._right").addClass("go");
+          $("#position2 ._left").addClass("go");
+        }
       }
       
     });
