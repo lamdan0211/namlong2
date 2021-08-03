@@ -1975,3 +1975,61 @@ h3.fontstyle2_sp {
     padding: 0 5px 30px 5px;
   }
 }
+
+
+/* Chi tiết tinh tức */
+.tintuc_chitiet{
+  padding: 0 50px;
+}
+@media(max-width:1199.98px){
+  .tintuc_chitiet{
+    padding: 0;
+  }
+}
+.tintuc_chitiet .title-tt-chitiet{
+  color: #166379;
+  font-size: 25px;
+  font-family: "SFUFuturaBook";
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 25px;
+}
+.tintuc_chitiet .date_tt_chitiet{
+  color: #10768a;
+  font-family: "SFU Futura";
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 0;
+  display: flex;
+}
+.tintuc_chitiet .subtitle_tt_chitiet{
+  color: #212121;
+  font-family: "SFUFuturaBook";
+  font-size: 20px;
+  padding: 10px 0;
+  display: flex;
+  font-weight: 400;
+}
+.tintuc_chitiet img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.tintuc_chitiet p.tintuc_chitiet_paragraph{
+  font-size: 16px;
+  color: #333333;
+  font-weight: 300;
+  font-family: "SFU Futura";
+}
+.tintuc_chitiet .name_author{
+  color: #212121;
+  font-family: "SFUFuturaBook";
+  font-size: 20px;
+  padding: 10px 0;
+  display: flex;
+  font-weight: 400;
+  float: right;
+}
+/* End Chi tiết tinh tức */
