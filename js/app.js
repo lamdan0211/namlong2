@@ -188,6 +188,14 @@
         }
        
       }
+      if($('body').hasClass('tintuc'))
+      {
+        var section2 = $("#tt").position().top - top;
+        if(x > section2){
+          $("#tt ._right").addClass("go");
+          $("#tt ._left").addClass("go");
+        }
+      }
     });
   }
   $("#section6 .tab li").on('click',function(){
@@ -205,9 +213,9 @@
       dots: true,
       items: 1
   })
-  }
   $("._right").removeClass('animate__animated animate__fadeInRight delay-250');
   $("._left").removeClass('animate__animated animate__fadeInLeft delay-250');
+  }
   $('.gallery').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
         delegate: 'a', // the selector for gallery item
