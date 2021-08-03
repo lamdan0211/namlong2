@@ -787,7 +787,7 @@ body {
   padding: 50px 0;
 }
 #position2 .bg {
-  background: url("../img/bgposition.png") no-repeat top center;
+  background: url("../img/bgposition1.png") no-repeat top center;
   height: 300px;
   margin: 0 auto;
   width: 1040px;
@@ -828,6 +828,14 @@ body {
   font-weight: bold;
   font-size: 20px;
   color: #fff;
+}
+
+#contact1 {
+  margin: 120px 0;
+  position: relative;
+}
+#contact1 .home_mouse {
+  bottom: -100px;
 }
 
 #top {
