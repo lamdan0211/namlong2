@@ -2036,6 +2036,9 @@ h3.fontstyle2_sp {
 /* End Chi tiết tinh tức */
 
 /* Tiện ích */
+.tienich #section6{
+  padding: 120px 0 0 0;
+}
 .tienich-nl {
   background: #FFFFFF;
   position: relative;

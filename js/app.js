@@ -14,7 +14,6 @@
   var top = 200;
   if(width > 1264)
   {
-    $("#intro1").css("height", height);
     $("#section1").css("height", height);
     $("#section4").css("height", height);
     $(window).scroll(function() {
@@ -69,7 +68,11 @@
           $("#intro1 ._left").addClass("go");
         }
       }
-      
+      if($('body').hasClass('tienich'))
+      {
+        $("#section6 ._right").addClass("go");
+        $("#section6 ._left").addClass("go");
+      }
       
     });
   }
