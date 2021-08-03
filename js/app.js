@@ -1,3 +1,5 @@
+
+
 (function($) {
   var tienich = $(".tienich-nl .content");
   tienich.owlCarousel({
@@ -158,7 +160,14 @@
           $("#sp6 ._right").addClass("go");
           $("#sp6 ._left").addClass("go");
         }
-
+      }
+      if($('body').hasClass('tiendo'))
+      {
+        var section2 = $("#tt").position().top - top;
+        if(x > section2){
+          $("#tt ._right").addClass("go");
+          $("#tt ._left").addClass("go");
+        }
       }
     });
   }
@@ -178,5 +187,14 @@
       items: 1
   })
   }
+  $('.gallery').each(function() { // the containers for all your galleries
+    $(this).magnificPopup({
+        delegate: 'a', // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled:true
+        }
+    });
+});
 })(jQuery);
 
