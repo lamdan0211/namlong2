@@ -169,6 +169,25 @@
           $("#tt ._left").addClass("go");
         }
       }
+      if($('body').hasClass('thuvien'))
+      {
+        var section2 = $(".s0").position().top - top;
+        var section3 = $(".s1").position().top - top;
+        var section4 = $(".s2").position().top - top;
+        if(x > section2){
+          $(".s0 ._right").addClass("go");
+          $(".s0 ._left").addClass("go");
+        }
+        if(x > section3){
+          $(".s1 ._right").addClass("go");
+          $(".s1 ._left").addClass("go");
+        }
+        if(x > section4){
+          $(".s2 ._right").addClass("go");
+          $(".s2 ._left").addClass("go");
+        }
+       
+      }
     });
   }
   $("#section6 .tab li").on('click',function(){
@@ -193,6 +212,11 @@
         type: 'image',
         gallery: {
           enabled:true
+        },
+        image: {
+          titleSrc: function(item) {
+             return item.el.find('img').attr('title');
+          }
         }
     });
 });

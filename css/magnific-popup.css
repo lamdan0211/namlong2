@@ -58,8 +58,35 @@
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: -moz-zoom-out;
   cursor: -webkit-zoom-out;
-  cursor: zoom-out; }
-
+  cursor: zoom-out; 
+	background: #10768a;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	line-height: 30px;
+	top: -12px;
+	right: -12px;
+}
+.mfp-img{
+	border: 5px solid #FFF;
+	border-radius: 5px;
+	padding: 0 !important;
+}
+.mfp-arrow-left{
+	background: url("../img/arrow_left.png") no-repeat !important;
+	width: 49px !important;
+	height: 45px !important;
+	left: 30px !important;
+}
+.mfp-arrow-right{
+	background: url("../img/arrow_right.png") no-repeat !important;
+	width: 49px !important;
+	height: 45px !important;
+	right: 30px !important;
+}
+.mfp-arrow-left::before, .mfp-arrow-left::after,.mfp-arrow-right::before, .mfp-arrow-right::after{
+	display: none !important;
+}
 .mfp-zoom {
   cursor: pointer;
   cursor: -webkit-zoom-in;
@@ -103,7 +130,16 @@
 
 .mfp-s-error .mfp-content {
   display: none; }
-
+.mfp-bottom-bar .mfp-counter{
+	display: none;
+}
+.mfp-bottom-bar .mfp-title{
+	font-weight: bold;
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
 button.mfp-close,
 button.mfp-arrow {
   overflow: visible;
@@ -253,21 +289,8 @@ img.mfp-img {
   margin: 0 auto; }
 
 /* The shadow behind the image */
-.mfp-figure {
-  line-height: 0; }
-  .mfp-figure:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 40px;
-    bottom: 40px;
-    display: block;
-    right: 0;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    background: #444; }
+
+ 
   .mfp-figure small {
     color: #BDBDBD;
     display: block;
@@ -277,19 +300,9 @@ img.mfp-img {
     margin: 0; }
 
 .mfp-bottom-bar {
-  margin-top: -36px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  cursor: auto; }
+	margin-top: 30px;
+  }
 
-.mfp-title {
-  text-align: left;
-  line-height: 18px;
-  color: #F3F3F3;
-  word-wrap: break-word;
-  padding-right: 36px; }
 
 .mfp-image-holder .mfp-content {
   max-width: 100%; }

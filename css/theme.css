@@ -759,7 +759,7 @@ body {
   height: 100%;
   padding: 100px 0;
 }
-#position1 .bg::before {
+#position1 .bg::before, #tt.section1 .bg::before {
   content: "";
   background: #10768a;
   position: absolute;
@@ -769,7 +769,7 @@ body {
   height: 100%;
   z-index: 0;
 }
-#position1 .bg::after {
+#position1 .bg::after, #tt.section1 .bg::after {
   content: "";
   background: #c1f0f1;
   position: absolute;
@@ -1107,6 +1107,588 @@ ul {
   display: flex;
   height: 100%;
 }
+
+/* san pham */
+.sanpham_nl {
+  padding: 110px 0 50px 0 !important;
+}
+
+h2.fontstyle1_sp {
+  color: #2eabae;
+  font-size: 50px;
+  font-family: "MTD Adventures Unlimited Script";
+  font-style: italic;
+  margin-left: 0 !important;
+}
+
+h3.fontstyle2_sp {
+  color: #166379;
+  font-size: 30px;
+  font-family: "SFU Futura";
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
+
+.sp {
+  margin-bottom: 30px;
+}
+.sp .house_demo img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.bg-border {
+  border-radius: 5px;
+}
+
+.sp .descript_house_demo {
+  background: #10768a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+.sp .descript_house_demo .item1 {
+  border-right: 1px solid #75a8b2;
+}
+.sp .descript_house_demo .item1:last-child {
+  border-right: none;
+}
+.sp .right-img {
+  padding-left: 40px;
+  height: 100%;
+}
+.sp .descript_house_demo .descript_content .area {
+  font-family: "SFU Futura";
+  font-weight: 300;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+  .sp .right-img {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 0;
+  }
+}
+.descript_house_demo .descript_content .square_meter {
+  font-family: "SFU Futura";
+  font-weight: 300;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.sp .descript_house_demo .descript_content .square_meter strong {
+  font-family: "SFU Futura";
+  font-weight: bold;
+  color: #fff;
+  font-size: 25px;
+}
+.sp .descript_house_demo .descript_content .scale {
+  font-family: "SFU Futura";
+  font-weight: 300;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* end san pham */
+/* qui ho·∫°ch */
+#quihoach {
+  padding-top: 80px;
+}
+
+.quihoach_feature {
+  background-color: #c7daab;
+}
+
+.quihoach-features-container {
+  position: relative;
+  padding-left: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.image-with-caption {
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+}
+.image-with-caption img.image-with-caption_link {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+}
+
+.quihoach-features__features {
+  position: absolute;
+  left: 0;
+  background: #10768a;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  width: 450px;
+  top: 130px;
+  border-radius: 5px;
+}
+
+.note-quihoach {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  width: 380px;
+  padding: 2.5rem 0 2.5rem 2rem;
+  font-size: 13px;
+}
+
+.quihoach_fontstyle1 {
+  color: #FFF;
+  font-size: 60px;
+  font-family: "MTD Adventures Unlimited Script";
+  font-weight: bold;
+  font-style: italic;
+}
+
+.quihoach_fontstyle2 {
+  color: #fff;
+  font-size: 30px;
+  font-family: "SFU Futura";
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.qh_sub_content {
+  font-family: "SFU Futura";
+  font-weight: 200;
+  color: #fff;
+  font-size: 16px;
+  text-align: justify;
+}
+
+@media (max-width: 1380px) {
+  .quihoach-features__features {
+    top: 50px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .quihoach-features-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    display: block;
+    padding-left: 0 !important;
+  }
+
+  .quihoach-features__features {
+    position: relative;
+    width: 90%;
+    margin: -170px auto 170px auto;
+  }
+
+  .note-quihoach {
+    position: unset;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 0;
+  }
+}
+/* end qui ho·∫°ch */
+/* tien do - tin tuc */
+#tt {
+  padding: 120px 0 70px 0;
+}
+#tt .row{
+  width:  100%;
+}
+#tt .heading h2 {
+  margin-left: -180px;
+}
+#tt .heading h3 {
+  margin-top: 65px;
+  display: inline-block;
+}
+
+.img_tt {
+  background: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#tt .text {
+  padding: 0 30px 30px 30px;
+}
+#tt span.fontstyle1 {
+  color: #10768a;
+  font-family: "SFU Futura";
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#tt h3.fontstyle2 {
+  color: #166379;
+  font-size: 30px;
+  font-family: "SFU Futura";
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+#tt span.date_tt {
+  color: #10768a;
+  font-family: "SFU Futura";
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#tt h3.title_tt {
+  color: #166379;
+  font-size: 18px;
+  font-family: "SFUFuturaBook";
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 25px;
+}
+#tt .news_tt {
+  margin-top: 10px;
+}
+#tt p.subtitle_tt {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+#tt .image {
+  overflow: hidden;
+  padding: 30px 30px 0 30px;
+}
+
+.pagination_td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tt_pagination {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #d6d6d6;
+  color: #666666;
+  text-align: center;
+  font-size: 14px;
+  font-family: "SFUFuturaBook";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5px;
+}
+.tt_pagination.active {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #10768a;
+  color: #10768a;
+  text-align: center;
+  font-size: 14px;
+  font-family: "SFUFuturaBook";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1199.98px) {
+  #tt {
+    padding: 80px 0;
+  }
+  #tt .image {
+    padding: 0;
+  }
+  #tt .text {
+    padding: 0 5px 30px 5px;
+  }
+}
+
+
+/* Chi tiết tinh tức */
+.tintuc_chitiet{
+  padding: 0 50px;
+}
+@media(max-width:1199.98px){
+  .tintuc_chitiet{
+    padding: 0;
+  }
+}
+.tintuc_chitiet .title-tt-chitiet{
+  color: #166379;
+  font-size: 25px;
+  font-family: "SFUFuturaBook";
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 25px;
+}
+.tintuc_chitiet .date_tt_chitiet{
+  color: #10768a;
+  font-family: "SFU Futura";
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 0;
+  display: flex;
+}
+.tintuc_chitiet .subtitle_tt_chitiet{
+  color: #212121;
+  font-family: "SFUFuturaBook";
+  font-size: 20px;
+  padding: 10px 0;
+  display: flex;
+  font-weight: 400;
+}
+.tintuc_chitiet img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.tintuc_chitiet p.tintuc_chitiet_paragraph{
+  font-size: 16px;
+  color: #333333;
+  font-weight: 300;
+  font-family: "SFU Futura";
+}
+.tintuc_chitiet .name_author{
+  color: #212121;
+  font-family: "SFUFuturaBook";
+  font-size: 20px;
+  padding: 10px 0;
+  display: flex;
+  font-weight: 400;
+  float: right;
+}
+/* End Chi tiết tinh tức */
+
+/* Tiện ích */
+.tienich #section6{
+  padding: 120px 0 0 0;
+}
+.tienich-nl {
+  background: #FFFFFF;
+  position: relative;
+}
+.tienich-nl .owl-nav button.owl-next {
+  background: url("../img/arrow_right.png") no-repeat !important;
+  width: 48px;
+  height: 44px;
+  position: absolute;
+  bottom: 315px;
+  right: 20%;
+  text-indent: -9999px;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot{
+  border: #166379;
+}
+.tienich-nl .owl-nav .owl-prev {
+  background: url("../img/arrow_left.png") no-repeat !important;
+  width: 49px;
+  height: 45px;
+  position: absolute;
+  bottom: 315px;
+  left: 17%;
+  text-indent: -9999px;
+}
+.tienich-nl .owl-item {
+  padding-bottom: 80px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.tienich-nl .item .img {
+  position: relative;
+  border: 3px solid #10768a;
+  border-radius: 8px;
+}
+.tienich-nl .item .img::before {
+  content: "";
+  background: rgba(16, 118, 138, 0.5);
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tienich-nl .item .img img {
+  border-radius: 5px;
+}
+.tienich-nl .item p {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #10768a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-right: 50px;
+  height: 70px;
+  overflow: hidden;
+  text-transform: uppercase;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "SFUFuturaBook";
+  font-weight: 500;
+}
+.tienich-nl .sub_tienich{
+  margin: 20px auto;
+  width: 75%;
+  text-align: center;
+}
+
+/* End tiện ích */
+
+/* Thu viện */
+.thuvien_nl{
+  padding-bottom: 50px;
+}
+.thuvien_nl img.thumb_dowload{
+  max-width: 100%;
+  height: 100%;
+  padding: 20px 30px 15px 30px;
+}
+.bottom_content_tv{
+  padding: 0 30px;
+}
+.left-bottom-thuvien{
+  border-right: 1px solid #dadada;
+}
+.icon-download{
+  width: 60px !important;
+  height: 62px !important;
+}
+.title_download_tv{
+  color: #166379;
+  font-size: 18px;
+  font-family: "SFUFuturaBook";
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 30px;
+  padding-left: 35px;
+}
+
+/* End  Thu viện */
+#tt.section1{
+  position: relative;
+}
+#tt.section1 .container{
+  position:relative; 
+  z-index: 1;
+}
+.gallery .item{
+  position: relative;
+  margin: 15px;
+  overflow: hidden;
+}
+.gallery .item  .hover{
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  position: absolute;
+  top: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  left: 0;
+  right: 0; 
+  margin: 5px;
+  background: rgba(35, 103, 120, 0.6);
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.gallery .item  .hover .xt1{
+  display: inline-flex;
+}
+.gallery .item  .hover .inner{
+  text-align: center;
+}
+.gallery .image{
+  padding: 0 !important;
+}
+.gallery .item  .hover h4{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.gallery .item:hover .hover{
+  top: 0;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
 
 @media (min-width: 1280px) {
   #header {
@@ -1582,17 +2164,17 @@ ul {
   #position1 h3 {
     text-align: left !important;
   }
-  #position1 .bg::before {
-    height: 30%;
-    width: 100%;
-    top: 70%;
-    bottom: 0;
+  #position1 .bg::before, #tt .bg::before  {
+    height: 30% !important;
+    width: 100% !important;
+    top: 70% !important;
+    bottom: 0 !important;
   }
-  #position1 .bg::after {
-    width: 100%;
-    height: 70%;
-    left: 0;
-    top: 0;
+  #position1 .bg::after, #tt .bg::after {
+    width: 100% !important;
+    height: 70% !important;
+    left: 0 !important;
+    top: 0 !important;
   }
 
   #position2 .item {
@@ -1600,6 +2182,24 @@ ul {
   }
   #position2 .bg + .row {
     margin: 30px 0;
+  }
+  .title_download_tv{
+    padding-left: 0 !important;
+  }
+  .left-bottom-thuvien{
+    border-right: none !important;
+  }
+  .left-bottom-thuvien a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .icon-download{
+    margin: 0 auto;
+    display: inline-flex;
+  }
+  #tt.section1 .tt_pagination{
+    color: #fff;
   }
 }
 @media (max-width: 414px) {
@@ -1618,531 +2218,3 @@ ul {
     margin: 30px 0;
   }
 }
-/* san pham */
-.sanpham_nl {
-  padding: 110px 0 50px 0 !important;
-}
-
-h2.fontstyle1_sp {
-  color: #2eabae;
-  font-size: 50px;
-  font-family: "MTD Adventures Unlimited Script";
-  font-style: italic;
-  margin-left: 0 !important;
-}
-
-h3.fontstyle2_sp {
-  color: #166379;
-  font-size: 30px;
-  font-family: "SFU Futura";
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase;
-  margin-top: 55px;
-  margin-bottom: 20px;
-}
-
-.sp {
-  margin-bottom: 30px;
-}
-.sp .house_demo img {
-  max-width: 100%;
-  height: 100%;
-}
-
-.bg-border {
-  border-radius: 5px;
-}
-
-.sp .descript_house_demo {
-  background: #10768a;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 25px;
-}
-.sp .descript_house_demo .item1 {
-  border-right: 1px solid #75a8b2;
-}
-.sp .descript_house_demo .item1:last-child {
-  border-right: none;
-}
-.sp .right-img {
-  padding-left: 40px;
-  height: 100%;
-}
-.sp .descript_house_demo .descript_content .area {
-  font-family: "SFU Futura";
-  font-weight: 300;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-}
-
-@media (max-width: 1199.98px) {
-  .sp .right-img {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 0;
-  }
-}
-.descript_house_demo .descript_content .square_meter {
-  font-family: "SFU Futura";
-  font-weight: 300;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-}
-
-.sp .descript_house_demo .descript_content .square_meter strong {
-  font-family: "SFU Futura";
-  font-weight: bold;
-  color: #fff;
-  font-size: 25px;
-}
-.sp .descript_house_demo .descript_content .scale {
-  font-family: "SFU Futura";
-  font-weight: 300;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* end san pham */
-/* qui ho·∫°ch */
-#quihoach {
-  padding-top: 80px;
-}
-
-.quihoach_feature {
-  background-color: #c7daab;
-}
-
-.quihoach-features-container {
-  position: relative;
-  padding-left: 25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.image-with-caption {
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  overflow: hidden;
-}
-.image-with-caption img.image-with-caption_link {
-  display: block;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  width: 100%;
-}
-
-.quihoach-features__features {
-  position: absolute;
-  left: 0;
-  background: #10768a;
-  padding: 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #fff;
-  width: 450px;
-  top: 130px;
-  border-radius: 5px;
-}
-
-.note-quihoach {
-  position: absolute;
-  left: 0;
-  bottom: 15px;
-  width: 380px;
-  padding: 2.5rem 0 2.5rem 2rem;
-  font-size: 13px;
-}
-
-.quihoach_fontstyle1 {
-  color: #FFF;
-  font-size: 60px;
-  font-family: "MTD Adventures Unlimited Script";
-  font-weight: bold;
-  font-style: italic;
-}
-
-.quihoach_fontstyle2 {
-  color: #fff;
-  font-size: 30px;
-  font-family: "SFU Futura";
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase;
-}
-
-.qh_sub_content {
-  font-family: "SFU Futura";
-  font-weight: 200;
-  color: #fff;
-  font-size: 16px;
-  text-align: justify;
-}
-
-@media (max-width: 1380px) {
-  .quihoach-features__features {
-    top: 50px;
-  }
-}
-@media (max-width: 1199.98px) {
-  .quihoach-features-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    display: block;
-    padding-left: 0 !important;
-  }
-
-  .quihoach-features__features {
-    position: relative;
-    width: 90%;
-    margin: -170px auto 170px auto;
-  }
-
-  .note-quihoach {
-    position: unset;
-    margin: 0 auto;
-    width: 90%;
-    padding-top: 0;
-  }
-}
-/* end qui ho·∫°ch */
-/* tien do - tin tuc */
-#tt {
-  padding: 120px 0 70px 0;
-}
-#tt .heading h2 {
-  margin-left: -180px;
-}
-#tt .heading h3 {
-  margin-top: 65px;
-  display: inline-block;
-}
-
-.img_tt {
-  background: #fff;
-  padding: 5px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-#tt .text {
-  padding: 0 30px 30px 30px;
-}
-#tt span.fontstyle1 {
-  color: #10768a;
-  font-family: "SFU Futura";
-  font-weight: 300;
-  font-size: 14px;
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#tt h3.fontstyle2 {
-  color: #166379;
-  font-size: 30px;
-  font-family: "SFU Futura";
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase;
-}
-#tt span.date_tt {
-  color: #10768a;
-  font-family: "SFU Futura";
-  font-weight: 300;
-  font-size: 14px;
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#tt h3.title_tt {
-  color: #166379;
-  font-size: 18px;
-  font-family: "SFUFuturaBook";
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 25px;
-}
-#tt .news_tt {
-  margin-top: 10px;
-}
-#tt p.subtitle_tt {
-  font-size: 16px;
-  color: #333333;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 4;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-#tt .image {
-  overflow: hidden;
-  padding: 30px 30px 0 30px;
-}
-
-.pagination_td {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.tt_pagination {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #d6d6d6;
-  color: #666666;
-  text-align: center;
-  font-size: 14px;
-  font-family: "SFUFuturaBook";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 5px;
-}
-.tt_pagination.active {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #10768a;
-  color: #10768a;
-  text-align: center;
-  font-size: 14px;
-  font-family: "SFUFuturaBook";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (max-width: 1199.98px) {
-  #tt {
-    padding: 80px 0;
-  }
-  #tt .image {
-    padding: 0;
-  }
-  #tt .text {
-    padding: 0 5px 30px 5px;
-  }
-}
-
-
-/* Chi tiết tinh tức */
-.tintuc_chitiet{
-  padding: 0 50px;
-}
-@media(max-width:1199.98px){
-  .tintuc_chitiet{
-    padding: 0;
-  }
-}
-.tintuc_chitiet .title-tt-chitiet{
-  color: #166379;
-  font-size: 25px;
-  font-family: "SFUFuturaBook";
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 25px;
-}
-.tintuc_chitiet .date_tt_chitiet{
-  color: #10768a;
-  font-family: "SFU Futura";
-  font-weight: 300;
-  font-size: 14px;
-  padding: 10px 0;
-  display: flex;
-}
-.tintuc_chitiet .subtitle_tt_chitiet{
-  color: #212121;
-  font-family: "SFUFuturaBook";
-  font-size: 20px;
-  padding: 10px 0;
-  display: flex;
-  font-weight: 400;
-}
-.tintuc_chitiet img {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-.tintuc_chitiet p.tintuc_chitiet_paragraph{
-  font-size: 16px;
-  color: #333333;
-  font-weight: 300;
-  font-family: "SFU Futura";
-}
-.tintuc_chitiet .name_author{
-  color: #212121;
-  font-family: "SFUFuturaBook";
-  font-size: 20px;
-  padding: 10px 0;
-  display: flex;
-  font-weight: 400;
-  float: right;
-}
-/* End Chi tiết tinh tức */
-
-/* Tiện ích */
-.tienich #section6{
-  padding: 120px 0 0 0;
-}
-.tienich-nl {
-  background: #FFFFFF;
-  position: relative;
-}
-.tienich-nl .owl-nav button.owl-next {
-  background: url("../img/arrow_right.png") no-repeat !important;
-  width: 48px;
-  height: 44px;
-  position: absolute;
-  bottom: 315px;
-  right: 20%;
-  text-indent: -9999px;
-}
-.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot{
-  border: #166379;
-}
-.tienich-nl .owl-nav .owl-prev {
-  background: url("../img/arrow_left.png") no-repeat !important;
-  width: 49px;
-  height: 45px;
-  position: absolute;
-  bottom: 315px;
-  left: 17%;
-  text-indent: -9999px;
-}
-.tienich-nl .owl-item {
-  padding-bottom: 80px;
-  padding-right: 30px;
-  position: relative;
-}
-
-.tienich-nl .item .img {
-  position: relative;
-  border: 3px solid #10768a;
-  border-radius: 8px;
-}
-.tienich-nl .item .img::before {
-  content: "";
-  background: rgba(16, 118, 138, 0.5);
-  border-radius: 5px;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.tienich-nl .item .img img {
-  border-radius: 5px;
-}
-.tienich-nl .item p {
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  color: #10768a;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-right: 50px;
-  height: 70px;
-  overflow: hidden;
-  text-transform: uppercase;
-  width: 80%;
-  margin: 0 auto;
-  font-family: "SFUFuturaBook";
-  font-weight: 500;
-}
-.tienich-nl .sub_tienich{
-  margin: 20px auto;
-  width: 75%;
-  text-align: center;
-}
-
-/* End tiện ích */
-
-/* Thu viện */
-.thuvien_nl{
-  padding-bottom: 50px;
-}
-.thuvien_nl img.thumb_dowload{
-  max-width: 100%;
-  height: 100%;
-  padding: 20px 30px 15px 30px;
-}
-.bottom_content_tv{
-  padding: 0 30px;
-}
-.left-bottom-thuvien{
-  border-right: 1px solid #dadada;
-}
-.icon-download{
-  width: 60px !important;
-  height: 62px !important;
-}
-.title_download_tv{
-  color: #166379;
-  font-size: 18px;
-  font-family: "SFUFuturaBook";
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 30px;
-  padding-left: 35px;
-}
-
-/* End  Thu viện */
-
-
