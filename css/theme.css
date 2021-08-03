@@ -1568,6 +1568,10 @@ h3.fontstyle2_sp {
   border: 3px solid #10768a;
   border-radius: 8px;
 }
+.tienich-nl .owl-item.center .item .img::before{
+  display: none;
+}
+
 .tienich-nl .item .img::before {
   content: "";
   background: rgba(16, 118, 138, 0.5);
@@ -2200,6 +2204,12 @@ h3.fontstyle2_sp {
   }
   #tt.section1 .tt_pagination{
     color: #fff;
+  }
+  .tienich-nl .owl-item{
+    padding: 0 5px 80px 5px ;
+  }
+  .tienich-nl .item p{
+    padding-right: 0;
   }
 }
 @media (max-width: 414px) {
