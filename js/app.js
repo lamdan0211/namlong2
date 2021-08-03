@@ -1,6 +1,6 @@
 (function($) {
-  var video = $(".tienich-nl .content");
-  video.owlCarousel({
+  var tienich = $(".tienich-nl .content");
+  tienich.owlCarousel({
       center: true,
       items: 2,
       loop: true,
