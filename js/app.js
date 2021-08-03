@@ -73,6 +73,11 @@
         $("#section6 ._right").addClass("go");
         $("#section6 ._left").addClass("go");
       }
+      if($('body').hasClass('contact'))
+      {
+        $("#contact1 ._right").addClass("go");
+        $("#contact1 ._left").addClass("go");
+      }
       
     });
   }
