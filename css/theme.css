@@ -830,6 +830,14 @@ body {
   color: #fff;
 }
 
+#contact1 {
+  margin: 120px 0;
+  position: relative;
+}
+#contact1 .home_mouse {
+  bottom: -100px;
+}
+
 #top {
   -webkit-transition: right 2s;
   transition: right 2s;
