@@ -113,7 +113,53 @@
           $("#position2 ._left").addClass("go");
         }
       }
-      
+      if($('body').hasClass('quihoach'))
+      {
+        var section2 = $("#quihoach").position().top - top;
+        if(x > section2){
+          $("#quihoach ._right").addClass("go");
+          $("#quihoach ._left").addClass("go");
+        }
+      }
+      if($('body').hasClass('sanpham'))
+      {
+        var section2 = $("#section5").position().top - top;
+        var section3 = $("#sp1").position().top - top;
+        var section4 = $("#sp2").position().top - top;
+        var section5 = $("#sp3").position().top - top;
+        var section6 = $("#sp4").position().top - top;
+        var section7 = $("#sp5").position().top - top;
+        var section8 = $("#sp6").position().top - top;
+        if(x > section2){
+          $("#section5 ._right").addClass("go");
+          $("#section5 ._left").addClass("go");
+        }
+        if(x > section3){
+          $("#sp1 ._right").addClass("go");
+          $("#sp1 ._left").addClass("go");
+        }
+        if(x > section4){
+          $("#sp2 ._right").addClass("go");
+          $("#sp2 ._left").addClass("go");
+        }
+        if(x > section5){
+          $("#sp3 ._right").addClass("go");
+          $("#sp3 ._left").addClass("go");
+        }
+        if(x > section6){
+          $("#sp4 ._right").addClass("go");
+          $("#sp4 ._left").addClass("go");
+        }
+        if(x > section7){
+          $("#sp5 ._right").addClass("go");
+          $("#sp5 ._left").addClass("go");
+        }
+        if(x > section8){
+          $("#sp6 ._right").addClass("go");
+          $("#sp6 ._left").addClass("go");
+        }
+
+      }
     });
   }
   $("#section6 .tab li").on('click',function(){
