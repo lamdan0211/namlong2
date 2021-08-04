@@ -1703,11 +1703,23 @@ h3.fontstyle2_sp {
     padding: 0 30px;
     width: 100%;
     z-index: 100;
+   
+  }
+  #header::before{
+    -webkit-transition: top 0.1s ease-out;
+    transition: top 0.1s ease-out;
+    background: #daf6f7;
+    position: absolute;
+    top: -100%;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
   }
   #header.bg-header {
     background: #daf6f7;
   }
-  #header.bg-header img {
+  #header .navbar-brand img {
     width: 200px;
   }
   #header .navbar.navbar-light .navbar-nav .nav-link {
@@ -1734,8 +1746,11 @@ h3.fontstyle2_sp {
         -ms-flex-positive: unset;
             flex-grow: unset;
   }
-  #header.active {
+  #header.active::before {
     background: #daf6f7;
+    -webkit-transition: top 0.25s ease-out;
+    transition: top 0.25s ease-out;
+    top: 0;
   }
   #header.active .navbar-brand img {
     width: 200px;
