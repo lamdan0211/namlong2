@@ -68,6 +68,9 @@
         $("._left").removeClass("go");
       }
     }
+    else{
+      $("#header").addClass("active animate__animated animate__fadeInDown delay-250 go");
+    }
     // Page Contact
     if($('body').hasClass('contact'))
     { 
@@ -122,6 +125,118 @@
         $("._left").removeClass("go");
       }
     }
+    // Page Quy hoach
+    if($('body').hasClass('quihoach'))
+      {
+        $("#quihoach ._right").addClass("go");
+        $("#quihoach ._left").addClass("go");
+      }
+    // Page san pham
+    if($('body').hasClass('sanpham'))
+      {
+        var section2 = $("#section5").position().top - top;
+        var section3 = $("#sp1").position().top - top;
+        var section4 = $("#sp2").position().top - top;
+        var section5 = $("#sp3").position().top - top;
+        var section6 = $("#sp4").position().top - top;
+        var section7 = $("#sp5").position().top - top;
+        var section8 = $("#sp6").position().top - top;
+        if(section2 = section2){
+          $("#section5 ._right").addClass("go");
+          $("#section5 ._left").addClass("go");
+        }
+        else if(section3 > section2){
+          $("#sp1 ._right").addClass("go");
+          $("#sp1 ._left").addClass("go");
+        }
+        else if(section4 > section3){
+          $("#sp2 ._right").addClass("go");
+          $("#sp2 ._left").addClass("go");
+        }
+        else if(section5 > section4){
+          $("#sp3 ._right").addClass("go");
+          $("#sp3 ._left").addClass("go");
+        }
+        else if(section6 > section5){
+          $("#sp4 ._right").addClass("go");
+          $("#sp4 ._left").addClass("go");
+        }
+        else if(section7 > section6){
+          $("#sp5 ._right").addClass("go");
+          $("#sp5 ._left").addClass("go");
+        }
+        else if(section8 > section7){
+          $("#sp6 ._right").addClass("go");
+          $("#sp6 ._left").addClass("go");
+        }
+        else{
+          $("._right").removeClass("go");
+          $("._left").removeClass("go");
+        }
+      }
+    // Page thu vien
+    if($('body').hasClass('thuvien'))
+      {
+        var section2 = $(".s0").position().top - top;
+        var section3 = $(".s1").position().top - top;
+        var section4 = $(".s2").position().top - top;
+        if(section2 = section2){
+          $(".s0 ._right").addClass("go");
+          $(".s0 ._left").addClass("go");
+        }
+        else if( section3  > section2){
+          $(".s1 ._right").addClass("go");
+          $(".s1 ._left").addClass("go");
+        }
+        else if(section4 > section3){
+          $(".s2 ._right").addClass("go");
+          $(".s2 ._left").addClass("go");
+        }
+        else{
+          $("._right").removeClass("go");
+          $("._left").removeClass("go");
+        }
+       
+      }
+    // Page Tien do
+    if($('body').hasClass('tiendo'))
+    {
+      $("#tt ._right").addClass("go");
+      $("#tt ._left").addClass("go"); 
+    }
+    // Page Tien ich
+    if($('body').hasClass('tienich'))
+      {
+       
+          $("#section6 ._right").addClass("go");
+          $("#section6 ._left").addClass("go");
+        }
+    // Page tin tức
+    if($('body').hasClass('tintuc'))
+      {
+        
+          $("#tt ._right").addClass("go");
+          $("#tt ._left").addClass("go");
+        
+      }
+    // Page vi tri
+    if($('body').hasClass('position'))
+      {
+        var section2 = $("#position1").position().top - top;
+        var section3 = $("#position2").position().top - top;
+        if(section2 = section2){
+          $("#position1 ._right").addClass("go");
+          $("#position1 ._left").addClass("go");
+        }
+        else if(section3 > section2 ){
+          $("#position2 ._right").addClass("go");
+          $("#position2 ._left").addClass("go");
+        }
+        else{
+          $("._right").removeClass("go");
+          $("._left").removeClass("go");
+        }
+      }
     // window scroll
     $(window).scroll(function() {
       var x = $(this).scrollTop();
