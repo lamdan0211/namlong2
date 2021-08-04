@@ -16,8 +16,113 @@
   var top = 200;
   if(width > 1264)
   {
-    $("#section1").css("height", height);
-    $("#section4").css("height", height);
+    // Page Home
+    if($("body").hasClass("home")){
+      $("#section1").css("height", height);
+      $("#section4").css("height", height); 
+      var section1 = $("#section1").position().top - top;
+      var section2 = $("#section2").position().top - top;
+      var section3 = $("#section3").position().top - top;
+      var section4 = $("#section4").position().top - top;
+      var section5 = $("#section5").position().top - top;
+      var section6 = $("#section6").position().top - top;
+      var section7 = $("#section7").position().top - top;
+      var section8 = $("#section8").position().top - top;
+      if(section2 > section1){
+        $("#section2 ._right").addClass("go");
+        $("#section2 ._left").addClass("go");
+      }
+      else if ( section3 > section2)
+      {
+        $("#section3 ._right").addClass("go");
+        $("#section3 ._left").addClass("go");
+      }
+      else if ( section4 > section3)
+      {
+        $("#section4 ._right").addClass("go");
+        $("#section4 ._left").addClass("go");
+      }
+      else if ( section5 > section4)
+      {
+        $("#section5 ._right").addClass("go");
+        $("#section5 ._left").addClass("go");
+      }
+      else if ( section6 > section5)
+      {
+        $("#section6 ._right").addClass("go");
+        $("#section6 ._left").addClass("go");
+      }
+      else if ( section7 > section5)
+      {
+        $("#section7 ._right").addClass("go");
+        $("#section7 ._left").addClass("go");
+      }
+      else if ( section8 > section5)
+      {
+        $("#section8 ._right").addClass("go");
+        $("#section8 ._left").addClass("go");
+      }
+      else
+      {
+        $("._right").removeClass("go");
+        $("._left").removeClass("go");
+      }
+    }
+    // Page Contact
+    if($('body').hasClass('contact'))
+    { 
+      $("#contact1 ._right").addClass("go");
+      $("#contact1 ._left").addClass("go");
+    }
+    // Page Intro
+    if($('body').hasClass('intro'))
+      {
+        var section2 = $("#intro1").position().top - top;
+        var section3 = $("#intro2").position().top - top;
+        var section4 = $("#intro3").position().top - top;
+        var section5 = $("#intro4").position().top - top;
+        if(section2 = section2){
+          $("#intro1 ._right").addClass("go");
+          $("#intro1 ._left").addClass("go");
+        }
+        else if(section3 > section2){
+          $("#intro2 ._right").addClass("go");
+          $("#intro2 ._left").addClass("go");
+        }
+        else if(section4 > section3){
+          $("#intro3 ._right").addClass("go");
+          $("#intro3 ._left").addClass("go");
+        }
+        else if(section5 > section4){
+          $("#intro4 ._right").addClass("go");
+          $("#intro4 ._left").addClass("go");
+        }
+        else
+        {
+          $("._right").removeClass("go");
+          $("._left").removeClass("go");
+        }
+      }
+    // Page Position
+    if($('body').hasClass('position'))
+    {
+      var section2 = $("#position1").position().top - top;
+      var section3 = $("#position2").position().top - top;
+      if(section2 = section2 ){
+        $("#position1 ._right").addClass("go");
+        $("#position1 ._left").addClass("go");
+      }
+      else if(section3 > section2){
+        $("#position2 ._right").addClass("go");
+        $("#position2 ._left").addClass("go");
+      }
+      else
+      {
+        $("._right").removeClass("go");
+        $("._left").removeClass("go");
+      }
+    }
+    // window scroll
     $(window).scroll(function() {
       var x = $(this).scrollTop();
       if($('body').hasClass('home')){       
@@ -29,7 +134,7 @@
         var section7 = $("#section7").position().top - top;
         var section8 = $("#section8").position().top - top;
         if(x > section2){
-          $("#header").addClass("active");
+          $("#header").addClass("active animate__animated animate__fadeInDown delay-250 go");
           $("#section2 ._right").addClass("go");
           $("#section2 ._left").addClass("go");
         }
