@@ -1,7 +1,8 @@
 @charset "UTF-8";
 body {
-  font-family: "SFU Futura", sans-serif;
+  font-family: "SFU Futura";
   font-style: normal;
+  
 }
 
 .home_mouse {
@@ -349,10 +350,12 @@ body {
   margin-bottom: 10px;
 }
 #section8 .row .item h3 {
-  font-weight: bold;
   color: #166379;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 17px;
+  font-family: "SFUFuturaBook";
+  margin-top: 15px;
+  line-height: 25px;
 }
 #section8 .row .item span {
   font-weight: 300;
@@ -363,7 +366,7 @@ body {
 }
 #section8 .row .item p {
   font-size: 16px;
-  color: #333333;
+  color: #555;
   font-weight: 300;
 }
 #section8 .xt2 {
@@ -390,16 +393,16 @@ body {
 #footer .box p.title {
   font-size: 16px;
   font-weight: bold;
-  color: #333333;
+  color: #555;
 }
 #footer .box p {
   font-size: 16px;
   font-weight: 300;
-  color: #333333;
+  color: #555555;
   margin-bottom: 5px;
 }
 #footer .box p a {
-  color: #333333;
+  color: #555555;
 }
 #footer .ctright .box2 {
   margin: 10px 0 0 0;
@@ -422,6 +425,7 @@ body {
 #footer .ctright .box2 p span {
   font-weight: 300;
   display: block;
+  color: #555555;
 }
 #footer .ctright .social {
   margin-bottom: 10px;
@@ -907,7 +911,7 @@ body {
 
 .heading2 p.text {
   font-size: 20px;
-  color: #333333;
+  color: #555555;
   font-weight: 300;
   margin-top: 30px;
 }
@@ -992,14 +996,14 @@ ul {
 .fontstyle3 {
   font-family: "SFU Futura";
   font-weight: 300;
-  color: #333333;
+  color: #555555;
   font-size: 16px;
 }
 
 .fontstyle4 {
   font-family: "SFU Futura";
   font-weight: bold;
-  color: #333333;
+  color: #555555;
 }
 
 .fontstyle5 {
@@ -1340,7 +1344,12 @@ h3.fontstyle2_sp {
   margin-top: 65px;
   display: inline-block;
 }
-
+.style_tt{
+  margin-left: -140px;
+}
+.style_tt2{
+  margin-right: -100px
+}
 .img_tt {
   background: #fff;
   padding: 5px;
@@ -1383,7 +1392,6 @@ h3.fontstyle2_sp {
   color: #166379;
   font-size: 18px;
   font-family: "SFUFuturaBook";
-  font-style: normal;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 25px;
@@ -1393,7 +1401,7 @@ h3.fontstyle2_sp {
 }
 #tt p.subtitle_tt {
   font-size: 16px;
-  color: #333333;
+  color: #555555;
   font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1513,7 +1521,7 @@ h3.fontstyle2_sp {
 }
 .tintuc_chitiet p.tintuc_chitiet_paragraph{
   font-size: 16px;
-  color: #333333;
+  color: #555555;
   font-weight: 300;
   font-family: "SFU Futura";
 }
@@ -1617,7 +1625,6 @@ h3.fontstyle2_sp {
 }
 .thuvien_nl img.thumb_dowload{
   max-width: 100%;
-  height: 100%;
   padding: 20px 30px 15px 30px;
 }
 .bottom_content_tv{
@@ -1625,6 +1632,12 @@ h3.fontstyle2_sp {
 }
 .left-bottom-thuvien{
   border-right: 1px solid #dadada;
+}
+.ttv-nl{
+  font-weight: 300;
+  font-size: 20px;
+  color: #166379;
+  margin-top: 30px;
 }
 .icon-download{
   width: 60px !important;
@@ -2228,7 +2241,7 @@ h3.fontstyle2_sp {
     padding-right: 0;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   #section4 .text h2 {
     left: 0;
     right: auto;
@@ -2242,5 +2255,114 @@ h3.fontstyle2_sp {
     background: url("../img/bgpositionmobile.png") no-repeat top center;
     padding: 120px 0 0 0;
     margin: 30px 0;
+  }
+  #top{
+    right: 15px;
+    bottom: 15px;
+  }
+  .home_mouse{
+    display: none;
+  }
+  #contact1{
+    margin: 80px 0 40px 0;
+  }
+  .fontstyle1{
+    text-align: center;
+    font-size: 70px !important;
+  }
+  .fontstyle2{
+    text-align: center;
+    margin: 0;
+    margin-top: -5px;
+  }
+  .style_tt, .style_tt2{
+    margin: 0;
+  }
+  #tt .heading h2{
+    text-align: center;
+    margin: 0;
+  }
+  .title_download_tv{
+    margin-top: 10px;
+  }
+  .tienich-nl .sub_tienich{
+    width: 90%;
+  }
+  .tienich-nl .owl-nav button.owl-next{
+    bottom: 240px;
+    right: 3%;
+  }
+  .tienich-nl .owl-nav .owl-prev{
+    bottom: 240px;
+    left: 3%;
+  }
+  .quihoach-features__features{
+    margin: 0px auto 90px auto;
+  }
+  .note-quihoach{
+    padding: 0 2rem 2rem 2rem;
+    width: 100%;
+  }
+  #footer .ctright .width100{
+    width: 50%;
+  }
+  .textbg::before{
+    border-radius: 5px;
+  }
+  #section5 .row.bg .item{
+    border-radius: 5px;
+  }
+  .quihoach_fontstyle2{
+    font-size: 25px;
+  }
+  #intro4 .ct .item.item4{
+    margin-top: 30px;
+  }
+  #intro1 h3{
+    text-align: center !important;
+  }
+  .gt_namlong{
+    padding: 20px 0;
+  }
+  #footer .form h4{
+    font-size: 20px;
+  }
+  #intro1 .row.ct .item .img img{
+    width: 50%;
+  }
+  #intro1 .row.ct .item{
+    height: auto;
+  }
+  #intro1 .item .img{
+    width: 80px;
+  }
+  #intro1 .row.ct .item p{
+    padding-left: 10px;
+  }
+  #section3 .ctright{
+    padding-top: 30px;
+  }
+  #section5 .heading h2{
+    margin: 0;
+  }
+  #section5{
+    padding: 120px 0 20px 0;
+  }
+  #section7 .ctleft h3{
+    margin-left: 0;
+    text-align: center !important;
+  }
+  .heading h3{
+    margin-top: 20px;
+  }
+  #section8{
+    margin: 50px 0;
+  }
+  #section7{
+    margin-top: 50px;
+  }
+  #section8 .ct .owl-dots {
+    margin-bottom: 40px;
+    margin-top: -60px;
   }
 }

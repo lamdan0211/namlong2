@@ -67,6 +67,12 @@
 	top: -12px;
 	right: -12px;
 }
+@media(max-width:500px){
+  .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    right: 0;
+    top: -45px;
+  }
+}
 .mfp-img{
 	border: 5px solid #FFF;
 	border-radius: 5px;
@@ -134,11 +140,12 @@
 	display: none;
 }
 .mfp-bottom-bar .mfp-title{
-	font-weight: bold;
-	font-size: 30px;
 	color: #fff;
 	text-transform: uppercase;
-	text-align: center;
+  text-align: center;
+  font-size: 18px;
+  font-family: "SFUFuturaBook";
+  letter-spacing: 1px;
 }
 button.mfp-close,
 button.mfp-arrow {
