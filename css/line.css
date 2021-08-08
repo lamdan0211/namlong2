@@ -1,0 +1,93 @@
+
+@keyframes kenburns_custom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes StrokeLine {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
+}
+@keyframes StrokeLine {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
+}
+
+@-webkit-keyframes rotate{
+  from{-webkit-transform:rotate(0);transform:rotate(0)}
+  to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}
+@keyframes rotate{
+  from{-webkit-transform:rotate(0);transform:rotate(0)}
+  to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}
+
+
+.location .thumbnail{float: right;}
+
+/*section-image */
+.location .section-image-wrapper{width: 100%;  height: 0px; padding-top: calc(891/1317*100%);   overflow: hidden;position: relative;}
+.location .section-image{height: 891px; width: 1317px; position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -445.5px 0 0 -658.5px;
+}
+
+.location .section-image img{width: 100%; }
+.location .section-image svg{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin-top: 41px;
+}
+.location .section-image svg#Layer_1 .st0 {
+    fill: none;
+    stroke-miterlimit: 8;
+    stroke-width: 2;
+    stroke-dasharray: 8;
+    stroke-dashoffset: 0;
+    animation: StrokeLine 6s infinite linear;
+    stroke: rgb(151, 38, 38);
+}
+

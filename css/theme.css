@@ -1047,9 +1047,7 @@ ul {
 
 .xt1 {
   background: url("../img/xt1.png") no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
   font-weight: 300;
   color: #fff;
   font-size: 20px;
@@ -1061,12 +1059,16 @@ ul {
   text-transform: uppercase;
   padding: 0 20px;
 }
-
+.xt1:hover {
+  background: none;
+  border: 1px solid #fff ;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-flex;
+}
 .xt2 {
   background: url("../img/xt2.png") no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
   font-weight: 300;
   color: #10768a;
   font-size: 20px;
@@ -1077,6 +1079,13 @@ ul {
           align-items: center;
   text-transform: uppercase;
   padding: 0 20px;
+}
+.xt2:hover {
+  background: none;
+  border: 1px solid #10768a ;
+  border-radius: 50px;
+  color: #10768a;
+  display: inline-flex;
 }
 
 .owl-dots {
