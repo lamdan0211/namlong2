@@ -6,41 +6,39 @@ body {
 }
 
 .home_mouse {
-  width: 30px;
-  height: 45px;
-  border: 2px solid #fff;
-  border-radius: 60px;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 9;
-  cursor: pointer;
-  animation: slideInDown 2s infinite;
-  -webkit-animation: slideInDown 2s infinite;
+	width: 25px;
+	height: 40px;
+	border: 2px solid #fff;
+	border-radius: 60px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9;
+    cursor: pointer;
 }
+.home_mouse::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: wheel 2s infinite;
+}
+
 .home_mouse.style1 {
   border: 2px solid #166379;
 }
 .home_mouse.style1::before {
   background-color: #166379;
 }
-
-.home_mouse::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 1;
-}
-
 @keyframes wheel {
   to {
     opacity: 0;
