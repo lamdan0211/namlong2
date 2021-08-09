@@ -716,8 +716,8 @@ body {
   position: relative;
 }
 #intro4 .ct .item {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background: #fff;
   border-radius: 50%;
   display: -webkit-box;
@@ -731,10 +731,15 @@ body {
           align-items: center;
   position: absolute;
   text-align: center;
+}
+#intro4 .ct .item .inner {
   padding: 30px;
 }
+#intro4 .ct .item .inner img{
+  width: 30px;
+}
 #intro4 .ct .item.item1 {
-  top: -180px;
+  top: -125px;
   left: -40px;
 }
 #intro4 .ct .item.item2 {
@@ -752,11 +757,11 @@ body {
   right: 80px;
 }
 #intro4 .ct .item.item5 {
-  top: -180px;
+  top: -125px;
   right: -40px;
 }
 #intro4 .ct .item h4 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #10768a;
   text-transform: uppercase;
@@ -766,7 +771,7 @@ body {
   margin-bottom: 10px;
 }
 #intro4 .ct .item p {
-  font-size: 16px;
+  font-size: 14px;
   color: #10768a;
   font-weight: 300;
 }
@@ -843,6 +848,7 @@ body {
   position: relative;
   height: 125px;
   margin: 0 5px;
+  cursor: pointer;
 }
 #position2 .item img {
   width: 100%;
@@ -857,6 +863,10 @@ body {
   left: 0;
   text-align: center;
   padding: 20px 0;
+  display: none;
+}
+#position2 .item:hover .hover{
+  display: block;
 }
 #position2 .item .hover p {
   font-size: 16px;
