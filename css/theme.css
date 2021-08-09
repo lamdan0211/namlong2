@@ -231,7 +231,6 @@ body {
 }
 #section6 .tab li a {
   background: #dff0e8;
-  color: #74ba45;
   font-weight: bold;
   font-size: 20px;
   display: block;
@@ -239,14 +238,34 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+#section6 .tab li.style1 a{
+  color: #74ba45;
+}
+#section6 .tab li.style2 a{
+  color: #077841;
+}
+#section6 .tab li.style3 a{
+  color: #ff9026;
+}
+#section6 .tab li.style1.active a
+{
+  background: #74ba45;
+  color: #fff;
+}
+#section6 .tab li.style2.active a
+{
+  background: #077841;
+  color: #fff;
+}
+#section6 .tab li.style3.active a
+{
+  background: #ff9026;
+  color: #fff;
+}
 #section6 .tab li.active {
   background: #dff0e8;
   padding: 5px;
   border-radius: 5px;
-}
-#section6 .tab li.active a {
-  background: #077841;
-  color: #fff;
 }
 #section6 .tab li.active .open {
   display: block;
@@ -261,7 +280,6 @@ body {
 #section6 .tab li.active .open p span {
   width: 25px;
   height: 25px;
-  background: #1b7436;
   border-radius: 50%;
   font-size: 14px;
   color: #fff;
@@ -270,7 +288,24 @@ body {
   line-height: 25px;
   margin-right: 10px;
 }
-
+#section6 .tab li.style1.active .open p span{
+  background: #74ba45;
+}
+#section6 .tab li.style1.active .open p{
+  color: #74ba45;
+}
+#section6 .tab li.style2.active .open p span{
+  background: #077841;
+}
+#section6 .tab li.style2.active .open p{
+  color: #077841;
+}
+#section6 .tab li.style3.active .open p span{
+  background: #ff9026;
+}
+#section6 .tab li.style3.active .open p{
+  color: #ff9026;
+}
 #section7 {
   position: relative;
   position: relative;
@@ -1738,9 +1773,6 @@ h3.fontstyle2_sp {
   #header.bg-header {
     background: #daf6f7;
   }
-  #header .navbar-brand img {
-    width: 200px;
-  }
   #header .navbar.navbar-light .navbar-nav .nav-link {
     font-size: 14px;
     font-weight: 300;
@@ -1846,6 +1878,9 @@ h3.fontstyle2_sp {
   #header .navbar.navbar-light .navbar-nav .nav-link {
     font-size: 16px;
     margin: 0 20px 0 0;
+  }
+  #header .navbar.navbar-light .navbar-nav .nav-link:last-child {
+    margin: 0;
   }
 }
 @media (min-width: 1900px) {
