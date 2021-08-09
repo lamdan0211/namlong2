@@ -1722,10 +1722,8 @@ h3.fontstyle2_sp {
   overflow: hidden;
 }
 .gallery .item  .hover{
-  -webkit-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
   position: absolute;
-  top: 100%;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1737,7 +1735,7 @@ h3.fontstyle2_sp {
   background: rgba(35, 103, 120, 0.6);
   border-radius: 5px;
   cursor: pointer;
-
+  display: none;
 }
 .gallery .item  .hover .xt1{
   display: inline-flex;
@@ -1756,12 +1754,8 @@ h3.fontstyle2_sp {
   text-transform: uppercase;
 }
 .gallery .item:hover .hover{
-  top: 0;
-  -webkit-transition: 1s ease-out;
-  transition: 1s ease-out;
+  display: flex;
 }
-
-
 @media (min-width: 1280px) {
   #header {
     position: fixed;
