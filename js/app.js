@@ -27,6 +27,10 @@
   var top = 160;
   if(width > 1264)
   {
+    $( "#section5 .row.bg .item " ).hover(function() {
+      var imageUrl  = $(this).find(".text").attr("data-bg");
+      $('#section5 .row.bg').attr('style', 'background-image: url("' + imageUrl +'")');
+    });
     // Page Home
     if($("body").hasClass("home")){
       $("#section1").css("height", height);
