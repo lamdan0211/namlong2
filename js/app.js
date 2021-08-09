@@ -104,7 +104,6 @@
         var section6 = $("#section6").position().top - top;
         var section7 = $("#section7").position().top - top;
         var section8 = $("#section8").position().top - top;
-        var footer  = $("#footer").position().top - top;
         if(x  > section2)
         {
           $("#header").addClass("active animate__animated animate__fadeInDown delay-250 go");
@@ -137,7 +136,7 @@
           $("#section7 ._right").addClass("go");
           $("#section7 ._left").addClass("go");
         }
-        if(x < footer && x > section8){
+        if(x > section8){
           $("#section8 ._right").addClass("go");
           $("#section8 ._left").addClass("go");
         }
