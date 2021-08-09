@@ -731,6 +731,13 @@ body {
           align-items: center;
   position: absolute;
   text-align: center;
+  cursor: pointer  ;
+}
+#intro4 .ct .item.active  h4{
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+#intro4 .ct .item.active img, #intro4 .ct .item.active p {
+  opacity: 0;
 }
 #intro4 .ct .item .inner {
   padding: 30px;

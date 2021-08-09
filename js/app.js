@@ -31,6 +31,13 @@
       var imageUrl  = $(this).find(".text").attr("data-bg");
       $('#section5 .row.bg').attr('style', 'background-image: url("' + imageUrl +'")');
     });
+    $( "#intro4 .item " ).hover(function() {
+      $( "#intro4 .item " ).removeClass("active");
+      $( "#intro4 .item " ).attr('style', '');
+      var imageUrl  = $(this).find(".inner").attr("data-bg");
+      $(this).attr('style', 'background: url("' + imageUrl +'")');
+      $(this).addClass("active");
+    });
     // Page Home
     if($("body").hasClass("home")){
       $("#section1").css("height", height);
