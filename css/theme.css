@@ -2011,17 +2011,26 @@ h3.fontstyle2_sp {
   #header .navbar-toggler {
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 10px;
   }
   #header .navbar-brand img {
     width: 145px;
   }
   #header .navbar-toggler {
-    background: url("../img/navbar.png") no-repeat center center;
+    background: url("../img/navbar.png") no-repeat right ;
     color: transparent;
     border-color: transparent;
-    width: 71px;
-    height: 14px;
+    width: 145px;
+    height: 35px;
+  }
+  #header .navbar-toggler::before{
+    content  : "MENU";
+    position: absolute;
+    z-index: 10;
+    color: #10768a;
+    font-weight: 300;
+    font-size: 16px;
+    top: 10px;
   }
   #header .navbar-toggler .navbar-toggler-icon {
     display: none;
@@ -2087,7 +2096,7 @@ h3.fontstyle2_sp {
     display: block;
   }
   #section5 .row.bg {
-    background-image: none;
+    background-image: none !important;
     height: auto;
     width: 100%;
   }
