@@ -1879,6 +1879,10 @@ h3.fontstyle2_sp {
   #section8 .ct {
     margin: 0 -15px;
   }
+  img.mfp-img
+  {
+    height: 500px;
+  }
 }
 @media (min-width: 1440px) {
   .container-fluid {
@@ -2366,6 +2370,10 @@ h3.fontstyle2_sp {
   #section5 .row.bg .item{
     border-radius: 5px;
   }
+  #section5 .heading h2, h2.fontstyle1_sp{
+    margin: 0;
+    position: unset;
+  }
 }
 @media (max-width: 500px) {
   #section4 .text h2 {
@@ -2463,9 +2471,7 @@ h3.fontstyle2_sp {
   #section3 .ctright{
     padding-top: 30px;
   }
-  #section5 .heading h2{
-    margin: 0;
-  }
+  
   #section5{
     padding: 120px 0 20px 0;
   }

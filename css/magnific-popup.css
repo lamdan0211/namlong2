@@ -58,41 +58,8 @@
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: -moz-zoom-out;
   cursor: -webkit-zoom-out;
-  cursor: zoom-out; 
-	background: #10768a;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	line-height: 30px;
-	top: -12px;
-	right: -12px;
-}
-@media(max-width:500px){
-  .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-    right: 0;
-    top: -45px;
-  }
-}
-.mfp-img{
-	border: 5px solid #FFF;
-	border-radius: 5px;
-	padding: 0 !important;
-}
-.mfp-arrow-left{
-	background: url("../img/arrow_left.png") no-repeat !important;
-	width: 49px !important;
-	height: 45px !important;
-	left: 30px !important;
-}
-.mfp-arrow-right{
-	background: url("../img/arrow_right.png") no-repeat !important;
-	width: 49px !important;
-	height: 45px !important;
-	right: 30px !important;
-}
-.mfp-arrow-left::before, .mfp-arrow-left::after,.mfp-arrow-right::before, .mfp-arrow-right::after{
-	display: none !important;
-}
+  cursor: zoom-out; }
+
 .mfp-zoom {
   cursor: pointer;
   cursor: -webkit-zoom-in;
@@ -136,17 +103,7 @@
 
 .mfp-s-error .mfp-content {
   display: none; }
-.mfp-bottom-bar .mfp-counter{
-	display: none;
-}
-.mfp-bottom-bar .mfp-title{
-	color: #fff;
-	text-transform: uppercase;
-  text-align: center;
-  font-size: 18px;
-  font-family: "SFUFuturaBook";
-  letter-spacing: 1px;
-}
+
 button.mfp-close,
 button.mfp-arrow {
   overflow: visible;
@@ -191,11 +148,14 @@ button::-moz-focus-inner {
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color: #FFF;
-  right: -6px;
-  text-align: right;
-  padding-right: 6px;
-  width: 100%; }
+  background: #10768a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  top: 50px;
+  right: -12px;
+color: #fff;}
 
 .mfp-counter {
   position: absolute;
@@ -204,7 +164,7 @@ button::-moz-focus-inner {
   color: #CCC;
   font-size: 12px;
   line-height: 18px;
-  white-space: nowrap; }
+  white-space: nowrap; display: none;}
 
 .mfp-arrow {
   position: absolute;
@@ -288,16 +248,14 @@ button::-moz-focus-inner {
 img.mfp-img {
   width: auto;
   max-width: 100%;
-  height: auto;
   display: block;
   line-height: 0;
   box-sizing: border-box;
-  padding: 40px 0 40px;
-  margin: 0 auto; }
+  margin: 60px auto; }
 
 /* The shadow behind the image */
-
- 
+.mfp-figure {
+  line-height: 0; }
   .mfp-figure small {
     color: #BDBDBD;
     display: block;
@@ -307,9 +265,19 @@ img.mfp-img {
     margin: 0; }
 
 .mfp-bottom-bar {
-	margin-top: 30px;
-  }
+  margin-top: -36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto; }
 
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #F3F3F3;
+  word-wrap: break-word;
+  padding-right: 36px; }
 
 .mfp-image-holder .mfp-content {
   max-width: 100%; }
@@ -344,7 +312,7 @@ img.mfp-img {
       padding: 0; }
   .mfp-img-mobile .mfp-counter {
     right: 5px;
-    top: 3px; }
+    top: 3px; display: none;}
   .mfp-img-mobile .mfp-close {
     top: 0;
     right: 0;
@@ -369,3 +337,30 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+.mfp-arrow-right {
+  background: url(../img/arrow_right.png) no-repeat !important;
+  width: 49px !important;
+  height: 45px !important;
+  right: 30px !important;
+}
+.mfp-arrow-right::after, .mfp-arrow-right::before, .mfp-arrow-left::after, .mfp-arrow-left::before{
+  display: none;
+}
+.mfp-arrow-left {
+  background: url(../img/arrow_left.png) no-repeat !important;
+  width: 49px !important;
+  height: 45px !important;
+  left: 30px !important;
+}
+.mfp-bottom-bar .mfp-title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  font-family: "SFUFuturaBook";
+  letter-spacing: 1px;}
+  .mfp-img {
+    border: 5px solid #FFF;
+    border-radius: 5px;
+}
