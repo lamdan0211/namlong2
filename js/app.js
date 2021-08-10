@@ -316,8 +316,6 @@
     $(window).scroll(function() {
       var x = $(this).scrollTop(); 
       var footer  = $("body").height() - ($("#footer").height() + $("#footer .form").height() + 100) ;
-      console.log(footer);
-      console.log(x);
       if(x  > footer)
       {
         $('#top img').attr('src','img/top2.png');
