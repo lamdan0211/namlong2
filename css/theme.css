@@ -178,15 +178,17 @@ body {
   overflow: hidden;
 }
 #section5 .row.bg .item .text h3 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
   color: #fff;
   text-transform: uppercase;
+  font-family: "SFUFuturaBook";
+
+
 }
 #section5 .row.bg .item .text .hover {
   -webkit-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
-  margin-bottom: -175px;
+  margin-bottom: -165px;
 }
 #section5 .row.bg .item .text .hover p {
   font-size: 16px;
@@ -1897,10 +1899,11 @@ h3.fontstyle2_sp {
   }
 
   #header .navbar.navbar-light .navbar-nav .nav-link {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0 20px 0 0;
     padding-top: 0;
     padding-bottom: 0;
+    font-family: "SFUFuturaBook";
   }
   #header .navbar.navbar-light .navbar-nav .nav-link:last-child {
     margin: 0;
