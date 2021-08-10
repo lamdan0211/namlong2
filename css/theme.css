@@ -2340,6 +2340,32 @@ h3.fontstyle2_sp {
   #navbarNavAltMarkup.in .navbar-nav{
     display: block;
   }
+  .location .section-image-wrapper{
+    height: 100% !important;
+    left: 0  !important;
+    padding-top: 0  !important;
+    overflow-x: auto  !important;
+    overflow-y: hidden  !important;
+  }
+  .location .section-image{
+    margin: 0 !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0  !important;
+    width: 100% !important;
+    position: relative !important;
+    transform: none  !important;
+  }
+  .location .section-image svg{
+    margin-top: 3%  !important;
+  }
+  .textbg::before{
+    border-radius: 5px;
+  }
+
+  #section5 .row.bg .item{
+    border-radius: 5px;
+  }
 }
 @media (max-width: 500px) {
   #section4 .text h2 {
@@ -2406,12 +2432,7 @@ h3.fontstyle2_sp {
   #footer .ctright .width100{
     width: 50%;
   }
-  .textbg::before{
-    border-radius: 5px;
-  }
-  #section5 .row.bg .item{
-    border-radius: 5px;
-  }
+  
   .quihoach_fontstyle2{
     font-size: 25px;
   }
