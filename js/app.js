@@ -309,10 +309,24 @@
       nav:false,
       dots: true,
       items: 1
-  })
-  $("._right").removeClass('animate__animated animate__fadeInRight delay-250');
-  $("._left").removeClass('animate__animated animate__fadeInLeft delay-250');
+    });
+    $("._right").removeClass('animate__animated animate__fadeInRight delay-250');
+    $("._left").removeClass('animate__animated animate__fadeInLeft delay-250');
 
+    $(window).scroll(function() {
+      var x = $(this).scrollTop(); 
+      var footer  = $("body").height() - ($("#footer").height() + $("#footer .form").height() + 100) ;
+      console.log(footer);
+      console.log(x);
+      if(x  > footer)
+      {
+        $('#top img').attr('src','img/top2.png');
+      }
+      else
+      {
+        $('#top img').attr('src','img/top.png');
+      }
+    });
   }
   $('.gallery').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
