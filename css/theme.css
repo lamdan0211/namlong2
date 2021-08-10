@@ -1804,7 +1804,7 @@ h3.fontstyle2_sp {
     background: #10768a;
     position: absolute;
     margin: 0 5px;
-    bottom: 15px;
+    bottom: 5px;
   }
   #header .navbar-collapse {
     -webkit-box-flex: unset;
@@ -1818,7 +1818,7 @@ h3.fontstyle2_sp {
     top: 0;
   }
   #header.active .navbar-brand img {
-    width: 200px;
+    width: 150px;
   }
 
   .col-lg-6 {
@@ -1896,6 +1896,8 @@ h3.fontstyle2_sp {
   #header .navbar.navbar-light .navbar-nav .nav-link {
     font-size: 16px;
     margin: 0 20px 0 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   #header .navbar.navbar-light .navbar-nav .nav-link:last-child {
     margin: 0;
@@ -2374,6 +2376,9 @@ h3.fontstyle2_sp {
     margin: 0;
     position: unset;
   }
+  #position1 ._right{
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 500px) {
   #section4 .text h2 {
@@ -2423,12 +2428,12 @@ h3.fontstyle2_sp {
     width: 90%;
   }
   .tienich-nl .owl-nav button.owl-next{
-    bottom: 240px;
-    right: 3%;
+    top: 35%;
+    right: 15px;
   }
   .tienich-nl .owl-nav .owl-prev{
-    bottom: 240px;
-    left: 3%;
+    top: 35%;
+    left: 15px;
   }
   .quihoach-features__features{
     margin: 0px auto 90px auto;
