@@ -913,7 +913,7 @@ body {
   position: fixed;
   right: 30px;
   top: 100px;
-  z-index: 999;
+  z-index: 50;
 }
 .social_right li {
   list-style: none;
@@ -1956,18 +1956,6 @@ h3.fontstyle2_sp {
     display: block !important;
   }
 
-  .navbar-expand-lg .navbar-collapse {
-    display: none !important;
-  }
-
-  .navbar-expand-lg .navbar-collapse.in {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-  }
 
   .navbar-expand-lg .navbar-nav {
     -webkit-box-orient: vertical !important;
@@ -2036,7 +2024,7 @@ h3.fontstyle2_sp {
     display: none;
   }
   #header .navbar-nav {
-    padding: 10px 0 0 0;
+    padding: 15px;
   }
   #header .navbar-nav .nav-item {
     font-weight: 300;
@@ -2323,6 +2311,34 @@ h3.fontstyle2_sp {
   }
   .social_right li{
     margin: 0  10px;
+  }
+  #navbarNavAltMarkup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background: #daf6f7;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+
+  }
+  #navbarNavAltMarkup.in{
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    top: 60px;
+  }
+  #navbarNavAltMarkup .navbar-nav
+  {
+    display: none;
+  }
+  #navbarNavAltMarkup.in .navbar-nav{
+    display: block;
   }
 }
 @media (max-width: 500px) {
