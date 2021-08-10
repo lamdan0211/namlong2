@@ -1794,6 +1794,8 @@ h3.fontstyle2_sp {
     color: #10768a;
     text-transform: uppercase;
     margin: 0 10px 0 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   #header .navbar.navbar-light .navbar-nav .nav-item.active, #header .navbar.navbar-light .navbar-nav .nav-item:hover {
     position: relative;
