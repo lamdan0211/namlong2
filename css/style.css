@@ -135,14 +135,14 @@ header button#mobile-menu-btn:hover {
 	font-size: 20px;
 	color: white;
 }
-.section .head{
-	padding: 136px 0 12px 0;
-}
 #section-hero {
     background-image: url('../image/section-benefits/BG/1920x920.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+#section-hero .head, #section-benefits .head{
+	margin-top: 15vh;
 }
 #section-hero .bottom{
 	position: absolute;
@@ -229,7 +229,7 @@ header button#mobile-menu-btn:hover {
 .section-estimation {
   padding: 60px 20px;
   background-color: #f7f9fb;
-  font-family: Arial, sans-serif;
+  align-items: center;
 }
 
 .section-estimation .head {
@@ -395,15 +395,13 @@ input[type="text"] {
 }
 .section-steps {
 	background: #f7f9fb;
+	align-items: center;
 }
 .section-steps .steps-container{
 	display: flex;
 }
 .section-steps .steps-container .steps-left{
-	width: 40%;
-}
-.section-steps .steps-container .steps-left img{
-	width: 100%;
+	width: 25vw;
 }
 .section-steps .steps-container .steps-right .step-item{
 	text-align: left;
