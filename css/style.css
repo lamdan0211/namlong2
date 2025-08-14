@@ -112,20 +112,34 @@ header button#mobile-menu-btn:hover {
     justify-content: center;
     text-align: center;
 }
+.section h1{
+    font-size: 30px;
+    color: black;
+	margin-bottom: 10px;
+}
+.section h2{
+    font-size: 60px;
+    color: black;
+	margin-bottom: 10px;
+}
+.section .button{
+    background: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+	font-size: 20px;
+	color: white;
+}
 #section-hero {
     min-height: 100vh;
-    background-image: url('../image/section-hero/section-hero-Background.svg'); 
-    background-size: cover; 
-    background-position: center; 
+    background-image: url('../image/section-hero/section-hero-Background.svg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
 	overflow: hidden;
 }
 #section-hero .content{
 	padding: 136px 0 68px 0;
-}
-#section-hero .content h1{
-	
 }
 #section-hero .bottom{
 	position: absolute;
@@ -145,28 +159,9 @@ header button#mobile-menu-btn:hover {
    background-attachment: fixed;
    height: 100vh;
 }
-
-.bg-gray-100 { background-color: #f3f4f6; }
-.bg-gray-200 { background-color: #e5e7eb; }
-.bg-gray-300 { background-color: #d1d5db; }
-.bg-gray-400 { background-color: #9ca3af; }
-.bg-gray-500 { background-color: #6b7280; color: white; }
-.bg-gray-600 { background-color: #4b5563; color: white; }
-
-.btn-indigo {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: #4f46e5;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.btn-indigo:hover {
-    background-color: #4338ca;
-}
 .scroll-text {
-  position: absolute; 
-  right: 40px;
+  position: absolute;
+  right: 0;
   left: 0%;
   transform: translateY(-50%);
   display: flex;
@@ -174,7 +169,7 @@ header button#mobile-menu-btn:hover {
   align-items: center;
   gap: 12px;
   pointer-events: none;
-  top: 35%;
+  top: 45%;
 }
 
 /* Chữ dọc */
