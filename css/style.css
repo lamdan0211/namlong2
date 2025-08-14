@@ -271,6 +271,9 @@ header button#mobile-menu-btn:hover {
 	border-radius: 10px;
 	
 }
+.section-faqs .faq-content{
+	display: flex;
+}
 .estimation-box {
   display: flex;
   max-width: 900px;
