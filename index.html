@@ -451,6 +451,30 @@
       })
       .animate({ opacity: 1, translateY: 0 }, 300);
   }
+  // Tab switching
+  $(".faq-tabs button").on("click", function () {
+    var index = $(this).index();
+
+    // Active tab
+    $(".faq-tabs button").removeClass("active");
+    $(this).addClass("active");
+
+    // Ở đây mình giả sử bạn có nhiều nhóm nội dung faq-content theo thứ tự giống như tab
+    // Ví dụ: .faq-content[data-tab="0"], .faq-content[data-tab="1"], ...
+    $(".faq-content").hide().eq(index).fadeIn(300);
+  });
+
+  // Accordion
+  $(".accordion-header").on("click", function () {
+    var $item = $(this).closest(".accordion-item");
+
+    // Nếu muốn đóng tất cả khi mở cái mới
+    $(".accordion-item").not($item).removeClass("open").find(".accordion-body").slideUp(300);
+
+    // Toggle hiện tại
+    $item.toggleClass("open");
+    $item.find(".accordion-body").stop(true, true).slideToggle(300);
+  });
 });
 
   </script>

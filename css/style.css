@@ -422,6 +422,9 @@ input[type="text"] {
   pointer-events: none;
   top: 45%;
 }
+.fp-watermark{
+  display: none;
+}
 
 /* Chữ dọc */
 .scroll-text span {
