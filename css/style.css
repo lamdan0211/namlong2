@@ -131,6 +131,11 @@ header button#mobile-menu-btn:hover {
 
     color: white; /* đổi màu chữ cho nổi bật trên ảnh */
 }
+#section-hero .content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .bg-gray-100 { background-color: #f3f4f6; }
 .bg-gray-200 { background-color: #e5e7eb; }
