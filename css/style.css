@@ -12,6 +12,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+img{
+	max-width: 100%;
+}
 
 /* ==== HEADER ==== */
 header {
@@ -153,6 +156,9 @@ header button#mobile-menu-btn:hover {
 	right: 0;
 	margin: 0 auto;
 }
+#section-hero .phone img{
+    width: 16vw;
+}
 #section-benefits {
    background: url('../image/section-benefits/BG/1920x920.png') no-repeat center calc(-20vh);
    background-size: cover;
@@ -163,7 +169,7 @@ header button#mobile-menu-btn:hover {
 	background: white;
 	padding: 10px;
 	border-radius: 10px;
-	width: 350px;
+	width: 18vw;
 	display: flex;
 	left: 0;
 	right: 0;
@@ -174,24 +180,24 @@ header button#mobile-menu-btn:hover {
 }
 
 #section-benefits .block.block1{
-	left: -700px;
-	top: 35%;
+	left: -36vw;
+	top: 35vh;
 }
 #section-benefits .block.block2{
-	left: -1100px;
-	top: 50%;
+	left: -57vw;
+	top: 50vh;
 }
 #section-benefits .block.block3{
-	left: 700px;
-	top: 30%;
+	left: 36vw;
+	top: 30vh;
 }
 #section-benefits .block.block4{
-	left: 1100px;
-	top: 45%;
+	left: 57vw;
+	top: 45vh;
 }
 #section-benefits .men{
   position: absolute;
-  left: -490px;
+  left: -25vw;
   bottom: 20vh;
   right: 0;
   z-index: 200;
@@ -200,7 +206,7 @@ header button#mobile-menu-btn:hover {
   position: absolute;
   right: 0;
   bottom: 20vh;
-  left: 510px;
+  left: 25vw;
   right: 0;
   z-index: 200;
 }
@@ -216,6 +222,9 @@ header button#mobile-menu-btn:hover {
 	left: 0;
 	right: 0;
 	z-index: 100;
+}
+#section-benefits .phone img, #section-benefits .men img, #section-benefits .women img {
+	width: 14vw;
 }
 .section-estimation {
   padding: 60px 20px;
