@@ -122,14 +122,15 @@ header button#mobile-menu-btn:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-
     /* background image */
     background-image: url('../image/section-hero-Background.svg'); /* thay link ảnh của chị */
     background-size: cover;  /* ảnh bao phủ hết */
     background-position: center; /* canh giữa */
     background-repeat: no-repeat;
-
     color: white; /* đổi màu chữ cho nổi bật trên ảnh */
+}
+#section-hero .head{
+	
 }
 #section-hero .content{
 	display: flex;
@@ -160,6 +161,37 @@ header button#mobile-menu-btn:hover {
 }
 .btn-indigo:hover {
     background-color: #4338ca;
+}
+.scroll-text {
+  position: fixed; /* Hoặc absolute nếu muốn đặt trong section */
+  right: 40px;     /* Khoảng cách bên phải */
+  left: 0%;        /* Căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.scroll-text span {
+  writing-mode: vertical-rl; /* Xoay chữ dọc */
+  text-orientation: upright; /* Giữ chữ đứng */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.scroll-text .line {
+  width: 1px;
+  height: 40px;
+  background-color: #000; /* Màu gạch */
+  animation: scroll-line 1.5s infinite ease-in-out;
+}
+
+@keyframes scroll-line {
+  0% { transform: scaleY(0); opacity: 0; }
+  50% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(0); opacity: 0; }
 }
 
 /* ==== RESPONSIVE ==== */
