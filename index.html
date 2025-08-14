@@ -1,1 +1,134 @@
+<<<<<<< HEAD
 sdd
+=======
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="css/fullpage.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header sticky -->
+<header>
+    <div class="container">
+        <!-- Logo -->
+        <a href="#hero" class="logo">
+            <img src="logo.png" alt="Logo">
+            <span class="logo-text">Cathay United Bank</span>
+        </a>
+
+        <!-- Desktop menu -->
+        <nav>
+            <a href="#hero">Trang chủ</a>
+            <a href="#benefits">Lợi ích</a>
+            <a href="#estimation">Ước tính</a>
+            <a href="#steps">Các bước</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#download">Tải xuống</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-menu">
+    <div>
+        <button id="mobile-menu-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <ul>
+            <li><a href="#product">Sản phẩm</a></li>
+            <li><a href="#privacy">Chính sách về quyền riêng tư</a></li>
+        </ul>
+    </div>
+
+    <!-- Language switch -->
+    <div class="lang-switch">
+        <img src="flag-vn.png" alt="VN">
+        <span>VN</span>
+        <span>|</span>
+        <span>EN</span>
+    </div>
+</div>
+
+<!-- fullPage container -->
+<div id="fullpage">
+    <div id="section-hero" class="section">
+        <h1>Cathay Meets</h1>
+        <p>All Your Needs</p>
+		<a href="#">Download App</a>
+		<img src="image/scroll.gif" />
+    </div>
+
+    <div id="section-benefits" class="section bg-gray-200">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 16px;">Section Two</h2>
+        <p style="margin-bottom: 24px;">CSS thuần utilities sẵn sàng.</p>
+        <button id="to-third" class="btn-indigo">Go to Section 3</button>
+    </div>
+
+    <div id="section-estimation" class="section bg-gray-300">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 16px;">Section Three</h2>
+        <p style="margin-bottom: 24px;">Bạn có thể thêm nhiều nội dung ở đây.</p>
+    </div>
+
+    <div id="section-steps" class="section bg-gray-400">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 16px;">Section Four</h2>
+    </div>
+
+    <div id="section-faqs" class="section bg-gray-500">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 16px;">Section Five</h2>
+    </div>
+
+    <div id="section-download" class="section bg-gray-600">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 16px;">Section Six</h2>
+    </div>
+</div>
+
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- fullPage.js script (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Chỉ khởi tạo fullPage khi màn hình >= 1024px
+      if ($(window).width() >= 1024) {
+        $('#fullpage').fullpage({
+          navigation: false,
+          anchors: [
+            'hero',
+            'benefits',
+            'estimation',
+            'steps',
+            'faqs',
+            'download'
+          ],
+          scrollingSpeed: 700
+        });
+
+      }
+	  $("#mobile-menu-btn").click(function(){
+		  $("#mobile-menu").removeClass("translate-x-full");
+		});
+		$("#mobile-menu-close").click(function(){
+		  $("#mobile-menu").addClass("translate-x-full");
+		});
+    });
+  </script>
+</body>
+</html>
+>>>>>>> 8c54879 (landingpage)
