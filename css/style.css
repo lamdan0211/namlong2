@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
+     font-family: 'Montserrat', sans-serif;
 }
 a {
     text-decoration: none;
@@ -110,17 +110,10 @@ header button#mobile-menu-btn:hover {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
 }
 #section-hero {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-image: url('../image/section-hero/section-hero-Background.svg'); 
     background-size: cover; 
     background-position: center; 
@@ -128,13 +121,11 @@ header button#mobile-menu-btn:hover {
     position: relative;
 	overflow: hidden;
 }
-#section-hero .head{
-	
-}
 #section-hero .content{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 136px 0 68px 0;
+}
+#section-hero .content h1{
+	
 }
 #section-hero .bottom{
 	position: absolute;
@@ -174,7 +165,7 @@ header button#mobile-menu-btn:hover {
     background-color: #4338ca;
 }
 .scroll-text {
-  position: fixed;        /* hoặc absolute nếu đặt trong section */
+  position: absolute; 
   right: 40px;
   left: 0%;
   transform: translateY(-50%);
@@ -183,6 +174,7 @@ header button#mobile-menu-btn:hover {
   align-items: center;
   gap: 12px;
   pointer-events: none;
+  top: 35%;
 }
 
 /* Chữ dọc */
