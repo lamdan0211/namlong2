@@ -251,7 +251,26 @@ header button#mobile-menu-btn:hover {
 .section-estimation .head p {
   color: #555;
 }
-
+.section-faqs{
+	align-items: center;
+}
+.section-faqs .faq-tabs{
+	background: #fff;
+	border-radius: 10px;
+	display: inline-block;
+	padding: 10px;
+}
+.section-faqs .faq-tabs button{
+	background: none;
+	border: none;
+}
+.section-faqs .faq-tabs button.active{
+	background: black;
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+	
+}
 .estimation-box {
   display: flex;
   max-width: 900px;
