@@ -367,8 +367,7 @@ input[type="text"] {
   margin-top: 20px;
 }
 .section-download {
-  padding: 60px 20px;
-  background-color: #f3f5f7;
+   background-color: #f3f5f7;
 }
 
 .download-box {
@@ -438,7 +437,9 @@ input[type="text"] {
 .section-steps .steps-container .steps-right .step-item.active{
 	background: white;
 }
-
+.section-download{
+	display: block;
+}
 .scroll-text {
   position: absolute;
   right: 0;
@@ -453,6 +454,54 @@ input[type="text"] {
 }
 .fp-watermark{
   display: none;
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
 }
 
 /* Chữ dọc */
