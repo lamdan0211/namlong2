@@ -6,6 +6,7 @@
 }
 body {
      font-family: 'Montserrat', sans-serif;
+	 overflow: hidden;
 }
 a {
     text-decoration: none;
@@ -383,6 +384,32 @@ input[type="text"] {
 .qr-code {
   height: 110px;
 }
+.section-steps {
+	background: #f7f9fb;
+}
+.section-steps .steps-container{
+	display: flex;
+}
+.section-steps .steps-container .steps-left{
+	width: 40%;
+}
+.section-steps .steps-container .steps-left img{
+	width: 100%;
+}
+.section-steps .steps-container .steps-right .step-item{
+	text-align: left;
+	padding: 20px;
+}
+.section-steps .steps-container .steps-right .step-number {
+	border: 1px solid black;
+	border-radius: 10px;
+	display: inline-block;
+	padding: 10px 20px;
+}
+.section-steps .steps-container .steps-right .step-item.active{
+	background: white;
+}
+
 .scroll-text {
   position: absolute;
   right: 0;

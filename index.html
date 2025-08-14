@@ -193,15 +193,15 @@
 	  </div>
 
 	  <div class="steps-container">
+	    
 		<!-- Left side: Phone & Person -->
 		<div class="steps-left">
-		  <img src="image/phone-app.png" alt="App Screenshot" class="phone-img" />
-		  <img src="image/person.png" alt="Person" class="person-img" />
+		    <img id="stepImage" src="image/section-steps/Step 1/Property 1=VN.png" />
 		</div>
 
 		<!-- Right side: Steps -->
 		<div class="steps-right">
-		  <div class="step-item">
+		  <div class="step-item active" data-img="image/section-steps/Step 1/Property 1=VN.png">
 			<div class="step-number">01</div>
 			<div class="step-content">
 			  <h4>Select “Drawdown via NAPAS 247” in the app</h4>
@@ -209,7 +209,7 @@
 			</div>
 		  </div>
 
-		  <div class="step-item">
+		  <div class="step-item" data-img="image/section-steps/Step 2/Property 1=VN.png">
 			<div class="step-number">02</div>
 			<div class="step-content">
 			  <h4>Fill in the loan request details</h4>
@@ -217,7 +217,7 @@
 			</div>
 		  </div>
 
-		  <div class="step-item">
+		  <div class="step-item" data-img="image/section-steps/Step 3/Property 1=VN.png">
 			<div class="step-number">03</div>
 			<div class="step-content">
 			  <h4>Enter your bank account information</h4>
@@ -225,7 +225,7 @@
 			</div>
 		  </div>
 
-		  <div class="step-item">
+		  <div class="step-item" data-img="image/section-steps/Step 4/Property 1=VN.png">
 			<div class="step-number">04</div>
 			<div class="step-content">
 			  <h4>Carefully review, confirm the disbursement details</h4>
@@ -341,30 +341,119 @@
   <!-- fullPage.js script (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
   <script>
-    $(document).ready(function () {
-      // Chỉ khởi tạo fullPage khi màn hình >= 1024px
-      if ($(window).width() >= 1024) {
-        $('#fullpage').fullpage({
-          navigation: false,
-          anchors: [
-            'hero',
-            'benefits',
-            'estimation',
-            'steps',
-            'faqs',
-            'download'
-          ],
-          scrollingSpeed: 700
-        });
+  $(document).ready(function () {
+  var currentStep = 0;
+  var totalSteps = $(".step-item").length;
+  var isScrolling = false;
+  var scrollTimeout;
 
+  if ($(window).width() >= 1024) {
+    $('#fullpage').fullpage({
+      navigation: false,
+      anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
+      scrollingSpeed: 700,
+      afterLoad: function (origin, destination) {
+        if (destination.anchor === 'steps') {
+          currentStep = 0; // reset khi vào steps
+          setActiveStep(currentStep, 'down', true);
+          fullpage_api.setAllowScrolling(false);
+          attachStepScroll();
+        }
+      },
+      onLeave: function (origin) {
+        if (origin.anchor === 'steps') {
+          detachStepScroll();
+          fullpage_api.setAllowScrolling(true);
+        }
       }
-	  $("#mobile-menu-btn").click(function(){
-		  $("#mobile-menu").removeClass("translate-x-full");
-		});
-		$("#mobile-menu-close").click(function(){
-		  $("#mobile-menu").addClass("translate-x-full");
-		});
     });
+  }
+
+  function attachStepScroll() {
+    $(window)
+      .off("wheel.stepScroll")
+      .on("wheel.stepScroll", { passive: false }, function (e) {
+        e.preventDefault();
+
+        clearTimeout(scrollTimeout); // chặn inertia scroll liên tiếp
+        scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
+
+        if (isScrolling) return;
+        isScrolling = true;
+
+        const delta = e.originalEvent.deltaY;
+
+        if (delta > 0) {
+          // Scroll xuống
+          if (currentStep < totalSteps - 1) {
+            currentStep++;
+            setActiveStep(currentStep, 'down');
+          } else {
+            // Hết step -> sang section sau
+            goToNextSection();
+          }
+        } else {
+          // Scroll lên
+          if (currentStep > 0) {
+            currentStep--;
+            setActiveStep(currentStep, 'up');
+          } else {
+            // Về section trước
+            goToPrevSection();
+          }
+        }
+      });
+  }
+
+  function goToNextSection() {
+    detachStepScroll();
+    setTimeout(() => {
+      fullpage_api.setAllowScrolling(true);
+      fullpage_api.moveSectionDown();
+    }, 50);
+    setTimeout(() => { isScrolling = false; }, 700);
+  }
+
+  function goToPrevSection() {
+    detachStepScroll();
+    setTimeout(() => {
+      fullpage_api.setAllowScrolling(true);
+      fullpage_api.moveSectionUp();
+    }, 50);
+    setTimeout(() => { isScrolling = false; }, 700);
+  }
+
+  function detachStepScroll() {
+    $(window).off("wheel.stepScroll");
+  }
+
+  function setActiveStep(index, direction, instant) {
+    $(".step-item").removeClass("active").eq(index).addClass("active");
+
+    let imgSrc = $(".step-item").eq(index).data("img");
+    let $img = $("#stepImage");
+
+    if (instant) {
+      $img.attr("src", imgSrc).show();
+      return;
+    }
+
+    // Animation ảnh
+    $img.stop(true, true).fadeOut(200, function () {
+      $img.attr("src", imgSrc).fadeIn(200);
+    });
+
+    // Animation step
+    $(".step-item").eq(index)
+      .css({
+        transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
+        opacity: 0
+      })
+      .animate({ opacity: 1, translateY: 0 }, 300);
+  }
+});
+
   </script>
+
 </body>
 </html>
