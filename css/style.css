@@ -136,6 +136,12 @@ header button#mobile-menu-btn:hover {
 	justify-content: center;
 	align-items: center;
 }
+#section-benefits {
+   background: url('../image/section-benefits/BG/1920x920.png') no-repeat center calc(-20vh);
+   background-size: cover;
+   background-attachment: fixed;
+   height: 100vh;
+}
 
 .bg-gray-100 { background-color: #f3f4f6; }
 .bg-gray-200 { background-color: #e5e7eb; }
