@@ -112,22 +112,21 @@ header button#mobile-menu-btn:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 32px;
     text-align: center;
 }
 #section-hero {
-    min-height: 100vh; /* chiều cao toàn màn hình */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background image */
-    background-image: url('../image/section-hero-Background.svg'); /* thay link ảnh của chị */
-    background-size: cover;  /* ảnh bao phủ hết */
-    background-position: center; /* canh giữa */
+    background-image: url('../image/section-hero/section-hero-Background.svg'); 
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
-    color: white; /* đổi màu chữ cho nổi bật trên ảnh */
+    position: relative;
+	overflow: hidden;
 }
 #section-hero .head{
 	
@@ -136,6 +135,18 @@ header button#mobile-menu-btn:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+#section-hero .bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#section-hero .phone{
+	position: absolute;
+	bottom: -20vh;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 #section-benefits {
    background: url('../image/section-benefits/BG/1920x920.png') no-repeat center calc(-20vh);
@@ -163,35 +174,50 @@ header button#mobile-menu-btn:hover {
     background-color: #4338ca;
 }
 .scroll-text {
-  position: fixed; /* Hoặc absolute nếu muốn đặt trong section */
-  right: 40px;     /* Khoảng cách bên phải */
-  left: 0%;        /* Căn giữa theo chiều dọc */
+  position: fixed;        /* hoặc absolute nếu đặt trong section */
+  right: 40px;
+  left: 0%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  pointer-events: none;
 }
 
+/* Chữ dọc */
 .scroll-text span {
-  writing-mode: vertical-rl; /* Xoay chữ dọc */
-  text-orientation: upright; /* Giữ chữ đứng */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  letter-spacing: 4px;
+  letter-spacing: 0.5em;
 }
 
-.scroll-text .line {
-  width: 1px;
-  height: 40px;
-  background-color: #000; /* Màu gạch */
-  animation: scroll-line 1.5s infinite ease-in-out;
+/* ----- Kiểu chạy NGANG (trái ⇄ phải) ----- */
+.scroll-text .line.line--x {
+  width: 18px;
+  height: 2px;
+  background: #000;
+  animation: ping-x 1.1s ease-in-out infinite alternate;
 }
 
-@keyframes scroll-line {
-  0% { transform: scaleY(0); opacity: 0; }
-  50% { transform: scaleY(1); opacity: 1; }
-  100% { transform: scaleY(0); opacity: 0; }
+@keyframes ping-x {
+  from { transform: translateX(-12px); }
+  to   { transform: translateX(12px); }
+}
+
+/* ----- Kiểu chạy DỌC (trên ⇅ dưới) — dùng nếu muốn ----- */
+.scroll-text .line.line--y {
+  width: 2px;
+  height: 18px;
+  background: #000;
+  animation: ping-y 1.1s ease-in-out infinite alternate;
+}
+
+@keyframes ping-y {
+  from { transform: translateY(-12px); }
+  to   { transform: translateY(12px); }
 }
 
 /* ==== RESPONSIVE ==== */
