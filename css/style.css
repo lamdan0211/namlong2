@@ -216,6 +216,173 @@ header button#mobile-menu-btn:hover {
 	right: 0;
 	z-index: 100;
 }
+.section-estimation {
+  padding: 60px 20px;
+  background-color: #f7f9fb;
+  font-family: Arial, sans-serif;
+}
+
+.section-estimation .head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-estimation .head img {
+  max-width: 122px;
+  margin-bottom: 15px;
+}
+
+.section-estimation .head h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section-estimation .head p {
+  color: #555;
+}
+
+.estimation-box {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  gap: 20px;
+}
+
+.estimation-left {
+  flex: 1;
+}
+
+.estimation-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group span {
+  font-size: 0.9rem;
+  color: #777;
+  white-space: nowrap;
+}
+
+input[type="range"] {
+  flex: 1;
+  appearance: none;
+  height: 6px;
+  background: #ddd;
+  border-radius: 4px;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 120px;
+  margin-top: 8px;
+}
+
+.currency, .unit {
+  margin-left: 5px;
+}
+
+.repayment-box {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.repayment-box p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.repayment-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #22a652;
+  margin-bottom: 5px;
+}
+
+.repayment-box small {
+  color: #777;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 20px;
+}
+.section-download {
+  padding: 60px 20px;
+  background-color: #f3f5f7;
+}
+
+.download-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(172,255,191,0.2) 0%, white 30%, white 70%, rgba(172,255,191,0.2) 100%);
+  padding: 30px 40px;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.download-left {
+  flex: 1;
+}
+
+.download-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.download-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.download-buttons img {
+  height: 45px;
+}
+
+.download-right {
+  flex-shrink: 0;
+}
+
+.qr-code {
+  height: 110px;
+}
 .scroll-text {
   position: absolute;
   right: 0;
