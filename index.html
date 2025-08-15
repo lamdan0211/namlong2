@@ -150,24 +150,36 @@
 		<div class="estimation-left">
 		  <!-- Loan Amount Needed -->
 		  <div class="form-group">
-			<label>Loan Amount Needed</label>
-			<div class="input-group">
-			  <span>3,000,000 đ</span>
-			  <input type="range" min="3000000" max="40000000" value="5000000" step="1000000" />
-			  <span>40,000,000 đ</span>
+		    <div class="label">
+				<label>Loan Amount Needed</label>
+				<div class="loan">
+				   <input type="text" value="5,000,000" /> <span class="currency">đ</span>
+				</div>
 			</div>
-			<input type="text" value="5,000,000" /> <span class="currency">đ</span>
+			<div class="input-group">
+			  <input type="range" min="3000000" max="40000000" value="5000000" step="1000000" />
+			  <div class="price">
+				<span>3,000,000 đ</span>
+				<span>40,000,000 đ</span>
+			  </div>
+			</div>
+		
 		  </div>
 
 		  <!-- Loan Term -->
 		  <div class="form-group">
-			<label>Loan Term</label>
+		    <div class="label">
+				<label>Loan Term</label>
+				<div class="loan">
+				   <input type="text" value="15" /> <span class="unit">months</span>
+				</div>
+			</div>
 			<div class="input-group">
 			  <span>3 months</span>
 			  <input type="range" min="3" max="36" value="15" step="1" />
 			  <span>36 months</span>
 			</div>
-			<input type="text" value="15" /> <span class="unit">months</span>
+			
 		  </div>
 		</div>
 
@@ -254,63 +266,235 @@
 		<button>Others</button>
 	  </div>
 
-	  <div class="faq-content">
-		<!-- Left: Image -->
-		<div class="faq-left">
-		  <h3>How to register and use Credit Limit</h3>
-		  <img src="image/section-faqs/FAQ/322x422.png" alt="Phone & Person" />
-		</div>
+	  <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Section -->
+            <div class="left-section">
+                <div class="section-header">
+                    <div class="section-icon"></div>
+                    <h2 class="section-title" id="section-title">How to register<br>and use Credit Limit</h2>
+                </div>
+                <div class="illustration">
+                    <div class="person-illustration"></div>
+                    <div class="phone-mockup">
+                        <div class="phone-screen" id="phone-screen">VIETINBANK</div>
+                    </div>
+                </div>
+            </div>
 
-		<!-- Right: Accordion -->
-		<div class="faq-right">
-		  <div class="accordion">
-			<div class="accordion-item">
-			  <button class="accordion-header">
-				CUB Vietnam App User Guideline?
-			  </button>
-			  <div class="accordion-body">
-				Please help to refer <a href="#">here</a> for CUB Vietnam Application (App) user guideline.
-			  </div>
-			</div>
+            <!-- Right Section - FAQ -->
+            <!-- Added multiple content sections for different tabs -->
+            <div class="faq-section" id="credit-limit-content">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        CUB Vietnam App User Guideline?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Please help to refer <a href="#">here</a> for CUB Vietnam Application (App) user guideline</p>
+                    </div>
+                </div>
 
-			<div class="accordion-item">
-			  <button class="accordion-header">
-				How long and how do I activate my Credit Limit?
-			  </button>
-			  <div class="accordion-body">
-				You can activate immediately once approved...
-			  </div>
-			</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long and how do I activate my Credit Limit?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your Credit Limit will be activated within 1-2 business days after your application is approved. You will receive an SMS notification once it's ready to use.</p>
+                    </div>
+                </div>
 
-			<div class="accordion-item">
-			  <button class="accordion-header">
-				How to use Credit Limit?
-			  </button>
-			  <div class="accordion-body">
-				Instructions for usage...
-			  </div>
-			</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How to use Credit Limit?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can use your Credit Limit through the CUB Vietnam App, online banking, or at any ATM. Simply select the Credit Limit option when making transactions.</p>
+                    </div>
+                </div>
 
-			<div class="accordion-item">
-			  <button class="accordion-header">
-				How much Credit Limit amount that Cathay United Bank will approve?
-			  </button>
-			  <div class="accordion-body">
-				The approval depends on...
-			  </div>
-			</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How much Credit Limit amount that Cathay United Bank will approve?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Credit Limit amount depends on your income, credit history, and other financial factors. Our team will assess your application and determine the appropriate limit for your profile.</p>
+                    </div>
+                </div>
 
-			<div class="accordion-item">
-			  <button class="accordion-header">
-				How long is my Credit Limit using?
-			  </button>
-			  <div class="accordion-body">
-				The credit limit is valid for...
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long is my Credit Limit using?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your Credit Limit is valid as long as your account remains active and in good standing. The limit will be reviewed annually and may be adjusted based on your usage and creditworthiness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added Monthly Payment content section -->
+            <div class="faq-section" id="monthly-payment-content" style="display: none;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        When is my monthly payment due?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your monthly payment is due on the same date each month as specified in your contract. You will receive a reminder notification 3 days before the due date.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What payment methods are available?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can make payments through auto-debit, online banking, mobile app, bank transfer, or visit any CUB Vietnam branch. We recommend setting up auto-debit for convenience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens if I miss a payment?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Late payment fees will apply as per your contract terms. Your credit score may also be affected. Please contact us immediately if you anticipate payment difficulties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I make early payments?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can make early payments without penalty. Early payments will reduce your outstanding balance and may save you on interest charges.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I set up automatic payments?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can set up automatic payments through the CUB Vietnam App or by visiting any branch. You'll need to provide your preferred bank account details for auto-debit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added Payment Notice content section -->
+            <div class="faq-section" id="payment-notice-content" style="display: none;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How will I receive payment notifications?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Payment notifications are sent via SMS, email, and push notifications through the CUB Vietnam App. You can customize your notification preferences in the app settings.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        When do I receive payment reminders?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Payment reminders are sent 7 days, 3 days, and 1 day before your due date. You'll also receive a confirmation once payment is processed successfully.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I change my notification preferences?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can update your notification preferences anytime through the CUB Vietnam App under Settings > Notifications, or by contacting customer service.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I don't receive payment notices?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Please check your spam folder and ensure your contact information is up to date. Contact our support team at 028 3622 6836 if you continue to miss notifications.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are payment notices sent in Vietnamese?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Payment notices are available in both Vietnamese and English. You can select your preferred language in the app settings or during account setup.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added Others content section -->
+            <div class="faq-section" id="others-content" style="display: none;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I update my personal information?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can update your personal information through the CUB Vietnam App or by visiting any branch with required documents. Some changes may require verification.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What documents do I need for account verification?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You'll need a valid ID (CCCD/CMND), proof of income, and proof of residence. Additional documents may be required based on your application type.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I close my account?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To close your account, please visit any CUB Vietnam branch with your ID and account information. Ensure all outstanding balances are cleared before closure.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is my personal data secure?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we use advanced encryption and security measures to protect your data. We comply with Vietnamese banking regulations and international security standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I report suspicious activity?
+                        <div class="faq-arrow"></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Report suspicious activity immediately by calling our 24/7 hotline at 028 3622 6836 or through the CUB Vietnam App's security center.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</section>
 
 
