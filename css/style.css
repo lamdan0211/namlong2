@@ -312,7 +312,7 @@ header button#mobile-menu-btn:hover {
   font-size: 0.8rem;
   color: #777;
   margin-top: 20px;
-}
+} 
 .download-box {
   max-width: 1000px;
   margin: 0 auto;
@@ -784,7 +784,9 @@ header button#mobile-menu-btn:hover {
 		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 		width: 1200px;
 	}
-
+	#section-download{
+		align-items: center;
+	}
 }
 @media (max-width: 1023px) {
 	#section-hero .bottom, #section-hero .phone,.download-right, #section-benefits .rainbow{
@@ -825,5 +827,10 @@ header button#mobile-menu-btn:hover {
 	}
 	.footer{
 		margin: 0 -12px;
+		color: white;
+		padding: 12px;
+	}
+	.download-box{
+		margin: 12px 0;
 	}
 }
