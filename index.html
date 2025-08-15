@@ -1,802 +1,935 @@
 <html lang="vi">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/fullpage.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Landing Page</title>
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/fullpage.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <!-- Header sticky -->
-<header>
-    <div class="container">
-        <!-- Logo -->
-        <a href="#hero" class="logo">
-            <img src="logo.png" alt="Logo">
-            <span class="logo-text">Cathay United Bank</span>
-        </a>
+	<!-- Header sticky -->
+	<header>
+		<div class="container">
+			<!-- Logo -->
+			<a href="#hero" class="logo">
+				<img src="logo.png" alt="Logo">
+				<span class="logo-text">Cathay United Bank</span>
+			</a>
 
-        <!-- Desktop menu -->
-        <nav>
-            <a href="#">PRODUCT</a>
-            <a href="#">PRIVACY POLICY</a>
-        </nav>
-		<div class="lang-dropdown">
-		  <div class="lang-btn">
-			<img id="langIcon" src="flag-en.png" alt="EN" width="18">
-		  </div>
-		  <div class="lang-menu">
-			<div data-lang="EN" data-flag="flag-en.png">EN</div>
-			<div data-lang="VN" data-flag="flag-vn.png">VN</div>
-		  </div>
-		</div>
-
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                 viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-    </div>
-</header>
-
-<!-- Mobile menu overlay -->
-<div id="mobile-menu">
-    <div>
-        <button id="mobile-menu-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                 viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <ul>
-            <li><a href="#product">Sản phẩm</a></li>
-            <li><a href="#privacy">Chính sách về quyền riêng tư</a></li>
-        </ul>
-    </div>
-
-    <!-- Language switch -->
-    <div class="lang-switch">
-        <img src="flag-vn.png" alt="VN">
-        <span>VN</span>
-        <span>|</span>
-        <span>EN</span>
-    </div>
-</div>
-
-<!-- fullPage container -->
-<div id="fullpage">
-    <div id="section-hero" class="section">
-        <div class="head">
-            <h1>Cathay Meets</h1>
-            <h2>All Your Needs</h2>
-        </div>
-	    <div class="content">
-			<a href="#" class="button">Download App</a>
-			<div class="scroll-text">
-			  <span>SCROLL</span>
-			  <div class="line line--y"></div>
+			<!-- Desktop menu -->
+			<div class="desktop-menu-right">
+				<nav>
+					<a class="active" href="#">PRODUCT</a>
+					<a href="#">PRIVACY POLICY</a>
+				</nav>
+				<div class="lang-dropdown">
+					<div class="lang-btn">
+						<img id="langIcon" src="flag-en.png" alt="EN" width="18">
+						<span>EN</span>
+					</div>
+					<div class="lang-menu">
+						<div data-lang="EN" data-flag="flag-en.png">EN</div>
+						<div data-lang="VN" data-flag="flag-vn.png">VN</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	    <div class="phone">
-			<img src="image/section-hero/Phone/356x718.png" />
-		</div>
-		<div class="bottom">
-			<img src="image/section-hero/section-hero-BG blur.png" />
-		</div>
-    </div>
 
-    <div id="section-benefits" class="section" style="display: block">
-	    <div class="head">
-		   <img src="image/section-benefits/Decoration/122x58.png" />
-		   <h3>Speed Meets Simplicity</h3>
+			<!-- Mobile menu button -->
+			<button id="mobile-menu-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+				</svg>
+			</button>
 		</div>
-        <div class="content">
-		   <div class="block block1">
-		      <div class="icon">
-				<img src="image/section-benefits/icon/Selling point icon.svg" />
-			  </div>
-			  <div>
-				<h3>Fast</h3>
-			    <p>Approval</p>
-			  </div>
-		   </div>
-		   <div class="block block2">
-		      <div class="icon">
-				<img src="image/section-benefits/icon/Selling point icon-1.svg" />
-			  </div>
-			  <div>
-				<h3>Attractive interest rate from</h3>
-			    <p>1.91%/month(*)</p>
-			  </div>
-		   </div>
-		   <div class="block block3">
-			  <div class="icon">
-				<img src="image/section-benefits/icon/Selling point icon-2.svg" />
-			  </div>
-			  <div>
-			    <h3>One Credit line application</h3>
-			    <p>Mulitple loans</p>
-			  </div>
-		   </div>
-		   <div class="block block4">
-		      <div class="icon">
-				<img src="image/section-benefits/icon/Selling point icon-3.svg" />
-			  </div>
-			  <div>
-			    <h3>Only Citizen ID</h3>
-			    <p>100% online</p>
-			  </div>
-		   </div>
+	</header>
+
+	<!-- Mobile menu overlay -->
+	<div id="mobile-menu">
+		<div>
+			<button id="mobile-menu-close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+			<ul>
+				<li><a href="#product">Sản phẩm</a></li>
+				<li><a href="#privacy">Chính sách về quyền riêng tư</a></li>
+			</ul>
 		</div>
-		<div class="bg-people">
-			<div class="men">
-			   <img src="image/section-benefits/SpeedMeets-Boy/268x328.png" />
+
+		<!-- Language switch -->
+		<div class="lang-switch">
+			<img src="flag-vn.png" alt="VN">
+			<span>VN</span>
+			<span>|</span>
+			<span>EN</span>
+		</div>
+	</div>
+
+	<!-- fullPage container -->
+	<div id="fullpage">
+		<div id="section-hero" class="section">
+			<div class="head">
+				<h1>Cathay Meets</h1>
+				<h2>All Your Needs</h2>
+			</div>
+			<div class="content">
+				<a href="#" class="button">Download App</a>
+				<div class="scroll-text">
+					<span>SCROLL</span>
+					<div class="line line--y"></div>
+				</div>
 			</div>
 			<div class="phone">
 				<img src="image/section-hero/Phone/356x718.png" />
 			</div>
-			<div class="women">
-				<img src="image/section-benefits/SpeedMeets-Girl/268x328.png" />
+			<div class="bottom">
+				<img src="image/section-hero/section-hero-BG blur.png" />
 			</div>
-		</div>		
-		<div class="rainbow">
-		   <img src="image/section-benefits/Vongtron/1920x780.png" />
 		</div>
-    </div>
 
-    <section id="section-estimation" class="section-estimation section">
-	  <div class="head">
-		<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
-		<h3>Loan Estimation</h3>
-		<p>No maintenance fee, fast loan with CUB Vietnam</p>
-	  </div>
-
-	  <div class="estimation-box">
-		<div class="estimation-left">
-		  <!-- Loan Amount Needed -->
-		  <div class="form-group">
-		    <div class="label">
-				<label>Loan Amount Needed</label>
-				<div class="loan">
-				   <input type="text" value="5,000,000" /> <span class="currency">đ</span>
+		<div id="section-benefits" class="section" style="display: block">
+			<div class="head">
+				<img src="image/section-benefits/Decoration/122x58.png" />
+				<h3>Speed Meets Simplicity</h3>
+			</div>
+			<div class="content">
+				<div class="block block1">
+					<div class="icon">
+						<img src="image/section-benefits/icon/Selling point icon.svg" />
+					</div>
+					<div class="content-detail">
+						<p>Fast</p>
+						<h3>Approval</h3>
+					</div>
+				</div>
+				<div class="block block2">
+					<div class="icon">
+						<img src="image/section-benefits/icon/Selling point icon-1.svg" />
+					</div>
+					<div class="content-detail">
+						<p>Attractive interest rate from</p>
+						<h3>1.91%/month(*)</h3>
+					</div>
+				</div>
+				<div class="block block3">
+					<div class="icon">
+						<img src="image/section-benefits/icon/Selling point icon-2.svg" />
+					</div>
+					<div class="content-detail">
+						<p>One Credit line application</p>
+						<h3>Mulitple loans</h3>
+					</div>
+				</div>
+				<div class="block block4">
+					<div class="icon">
+						<img src="image/section-benefits/icon/Selling point icon-3.svg" />
+					</div>
+					<div class="content-detail">
+						<p>Only Citizen ID</p>
+						<h3>100% online</h3>
+					</div>
 				</div>
 			</div>
-			<div class="input-group">
-			  <input type="range" min="3000000" max="40000000" value="3000000" step="1000000" />
-			  <div class="price">
-				<span>3,000,000 đ</span>
-				<span>40,000,000 đ</span>
-			  </div>
-			</div>
-		  </div>
-
-		  <!-- Loan Term -->
-		  <div class="form-group">
-		    <div class="label">
-				<label>Loan Term</label>
-				<div class="loan">
-				   <input type="text" value="15" /> <span class="unit">months</span>
+			<div class="bg-people">
+				<div class="men">
+					<img src="image/section-benefits/SpeedMeets-Boy/268x328.png" />
+				</div>
+				<div class="phone">
+					<img src="image/section-hero/Phone/356x718.png" />
+				</div>
+				<div class="women">
+					<img src="image/section-benefits/SpeedMeets-Girl/268x328.png" />
 				</div>
 			</div>
-			<div class="input-group">
-			  <input type="range" min="3" max="36" value="3" step="1" />
-			  <div class="price">
-				<span>3 months</span>
-				<span>36 months</span>
-			  </div>
+			<div class="rainbow">
+				<img src="image/section-benefits/Vongtron/1920x780.png" />
 			</div>
-		  </div>
 		</div>
 
-		<div class="estimation-right">
-		  <div class="repayment-box">
-			<p>Monthly Repayment</p>
-			<h2>428,996 <span>đ</span></h2>
-			<small>(Equivalent to 14,300 đ / Day)</small>
-		  </div>
-		  <p class="note">
-			The estimated loan result is calculated based on a flat interest rate of 22.92% per year (*) and may slightly differ from the actual amount.<br/>
-			*The flat interest rate converted from the declining balance loan interest rate is 40% per annum, based on a 365-day year.
-		  </p>
-		</div>
-	  </div>
-	</section>
-    <section id="section-steps" class="section-steps section">
-	  <div class="head">
-		<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
-		<h3>4 Simple Steps to loan</h3>
-	  </div>
-
-	  <div class="steps-container">
-	    
-		<!-- Left side: Phone & Person -->
-		<div class="steps-left">
-		    <img id="stepImage" src="image/section-steps/Step 1/Property 1=VN.png" />
-		</div>
-
-		<!-- Right side: Steps -->
-		<div class="steps-right">
-		   <div class="step-dots"></div>
-		   <div>
-		    <div class="step-item active" data-img="image/section-steps/Step 1/Property 1=VN.png">
-			<div class="step-number">01</div>
-			<div class="step-content">
-			  <h4>Select “Drawdown via NAPAS 247” in the app</h4>
-			  <p>Once your Credit Limit is approved by CUB Vietnam</p>
+		<section id="section-estimation" class="section-estimation section">
+			<div class="head">
+				<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
+				<h3>Loan Estimation</h3>
+				<p>No maintenance fee, fast loan with CUB Vietnam</p>
 			</div>
-		  </div>
 
-		  <div class="step-item" data-img="image/section-steps/Step 2/Property 1=VN.png">
-			<div class="step-number">02</div>
-			<div class="step-content">
-			  <h4>Fill in the loan request details</h4>
-			  <p>And submit your disbursement request via the app</p>
+			<div class="estimation-box">
+				<div class="estimation-left">
+					<!-- Loan Amount Needed -->
+					<div class="form-group">
+						<div class="label">
+							<label>Loan Amount Needed</label>
+							<div class="loan">
+								<input type="text" value="5,000,000" /> <span class="currency">đ</span>
+							</div>
+						</div>
+						<div class="input-group">
+							<input type="range" min="3000000" max="40000000" value="3000000" step="1000000" />
+							<div class="price">
+								<span>3,000,000 đ</span>
+								<span>40,000,000 đ</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Loan Term -->
+					<div class="form-group">
+						<div class="label">
+							<label>Loan Term</label>
+							<div class="loan">
+								<input type="text" value="15" /> <span class="unit">months</span>
+							</div>
+						</div>
+						<div class="input-group">
+							<input type="range" min="3" max="36" value="3" step="1" />
+							<div class="price">
+								<span>3 months</span>
+								<span>36 months</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="estimation-right">
+					<div class="repayment-box">
+						<p>Monthly Repayment</p>
+						<h2>428,996 <span>đ</span></h2>
+						<small>(Equivalent to 14,300 đ / Day)</small>
+					</div>
+					<p class="note">
+						The estimated loan result is calculated based on a flat interest rate of 22.92% per year (*) and
+						may slightly differ from the actual amount.<br />
+						*The flat interest rate converted from the declining balance loan interest rate is 40% per
+						annum, based on a 365-day year.
+					</p>
+				</div>
 			</div>
-		  </div>
-
-		  <div class="step-item" data-img="image/section-steps/Step 3/Property 1=VN.png">
-			<div class="step-number">03</div>
-			<div class="step-content">
-			  <h4>Enter your bank account information</h4>
-			  <p>To receive the disbursed amount</p>
+		</section>
+		<section id="section-steps" class="section-steps section">
+			<div class="head">
+				<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
+				<h3>4 Simple Steps to loan</h3>
 			</div>
-		  </div>
 
-		  <div class="step-item" data-img="image/section-steps/Step 4/Property 1=VN.png">
-			<div class="step-number">04</div>
-			<div class="step-content">
-			  <h4>Carefully review, confirm the disbursement details</h4>
-			  <p>And sign the loan agreement for each transaction</p>
+			<div class="steps-container">
+
+				<!-- Left side: Phone & Person -->
+				<div class="steps-left">
+					<img id="stepImage" src="image/section-steps/Step 1/Property 1=VN.png" />
+				</div>
+
+				<!-- Right side: Steps -->
+				<div class="steps-right">
+					<div class="step-dots"></div>
+					<div class="step-items-group">
+						<div class="step-item active" data-img="image/section-steps/Step 1/Property 1=VN.png">
+							<div class="step-number">01</div>
+							<div class="step-content">
+								<h4>Select “Drawdown via NAPAS 247” in the app</h4>
+								<p>Once your Credit Limit is approved by CUB Vietnam</p>
+							</div>
+						</div>
+
+						<div class="step-item" data-img="image/section-steps/Step 2/Property 1=VN.png">
+							<div class="step-number">02</div>
+							<div class="step-content">
+								<h4>Fill in the loan request details</h4>
+								<p>And submit your disbursement request via the app</p>
+							</div>
+						</div>
+
+						<div class="step-item" data-img="image/section-steps/Step 3/Property 1=VN.png">
+							<div class="step-number">03</div>
+							<div class="step-content">
+								<h4>Enter your bank account information</h4>
+								<p>To receive the disbursed amount</p>
+							</div>
+						</div>
+
+						<div class="step-item" data-img="image/section-steps/Step 4/Property 1=VN.png">
+							<div class="step-number">04</div>
+							<div class="step-content">
+								<h4>Carefully review, confirm the disbursement details</h4>
+								<p>And sign the loan agreement for each transaction</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
-		  </div>
-		   </div>
-		  
-		</div>
-	  </div>
-	</section>
-    <section id="section-faqs" class="section-faqs section">
-	  <div class="head">
-		<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
-		<h3>FAQs</h3>
-		<p>The information below is for reference only.<br>
-		  If you have any concerns, please refer to the Signed Contract or contact the hotline at <strong>028 3622 6836</strong>.
-		</p>
-	  </div>
+		</section>
+		<section id="section-faqs" class="section-faqs section">
+			<div class="container">
+				<!-- Header -->
+				<div class="header">
 
-	  <!-- Tabs -->
-	  <div class="faq-tabs">
-		<button class="active">Register and Use Credit Limit</button>
-		<button>Monthly Payment</button>
-		<button>Payment Notice</button>
-		<button>Others</button>
-	  </div>
+					<h1>FAQs</h1>
+					<p>The information below is for reference only.</p>
+					<p class="contact-info">If you have any concerns, please refer to the Signed Contract or contact the
+						hotline at <strong>028 3622 6836</strong>.</p>
+				</div>
 
-	  <!-- Main Content -->
-        <div class="main-content">
-            <!-- Left Section -->
-            <div class="left-section">
-                <div class="section-header">
-                    <div class="section-icon"></div>
-                    <h2 class="section-title" id="section-title">How to register<br>and use Credit Limit</h2>
-                </div>
-                <div class="illustration">
-                    <div class="person-illustration"></div>
-                    <div class="phone-mockup">
-                        <div class="phone-screen" id="phone-screen">VIETINBANK</div>
-                    </div>
-                </div>
-            </div>
+				<!-- Navigation Tabs -->
+				<div class="nav-tabs">
+					<button class="nav-tab active" data-tab="credit-limit">Register and Use Credit Limit</button>
+					<button class="nav-tab" data-tab="monthly-payment">Monthly Payment</button>
+					<button class="nav-tab" data-tab="payment-notice">Payment Notice</button>
+					<button class="nav-tab" data-tab="others">Others</button>
+				</div>
 
-            <!-- Right Section - FAQ -->
-            <!-- Added multiple content sections for different tabs -->
-            <div class="faq-section" id="credit-limit-content">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        CUB Vietnam App User Guideline?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Please help to refer <a href="#">here</a> for CUB Vietnam Application (App) user guideline</p>
-                    </div>
-                </div>
+				<!-- Added mobile navigation menu -->
+				<div class="mobile-nav" id="mobile-nav">
+					<div class="mobile-nav-header" onclick="toggleMobileNav()">
+						<span class="mobile-nav-title" id="mobile-nav-title">Register and Use Credit Limit</span>
+						<div class="hamburger-menu">
+							<div class="hamburger-line"></div>
+							<div class="hamburger-line"></div>
+							<div class="hamburger-line"></div>
+						</div>
+					</div>
+					<div class="mobile-nav-dropdown">
+						<button class="mobile-nav-item active" data-tab="credit-limit">Register and Use Credit
+							Limit</button>
+						<button class="mobile-nav-item" data-tab="monthly-payment">Monthly Payment</button>
+						<button class="mobile-nav-item" data-tab="payment-notice">Payment Notice</button>
+						<button class="mobile-nav-item" data-tab="others">Others</button>
+					</div>
+				</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How long and how do I activate my Credit Limit?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Your Credit Limit will be activated within 1-2 business days after your application is approved. You will receive an SMS notification once it's ready to use.</p>
-                    </div>
-                </div>
+				<!-- Main Content -->
+				<div class="main-content">
+					<!-- Left Section -->
+					<div class="left-section">
+						<div class="section-header">
+							<div class="section-icon"></div>
+							<h2 class="section-title" id="section-title">How to register<br>and use Credit Limit</h2>
+						</div>
+						<div class="illustration">
+							<img src="image/section-faqs/322x422.png" />
+						</div>
+					</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How to use Credit Limit?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can use your Credit Limit through the CUB Vietnam App, online banking, or at any ATM. Simply select the Credit Limit option when making transactions.</p>
-                    </div>
-                </div>
+					<!-- Right Section - FAQ -->
+					<!-- Added multiple content sections for different tabs -->
+					<div class="faq-section" id="credit-limit-content">
+						<div class="faq-item">
+							<button class="faq-question">
+								CUB Vietnam App User Guideline?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Please help to refer <a href="#">here</a> for CUB Vietnam Application (App) user
+									guideline</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How much Credit Limit amount that Cathay United Bank will approve?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The Credit Limit amount depends on your income, credit history, and other financial factors. Our team will assess your application and determine the appropriate limit for your profile.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								How long and how do I activate my Credit Limit?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Your Credit Limit will be activated within 1-2 business days after your application
+									is approved. You will receive an SMS notification once it's ready to use.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How long is my Credit Limit using?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Your Credit Limit is valid as long as your account remains active and in good standing. The limit will be reviewed annually and may be adjusted based on your usage and creditworthiness.</p>
-                    </div>
-                </div>
-            </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								How to use Credit Limit?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>You can use your Credit Limit through the CUB Vietnam App, online banking, or at any
+									ATM. Simply select the Credit Limit option when making transactions.</p>
+							</div>
+						</div>
 
-            <!-- Added Monthly Payment content section -->
-            <div class="faq-section" id="monthly-payment-content" style="display: none;">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        When is my monthly payment due?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Your monthly payment is due on the same date each month as specified in your contract. You will receive a reminder notification 3 days before the due date.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								How much Credit Limit amount that Cathay United Bank will approve?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>The Credit Limit amount depends on your income, credit history, and other financial
+									factors. Our team will assess your application and determine the appropriate limit
+									for your profile.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What payment methods are available?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can make payments through auto-debit, online banking, mobile app, bank transfer, or visit any CUB Vietnam branch. We recommend setting up auto-debit for convenience.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								How long is my Credit Limit using?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Your Credit Limit is valid as long as your account remains active and in good
+									standing. The limit will be reviewed annually and may be adjusted based on your
+									usage and creditworthiness.</p>
+							</div>
+						</div>
+					</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What happens if I miss a payment?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Late payment fees will apply as per your contract terms. Your credit score may also be affected. Please contact us immediately if you anticipate payment difficulties.</p>
-                    </div>
-                </div>
+					<!-- Added Monthly Payment content section -->
+					<div class="faq-section" id="monthly-payment-content" style="display: none;">
+						<div class="faq-item">
+							<button class="faq-question">
+								When is my monthly payment due?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Your monthly payment is due on the same date each month as specified in your
+									contract. You will receive a reminder notification 3 days before the due date.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can I make early payments?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, you can make early payments without penalty. Early payments will reduce your outstanding balance and may save you on interest charges.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								What payment methods are available?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>You can make payments through auto-debit, online banking, mobile app, bank transfer,
+									or visit any CUB Vietnam branch. We recommend setting up auto-debit for convenience.
+								</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I set up automatic payments?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can set up automatic payments through the CUB Vietnam App or by visiting any branch. You'll need to provide your preferred bank account details for auto-debit.</p>
-                    </div>
-                </div>
-            </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								What happens if I miss a payment?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Late payment fees will apply as per your contract terms. Your credit score may also
+									be affected. Please contact us immediately if you anticipate payment difficulties.
+								</p>
+							</div>
+						</div>
 
-            <!-- Added Payment Notice content section -->
-            <div class="faq-section" id="payment-notice-content" style="display: none;">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How will I receive payment notifications?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Payment notifications are sent via SMS, email, and push notifications through the CUB Vietnam App. You can customize your notification preferences in the app settings.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								Can I make early payments?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Yes, you can make early payments without penalty. Early payments will reduce your
+									outstanding balance and may save you on interest charges.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        When do I receive payment reminders?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Payment reminders are sent 7 days, 3 days, and 1 day before your due date. You'll also receive a confirmation once payment is processed successfully.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								How do I set up automatic payments?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>You can set up automatic payments through the CUB Vietnam App or by visiting any
+									branch. You'll need to provide your preferred bank account details for auto-debit.
+								</p>
+							</div>
+						</div>
+					</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can I change my notification preferences?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, you can update your notification preferences anytime through the CUB Vietnam App under Settings > Notifications, or by contacting customer service.</p>
-                    </div>
-                </div>
+					<!-- Added Payment Notice content section -->
+					<div class="faq-section" id="payment-notice-content" style="display: none;">
+						<div class="faq-item">
+							<button class="faq-question">
+								How will I receive payment notifications?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Payment notifications are sent via SMS, email, and push notifications through the CUB
+									Vietnam App. You can customize your notification preferences in the app settings.
+								</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What if I don't receive payment notices?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Please check your spam folder and ensure your contact information is up to date. Contact our support team at 028 3622 6836 if you continue to miss notifications.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								When do I receive payment reminders?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Payment reminders are sent 7 days, 3 days, and 1 day before your due date. You'll
+									also receive a confirmation once payment is processed successfully.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Are payment notices sent in Vietnamese?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Payment notices are available in both Vietnamese and English. You can select your preferred language in the app settings or during account setup.</p>
-                    </div>
-                </div>
-            </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								Can I change my notification preferences?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Yes, you can update your notification preferences anytime through the CUB Vietnam App
+									under Settings > Notifications, or by contacting customer service.</p>
+							</div>
+						</div>
 
-            <!-- Added Others content section -->
-            <div class="faq-section" id="others-content" style="display: none;">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I update my personal information?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can update your personal information through the CUB Vietnam App or by visiting any branch with required documents. Some changes may require verification.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								What if I don't receive payment notices?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Please check your spam folder and ensure your contact information is up to date.
+									Contact our support team at 028 3622 6836 if you continue to miss notifications.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What documents do I need for account verification?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You'll need a valid ID (CCCD/CMND), proof of income, and proof of residence. Additional documents may be required based on your application type.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								Are payment notices sent in Vietnamese?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Payment notices are available in both Vietnamese and English. You can select your
+									preferred language in the app settings or during account setup.</p>
+							</div>
+						</div>
+					</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I close my account?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>To close your account, please visit any CUB Vietnam branch with your ID and account information. Ensure all outstanding balances are cleared before closure.</p>
-                    </div>
-                </div>
+					<!-- Added Others content section -->
+					<div class="faq-section" id="others-content" style="display: none;">
+						<div class="faq-item">
+							<button class="faq-question">
+								How do I update my personal information?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>You can update your personal information through the CUB Vietnam App or by visiting
+									any branch with required documents. Some changes may require verification.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Is my personal data secure?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, we use advanced encryption and security measures to protect your data. We comply with Vietnamese banking regulations and international security standards.</p>
-                    </div>
-                </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								What documents do I need for account verification?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>You'll need a valid ID (CCCD/CMND), proof of income, and proof of residence.
+									Additional documents may be required based on your application type.</p>
+							</div>
+						</div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How do I report suspicious activity?
-                        <div class="faq-arrow"></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Report suspicious activity immediately by calling our 24/7 hotline at 028 3622 6836 or through the CUB Vietnam App's security center.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</section>
-    <section id="section-download" class="section-download section">
-	  <div class="download-box">
-		<div class="download-left">
-		  <p class="download-subtitlae">Download</p>
-		  <h2 class="download-title">CUB Vietnam APP</h2>
-		  <div class="download-buttons">
-			<a href="#" class="btn-appstore">
-			  <img src="image/section-download/Apple/148x48.png" alt="App Store">
-			</a>
-			<a href="#" class="btn-googleplay">
-			  <img src="image/section-download/\Google/148x48.png" alt="Google Play">
-			</a>
-		  </div>
-		</div>
-		<div class="download-right">
-		  <img src="image/section-download/qrcode.png" alt="QR Code" class="qr-code">
-		</div>
-	  </div>
-	  <!-- Footer -->
-		<footer class="footer">
-		  <div class="footer-container">
-			<div class="footer-left">
-			  <img src="image/logo-footer.png" alt="Cathay United Bank" class="footer-logo">
-			  <p>Working hours: 8:30-17:30 (Mon-Fri)<br>Excluding national holidays</p>
-			  <div class="social-links">
-				<a href="#"><img src="image/icons/facebook.png" alt="Facebook"></a>
-				<a href="#"><img src="image/icons/tiktok.png" alt="TikTok"></a>
-				<a href="#"><img src="image/icons/youtube.png" alt="YouTube"></a>
-			  </div>
+						<div class="faq-item">
+							<button class="faq-question">
+								How do I close my account?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>To close your account, please visit any CUB Vietnam branch with your ID and account
+									information. Ensure all outstanding balances are cleared before closure.</p>
+							</div>
+						</div>
+
+						<div class="faq-item">
+							<button class="faq-question">
+								Is my personal data secure?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Yes, we use advanced encryption and security measures to protect your data. We comply
+									with Vietnamese banking regulations and international security standards.</p>
+							</div>
+						</div>
+
+						<div class="faq-item">
+							<button class="faq-question">
+								How do I report suspicious activity?
+								<div class="faq-arrow"></div>
+							</button>
+							<div class="faq-answer">
+								<p>Report suspicious activity immediately by calling our 24/7 hotline at 028 3622 6836
+									or through the CUB Vietnam App's security center.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="footer-right">
-			  <ul class="footer-menu">
-				<li><a href="#">PRODUCT</a></li>
-				<li><a href="#">PRIVACY POLICY</a></li>
-				<li><a href="mailto:contact.CUB@vn.cathaybk.com">CONTACT US</a></li>
-			  </ul>
-			  <p class="contact-phone">028 3622 6836</p>
+
+		</section>
+
+
+
+		<section id="section-download" class="section-download section">
+			<div class="download-box">
+				<div class="download-left">
+					<p class="download-subtitlae">Download</p>
+					<h2 class="download-title">CUB Vietnam APP</h2>
+					<div class="download-buttons">
+						<a href="#" class="btn-appstore">
+							<img src="image/section-download/Apple/148x48.png" alt="App Store">
+						</a>
+						<a href="#" class="btn-googleplay">
+							<img src="image/section-download/\Google/148x48.png" alt="Google Play">
+						</a>
+					</div>
+				</div>
+				<div class="download-right">
+					<img src="image/section-download/qrcode.png" alt="QR Code" class="qr-code">
+				</div>
 			</div>
-		  </div>
-		  <div class="footer-bottom">
-			<p>© 2025, All Rights Reserved</p>
-		  </div>
-		</footer>
-	</section>
+			<!-- Footer -->
+			<footer class="footer">
+				<div class="footer-container">
+					<div class="footer-left">
+						<img src="image/logo-footer.png" alt="Cathay United Bank" class="footer-logo">
+						<p>Working hours: 8:30-17:30 (Mon-Fri)<br>Excluding national holidays</p>
+						<div class="social-links">
+							<a href="#"><img src="image/icons/facebook.png" alt="Facebook"></a>
+							<a href="#"><img src="image/icons/tiktok.png" alt="TikTok"></a>
+							<a href="#"><img src="image/icons/youtube.png" alt="YouTube"></a>
+						</div>
+					</div>
+					<div class="footer-right">
+						<ul class="footer-menu">
+							<li><a href="#">PRODUCT</a></li>
+							<li><a href="#">PRIVACY POLICY</a></li>
+							<li><a href="mailto:contact.CUB@vn.cathaybk.com">CONTACT US</a></li>
+						</ul>
+						<p class="contact-phone">028 3622 6836</p>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>© 2025, All Rights Reserved</p>
+				</div>
+			</footer>
+		</section>
 
-</div>
+	</div>
 
-  <!-- jQuery (CDN) -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- fullPage.js script (CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
-  <script>
-	$(document).ready(function () {
-		var currentStep = 0;
-		var totalSteps = $(".step-item").length;
-		var isScrolling = false;
-		var scrollTimeout;
-		var isFullpageInit = false; // kiểm tra trạng thái fullpage
+	<!-- jQuery (CDN) -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<!-- fullPage.js script (CDN) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var currentStep = 0;
+			var totalSteps = $(".step-item").length;
+			var isScrolling = false;
+			var scrollTimeout;
+			var isFullpageInit = false; // kiểm tra trạng thái fullpage
 
-		function initFullpage() {
-			if (!isFullpageInit && $(window).width() >= 1024) {
-				$('#fullpage').fullpage({
-					navigation: false,
-					anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
-					scrollingSpeed: 700,
-					afterLoad: function (origin, destination) {
-						if (destination.anchor === 'steps') {
-							currentStep = 0;
-							setActiveStep(currentStep, 'down', true);
-							fullpage_api.setAllowScrolling(false);
-							attachStepScroll();
+			function initFullpage() {
+				if (!isFullpageInit && $(window).width() >= 1024) {
+					$('#fullpage').fullpage({
+						navigation: false,
+						anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
+						scrollingSpeed: 700,
+						afterLoad: function (origin, destination) {
+							if (destination.anchor === 'steps') {
+								currentStep = 0;
+								setActiveStep(currentStep, 'down', true);
+								fullpage_api.setAllowScrolling(false);
+								attachStepScroll();
+							}
+						},
+						onLeave: function (origin) {
+							if (origin.anchor === 'steps') {
+								detachStepScroll();
+								fullpage_api.setAllowScrolling(true);
+							}
 						}
-					},
-					onLeave: function (origin) {
-						if (origin.anchor === 'steps') {
-							detachStepScroll();
-							fullpage_api.setAllowScrolling(true);
-						}
-					}
-				});
-				isFullpageInit = true;
+					});
+					isFullpageInit = true;
+				}
 			}
-		}
 
-		function destroyFullpage() {
-			if (isFullpageInit && $(window).width() < 1024) {
-				fullpage_api.destroy('all'); // xóa hẳn fullpage
-				isFullpageInit = false;
+			function destroyFullpage() {
+				if (isFullpageInit && $(window).width() < 1024) {
+					fullpage_api.destroy('all'); // xóa hẳn fullpage
+					isFullpageInit = false;
+				}
 			}
-		}
 
-		function attachStepScroll() {
-			$(window)
-				.off("wheel.stepScroll")
-				.on("wheel.stepScroll", { passive: false }, function (e) {
-					e.preventDefault();
-					clearTimeout(scrollTimeout);
-					scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
-					if (isScrolling) return;
-					isScrolling = true;
+			function attachStepScroll() {
+				$(window)
+					.off("wheel.stepScroll")
+					.on("wheel.stepScroll", { passive: false }, function (e) {
+						e.preventDefault();
+						clearTimeout(scrollTimeout);
+						scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
+						if (isScrolling) return;
+						isScrolling = true;
 
-					const delta = e.originalEvent.deltaY;
+						const delta = e.originalEvent.deltaY;
 
-					if (delta > 0) {
-						if (currentStep < totalSteps - 1) {
-							currentStep++;
-							setActiveStep(currentStep, 'down');
+						if (delta > 0) {
+							if (currentStep < totalSteps - 1) {
+								currentStep++;
+								setActiveStep(currentStep, 'down');
+							} else {
+								goToNextSection();
+							}
 						} else {
-							goToNextSection();
+							if (currentStep > 0) {
+								currentStep--;
+								setActiveStep(currentStep, 'up');
+							} else {
+								goToPrevSection();
+							}
 						}
-					} else {
-						if (currentStep > 0) {
-							currentStep--;
-							setActiveStep(currentStep, 'up');
-						} else {
-							goToPrevSection();
-						}
-					}
-				});
-		}
-
-		function goToNextSection() {
-			detachStepScroll();
-			setTimeout(() => {
-				fullpage_api.setAllowScrolling(true);
-				fullpage_api.moveSectionDown();
-			}, 50);
-			setTimeout(() => { isScrolling = false; }, 700);
-		}
-
-		function goToPrevSection() {
-			detachStepScroll();
-			setTimeout(() => {
-				fullpage_api.setAllowScrolling(true);
-				fullpage_api.moveSectionUp();
-			}, 50);
-			setTimeout(() => { isScrolling = false; }, 700);
-		}
-
-		function detachStepScroll() {
-			$(window).off("wheel.stepScroll");
-		}
-
-		function setActiveStep(index, direction, instant) {
-			$(".step-item").removeClass("active").eq(index).addClass("active");
-			$(".step-dot").removeClass("active").eq(index).addClass("active");
-			let imgSrc = $(".step-item").eq(index).data("img");
-			let $img = $("#stepImage");
-
-			if (instant) {
-				$img.attr("src", imgSrc).show();
-				return;
+					});
 			}
 
-			$img.stop(true, true).fadeOut(200, function () {
-				$img.attr("src", imgSrc).fadeIn(200);
+			function goToNextSection() {
+				detachStepScroll();
+				setTimeout(() => {
+					fullpage_api.setAllowScrolling(true);
+					fullpage_api.moveSectionDown();
+				}, 50);
+				setTimeout(() => { isScrolling = false; }, 700);
+			}
+
+			function goToPrevSection() {
+				detachStepScroll();
+				setTimeout(() => {
+					fullpage_api.setAllowScrolling(true);
+					fullpage_api.moveSectionUp();
+				}, 50);
+				setTimeout(() => { isScrolling = false; }, 700);
+			}
+
+			function detachStepScroll() {
+				$(window).off("wheel.stepScroll");
+			}
+
+			function setActiveStep(index, direction, instant) {
+				$(".step-item").removeClass("active").eq(index).addClass("active");
+				$(".step-dot").removeClass("active").eq(index).addClass("active");
+				let imgSrc = $(".step-item").eq(index).data("img");
+				let $img = $("#stepImage");
+
+				if (instant) {
+					$img.attr("src", imgSrc).show();
+					return;
+				}
+
+				$img.stop(true, true).fadeOut(200, function () {
+					$img.attr("src", imgSrc).fadeIn(200);
+				});
+
+				$(".step-item").eq(index)
+					.css({
+						transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
+						opacity: 0
+					})
+					.animate({ opacity: 1, translateY: 0 }, 300);
+			}
+
+			// Loan calculation
+			const interestRate = 0.2292;
+			function formatCurrency(num) {
+				return num.toLocaleString('vi-VN');
+			}
+			function calculate() {
+				let loanAmount = parseInt($('.form-group').eq(0).find('input[type=text]').val().replace(/,/g, '')) || 0;
+				let loanTermMonths = parseInt($('.form-group').eq(1).find('input[type=text]').val()) || 0;
+				let principalPerMonth = loanAmount / loanTermMonths;
+				let interestPerMonth = loanAmount * interestRate / 12;
+				let monthlyRepayment = Math.round(principalPerMonth + interestPerMonth);
+				let dailyRepayment = Math.round(monthlyRepayment / 30);
+				$('.repayment-box h2').html(formatCurrency(monthlyRepayment) + ' <span>đ</span>');
+				$('.repayment-box small').text(`(Equivalent to ${formatCurrency(dailyRepayment)} đ / Day)`);
+			}
+			$('.form-group').eq(0).find('input[type=range]').on('input', function () {
+				let value = parseInt($(this).val());
+				$('.form-group').eq(0).find('input[type=text]').val(formatCurrency(value));
+				calculate();
+			});
+			$('.form-group').eq(1).find('input[type=range]').on('input', function () {
+				let value = parseInt($(this).val());
+				$('.form-group').eq(1).find('input[type=text]').val(value);
+				calculate();
+			});
+			$('.form-group').find('input[type=text]').on('input', calculate);
+			calculate();
+
+			// Khởi tạo đúng theo kích thước màn hình
+			initFullpage();
+
+			// Lắng nghe resize để bật/tắt fullpage
+			$(window).on('resize', function () {
+				if ($(window).width() >= 1024) {
+					initFullpage();
+				} else {
+					destroyFullpage();
+				}
+			});
+			// Mở menu
+			$('#mobile-menu-btn').on('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				$('#mobile-menu').addClass('active');
 			});
 
-			$(".step-item").eq(index)
-				.css({
-					transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
-					opacity: 0
-				})
-				.animate({ opacity: 1, translateY: 0 }, 300);
-		}
+			// Đóng menu khi bấm nút close
+			$('#mobile-menu-close').on('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				$('#mobile-menu').removeClass('active');
+			});
+			var $steps = $('.steps-right .step-item');
+			var $dotsContainer = $('.step-dots');
 
-		// FAQ tabs
-		$('.faq-tabs button').click(function () {
-			const index = $(this).index();
-			$('.faq-tabs button').removeClass('active');
-			$(this).addClass('active');
-			$('.faq-section').hide().eq(index).show();
+			// Tạo dot dựa trên số lượng step
+			$steps.each(function (index) {
+				var dot = $('<div class="step-dot"></div>');
+				if ($(this).hasClass('active')) {
+					dot.addClass('active');
+				}
+				$dotsContainer.append(dot);
+			});
+
+			// Khi click vào step => đổi ảnh và dot
+			$steps.on('click', function () {
+				var imgSrc = $(this).data('img');
+				$('#stepImage').attr('src', imgSrc);
+
+				$steps.removeClass('active');
+				$(this).addClass('active');
+
+				var index = $(this).index();
+				$('.step-dot').removeClass('active').eq(index).addClass('active');
+			});
+
+			// Khi click vào dot => đổi step và ảnh
+			$(document).on('click', '.step-dot', function () {
+				var index = $(this).index();
+
+				$steps.removeClass('active').eq(index).addClass('active');
+				$('.step-dot').removeClass('active').eq(index).addClass('active');
+
+				var imgSrc = $steps.eq(index).data('img');
+				$('#stepImage').attr('src', imgSrc);
+			});
+			// Toggle dropdown
+			$(".lang-btn").click(function () {
+				$(".lang-menu").toggle();
+			});
+
+			// Click chọn ngôn ngữ
+			$(".lang-menu div").click(function () {
+				let lang = $(this).data("lang");
+				let flag = $(this).data("flag");
+				$("#langText").text(lang);
+				$("#langIcon").attr("src", flag).attr("alt", lang);
+				$(".lang-menu").hide();
+			});
+
+			// Click ra ngoài thì đóng
+			$(document).click(function (e) {
+				if (!$(e.target).closest(".lang-dropdown").length) {
+					$(".lang-menu").hide();
+				}
+			});
 		});
+	</script>
 
-		// FAQ toggle
-		$('.faq-question').click(function () {
-			const $answer = $(this).next('.faq-answer');
-			$('.faq-answer').not($answer).removeClass('active');
-			$('.faq-question').not(this).removeClass('open');
-			$answer.toggleClass('active');
-			$(this).toggleClass('open');
-		});
+	<script>
+		$(document).ready(function () {
+			// Tab content data
+			const tabContent = {
+				'credit-limit': { title: 'How to register<br>and use Credit Limit', screen: 'VIETINBANK' },
+				'monthly-payment': { title: 'Monthly Payment<br>Information', screen: 'PAYMENT' },
+				'payment-notice': { title: 'Payment Notice<br>Settings', screen: 'NOTICES' },
+				'others': { title: 'Other Services<br>& Support', screen: 'SUPPORT' }
+			};
 
-		// Loan calculation
-		const interestRate = 0.2292;
-		function formatCurrency(num) {
-			return num.toLocaleString('vi-VN');
-		}
-		function calculate() {
-			let loanAmount = parseInt($('.form-group').eq(0).find('input[type=text]').val().replace(/,/g, '')) || 0;
-			let loanTermMonths = parseInt($('.form-group').eq(1).find('input[type=text]').val()) || 0;
-			let principalPerMonth = loanAmount / loanTermMonths;
-			let interestPerMonth = loanAmount * interestRate / 12;
-			let monthlyRepayment = Math.round(principalPerMonth + interestPerMonth);
-			let dailyRepayment = Math.round(monthlyRepayment / 30);
-			$('.repayment-box h2').html(formatCurrency(monthlyRepayment) + ' <span>đ</span>');
-			$('.repayment-box small').text(`(Equivalent to ${formatCurrency(dailyRepayment)} đ / Day)`);
-		}
-		$('.form-group').eq(0).find('input[type=range]').on('input', function () {
-			let value = parseInt($(this).val());
-			$('.form-group').eq(0).find('input[type=text]').val(formatCurrency(value));
-			calculate();
-		});
-		$('.form-group').eq(1).find('input[type=range]').on('input', function () {
-			let value = parseInt($(this).val());
-			$('.form-group').eq(1).find('input[type=text]').val(value);
-			calculate();
-		});
-		$('.form-group').find('input[type=text]').on('input', calculate);
-		calculate();
+			// Initialize FAQ functionality
+			function initFAQ() {
+				$('.faq-section:not([style*="display: none"]) .faq-item').each(function () {
+					const $item = $(this);
+					const $question = $item.find('.faq-question');
+					const $answer = $item.find('.faq-answer');
 
-		// Khởi tạo đúng theo kích thước màn hình
-		initFullpage();
+					// Remove existing listeners and add new one
+					$question.off('click').on('click', function () {
+						const isActive = $item.hasClass('active');
 
-		// Lắng nghe resize để bật/tắt fullpage
-		$(window).on('resize', function () {
-			if ($(window).width() >= 1024) {
-				initFullpage();
-			} else {
-				destroyFullpage();
+						// Close other items
+						$('.faq-section:not([style*="display: none"]) .faq-item').not($item).removeClass('active')
+							.find('.faq-answer').removeClass('active');
+
+						// Toggle current item
+						$item.toggleClass('active');
+						$answer.toggleClass('active');
+					});
+				});
 			}
-		});
-		// Mở menu
-		$('#mobile-menu-btn').on('click', function (e) {
-			e.preventDefault();
-			e.stopPropagation();
-			$('#mobile-menu').addClass('active');
-		});
 
-		// Đóng menu khi bấm nút close
-		$('#mobile-menu-close').on('click', function (e) {
-			e.preventDefault();
-			e.stopPropagation();
-			$('#mobile-menu').removeClass('active');
-		});
-		var $steps = $('.steps-right .step-item');
-		var $dotsContainer = $('.step-dots');
+			// Handle tab switching
+			function switchTab(tabType) {
+				// Update all navigation states
+				$('[data-tab]').removeClass('active').filter(`[data-tab="${tabType}"]`).addClass('active');
 
-		// Tạo dot dựa trên số lượng step
-		$steps.each(function (index) {
-			var dot = $('<div class="step-dot"></div>');
-			if ($(this).hasClass('active')) {
-				dot.addClass('active');
+				// Update mobile nav title
+				$('#mobile-nav-title').text($(`[data-tab="${tabType}"]`).first().text());
+
+				// Switch content
+				$('.faq-section').hide();
+				$(`#${tabType}-content`).show().css({
+					'display': 'flex',
+					'flex-direction': 'column',
+					'gap': '16px'
+				});
+
+				// Update left section
+				if (tabContent[tabType]) {
+					$('#section-title').html(tabContent[tabType].title);
+					$('#phone-screen').text(tabContent[tabType].screen);
+				}
+
+				// Reinitialize FAQ
+				setTimeout(initFAQ, 100);
 			}
-			$dotsContainer.append(dot);
+
+			// Event listeners
+			$('[data-tab]').on('click', function () {
+				const tabType = $(this).data('tab');
+				switchTab(tabType);
+
+				// Close mobile menu if needed
+				if ($(this).hasClass('mobile-nav-item')) {
+					$('#mobile-nav').removeClass('expanded');
+				}
+			});
+
+			// Mobile nav toggle
+			window.toggleMobileNav = function () {
+				$('#mobile-nav').toggleClass('expanded');
+			};
+
+			// Phone hover effect
+			$('.illustration').hover(
+				function () {
+					$(this).find('.phone-mockup').css({
+						'transform': 'scale(1.05) rotate(2deg)',
+						'transition': 'transform 0.3s ease'
+					});
+				},
+				function () {
+					$(this).find('.phone-mockup').css('transform', 'scale(1) rotate(0deg)');
+				}
+			);
+
+			// Initialize
+			initFAQ();
+			$('html').css('scroll-behavior', 'smooth');
 		});
-
-		// Khi click vào step => đổi ảnh và dot
-		$steps.on('click', function () {
-			var imgSrc = $(this).data('img');
-			$('#stepImage').attr('src', imgSrc);
-
-			$steps.removeClass('active');
-			$(this).addClass('active');
-
-			var index = $(this).index();
-			$('.step-dot').removeClass('active').eq(index).addClass('active');
-		});
-
-		// Khi click vào dot => đổi step và ảnh
-		$(document).on('click', '.step-dot', function () {
-			var index = $(this).index();
-
-			$steps.removeClass('active').eq(index).addClass('active');
-			$('.step-dot').removeClass('active').eq(index).addClass('active');
-
-			var imgSrc = $steps.eq(index).data('img');
-			$('#stepImage').attr('src', imgSrc);
-		});
-		// Toggle dropdown
-	  $(".lang-btn").click(function(){
-		$(".lang-menu").toggle();
-	  });
-
-	  // Click chọn ngôn ngữ
-	  $(".lang-menu div").click(function(){
-		let lang = $(this).data("lang");
-		let flag = $(this).data("flag");
-		$("#langText").text(lang);
-		$("#langIcon").attr("src", flag).attr("alt", lang);
-		$(".lang-menu").hide();
-	  });
-
-	  // Click ra ngoài thì đóng
-	  $(document).click(function(e){
-		if(!$(e.target).closest(".lang-dropdown").length){
-		  $(".lang-menu").hide();
-		}
-	  });
-	});
-</script>
+	</script>
 </body>
+
 </html>
