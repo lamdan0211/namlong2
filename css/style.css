@@ -195,7 +195,8 @@ header button#mobile-menu-btn:hover {
 	background: #fff;
 	border-radius: 10px;
 	display: inline-block;
-	padding: 10px;
+	padding: 12px;
+	margin: 12px 0;
 }
 .section-faqs .faq-tabs button{
 	background: none;
@@ -312,10 +313,6 @@ header button#mobile-menu-btn:hover {
   color: #777;
   margin-top: 20px;
 }
-.section-download {
-   background-color: #f3f5f7;
-}
-
 .download-box {
   max-width: 1000px;
   margin: 0 auto;
@@ -410,18 +407,10 @@ header button#mobile-menu-btn:hover {
   color: #fff;
   text-decoration: none;
 }
-/* Main Content */
 #section-faqs .main-content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 60px;
 	background: white;
-	border-radius: 20px;
-	padding: 40px;
-	box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-	width: 1200px;
+	padding: 12px;
 }
-
 /* Left Section */
 #section-faqs .left-section {
 	display: flex;
@@ -598,28 +587,6 @@ header button#mobile-menu-btn:hover {
 #section-faqs .faq-answer a:hover {
 	text-decoration: underline;
 }
-.steps-right{
-	display: flex;
-	align-items: center;
-}
-.step-dots {
-    margin: 0 12px;
-}
-
-.step-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s;
-	margin-bottom: 12px;
-}
-
-.step-dot.active {
-    background-color: #007bff;
-	height: 50px;
-}
 
 /* Chữ dọc */
 .scroll-text span {
@@ -785,9 +752,42 @@ header button#mobile-menu-btn:hover {
 	.section-steps .steps-container .steps-left{
 		width: 25vw;
 	}
+	.steps-right{
+		display: flex;
+		align-items: center;
+	}
+	.step-dots {
+		margin: 0 12px;
+	}
+
+	.step-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 10px;
+		background-color: #ccc;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		margin-bottom: 12px;
+	}
+
+	.step-dot.active {
+		background-color: #007bff;
+		height: 50px;
+	}
+	/* Main Content */
+	#section-faqs .main-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		border-radius: 20px;
+		padding: 40px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		width: 1200px;
+	}
+
 }
 @media (max-width: 1023px) {
-	#section-hero .bottom, #section-hero .phone{
+	#section-hero .bottom, #section-hero .phone,.download-right, #section-benefits .rainbow{
 		display: none;
 	}
 	.scroll-text{
@@ -797,9 +797,6 @@ header button#mobile-menu-btn:hover {
 	}
 	.scroll-text .line.line--y{
 		display: inline-block;
-	}
-	#section-benefits .rainbow{
-		display: none;
 	}
 	#section-benefits .block{
 		margin-bottom: 12px;
@@ -815,5 +812,18 @@ header button#mobile-menu-btn:hover {
 	}
 	.section-steps .steps-container .steps-left{
 		display: none;
+	}
+	.section-steps .steps-container .steps-right .step-item{
+		background: white;
+		margin-bottom: 12px;
+	}
+	#section-steps .head, #section-faqs .head{
+		margin-top: 5vh;
+	}
+	#section-faqs .illustration{
+		margin-bottom: 12px;
+	}
+	.footer{
+		margin: 0 -12px;
 	}
 }
