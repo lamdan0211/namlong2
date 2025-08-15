@@ -253,6 +253,7 @@ header button#mobile-menu-btn:hover {
 }
 .section-faqs{
 	align-items: center;
+	background: #f7f9fb;
 }
 .section-faqs .faq-tabs{
 	background: #fff;
@@ -273,6 +274,7 @@ header button#mobile-menu-btn:hover {
 }
 .section-faqs .faq-content{
 	display: flex;
+	background: white;
 }
 .estimation-box {
   display: flex;
