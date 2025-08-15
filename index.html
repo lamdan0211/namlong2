@@ -545,191 +545,189 @@
   <!-- fullPage.js script (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
   <script>
-	  $(document).ready(function () {
-		  var currentStep = 0;
-		  var totalSteps = $(".step-item").length;
-		  var isScrolling = false;
-		  var scrollTimeout;
+	$(document).ready(function () {
+		var currentStep = 0;
+		var totalSteps = $(".step-item").length;
+		var isScrolling = false;
+		var scrollTimeout;
+		var isFullpageInit = false; // kiểm tra trạng thái fullpage
 
-		  if ($(window).width() >= 1024) {
-			$('#fullpage').fullpage({
-			  navigation: false,
-			  anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
-			  scrollingSpeed: 700,
-			  afterLoad: function (origin, destination) {
-				if (destination.anchor === 'steps') {
-				  currentStep = 0; // reset khi vào steps
-				  setActiveStep(currentStep, 'down', true);
-				  fullpage_api.setAllowScrolling(false);
-				  attachStepScroll();
-				}
-			  },
-			  onLeave: function (origin) {
-				if (origin.anchor === 'steps') {
-				  detachStepScroll();
-				  fullpage_api.setAllowScrolling(true);
-				}
-			  }
-			});
-		  }
+		function initFullpage() {
+			if (!isFullpageInit && $(window).width() >= 1024) {
+				$('#fullpage').fullpage({
+					navigation: false,
+					anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
+					scrollingSpeed: 700,
+					afterLoad: function (origin, destination) {
+						if (destination.anchor === 'steps') {
+							currentStep = 0;
+							setActiveStep(currentStep, 'down', true);
+							fullpage_api.setAllowScrolling(false);
+							attachStepScroll();
+						}
+					},
+					onLeave: function (origin) {
+						if (origin.anchor === 'steps') {
+							detachStepScroll();
+							fullpage_api.setAllowScrolling(true);
+						}
+					}
+				});
+				isFullpageInit = true;
+			}
+		}
 
-		  function attachStepScroll() {
+		function destroyFullpage() {
+			if (isFullpageInit && $(window).width() < 1024) {
+				fullpage_api.destroy('all'); // xóa hẳn fullpage
+				isFullpageInit = false;
+			}
+		}
+
+		function attachStepScroll() {
 			$(window)
-			  .off("wheel.stepScroll")
-			  .on("wheel.stepScroll", { passive: false }, function (e) {
-				e.preventDefault();
+				.off("wheel.stepScroll")
+				.on("wheel.stepScroll", { passive: false }, function (e) {
+					e.preventDefault();
+					clearTimeout(scrollTimeout);
+					scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
+					if (isScrolling) return;
+					isScrolling = true;
 
-				clearTimeout(scrollTimeout); // chặn inertia scroll liên tiếp
-				scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
+					const delta = e.originalEvent.deltaY;
 
-				if (isScrolling) return;
-				isScrolling = true;
+					if (delta > 0) {
+						if (currentStep < totalSteps - 1) {
+							currentStep++;
+							setActiveStep(currentStep, 'down');
+						} else {
+							goToNextSection();
+						}
+					} else {
+						if (currentStep > 0) {
+							currentStep--;
+							setActiveStep(currentStep, 'up');
+						} else {
+							goToPrevSection();
+						}
+					}
+				});
+		}
 
-				const delta = e.originalEvent.deltaY;
-
-				if (delta > 0) {
-				  // Scroll xuống
-				  if (currentStep < totalSteps - 1) {
-					currentStep++;
-					setActiveStep(currentStep, 'down');
-				  } else {
-					// Hết step -> sang section sau
-					goToNextSection();
-				  }
-				} else {
-				  // Scroll lên
-				  if (currentStep > 0) {
-					currentStep--;
-					setActiveStep(currentStep, 'up');
-				  } else {
-					// Về section trước
-					goToPrevSection();
-				  }
-				}
-			  });
-		  }
-
-		  function goToNextSection() {
+		function goToNextSection() {
 			detachStepScroll();
 			setTimeout(() => {
-			  fullpage_api.setAllowScrolling(true);
-			  fullpage_api.moveSectionDown();
+				fullpage_api.setAllowScrolling(true);
+				fullpage_api.moveSectionDown();
 			}, 50);
 			setTimeout(() => { isScrolling = false; }, 700);
-		  }
+		}
 
-		  function goToPrevSection() {
+		function goToPrevSection() {
 			detachStepScroll();
 			setTimeout(() => {
-			  fullpage_api.setAllowScrolling(true);
-			  fullpage_api.moveSectionUp();
+				fullpage_api.setAllowScrolling(true);
+				fullpage_api.moveSectionUp();
 			}, 50);
 			setTimeout(() => { isScrolling = false; }, 700);
-		  }
+		}
 
-		  function detachStepScroll() {
+		function detachStepScroll() {
 			$(window).off("wheel.stepScroll");
-		  }
+		}
 
-		  function setActiveStep(index, direction, instant) {
+		function setActiveStep(index, direction, instant) {
 			$(".step-item").removeClass("active").eq(index).addClass("active");
-
 			let imgSrc = $(".step-item").eq(index).data("img");
 			let $img = $("#stepImage");
 
 			if (instant) {
-			  $img.attr("src", imgSrc).show();
-			  return;
+				$img.attr("src", imgSrc).show();
+				return;
 			}
 
-			// Animation ảnh
 			$img.stop(true, true).fadeOut(200, function () {
-			  $img.attr("src", imgSrc).fadeIn(200);
+				$img.attr("src", imgSrc).fadeIn(200);
 			});
 
-			// Animation step
 			$(".step-item").eq(index)
-			  .css({
-				transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
-				opacity: 0
-			  })
-			  .animate({ opacity: 1, translateY: 0 }, 300);
-		  }
-		  // Xử lý chuyển tab
-			$('.faq-tabs button').click(function () {
-				const index = $(this).index();
+				.css({
+					transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
+					opacity: 0
+				})
+				.animate({ opacity: 1, translateY: 0 }, 300);
+		}
 
-				// Active tab
-				$('.faq-tabs button').removeClass('active');
-				$(this).addClass('active');
+		// FAQ tabs
+		$('.faq-tabs button').click(function () {
+			const index = $(this).index();
+			$('.faq-tabs button').removeClass('active');
+			$(this).addClass('active');
+			$('.faq-section').hide().eq(index).show();
+		});
 
-				// Ẩn tất cả section và hiển thị section tương ứng
-				$('.faq-section').hide();
-				$('.faq-section').eq(index).show();
-			});
+		// FAQ toggle
+		$('.faq-question').click(function () {
+			const $answer = $(this).next('.faq-answer');
+			$('.faq-answer').not($answer).removeClass('active');
+			$('.faq-question').not(this).removeClass('open');
+			$answer.toggleClass('active');
+			$(this).toggleClass('open');
+		});
 
-			// Xử lý mở/đóng câu hỏi FAQ dùng CSS transition
-			$('.faq-question').click(function () {
-				const $answer = $(this).next('.faq-answer');
-
-				// Nếu muốn đóng các câu khác khi mở câu mới
-				$('.faq-answer').not($answer).removeClass('active');
-				$('.faq-question').not(this).removeClass('open');
-
-				$answer.toggleClass('active');
-				$(this).toggleClass('open');
-			});
-			const interestRate = 0.2292; // Lãi suất phẳng (flat) 22.92%/năm
-			const daysInYear = 365;
-
-			function formatCurrency(num) {
-				return num.toLocaleString('vi-VN');
-			}
-
-			function calculate() {
-				// Lấy giá trị từ input
-				let loanAmount = parseInt($('.form-group').eq(0).find('input[type=text]').val().replace(/,/g, '')) || 0;
-				let loanTermMonths = parseInt($('.form-group').eq(1).find('input[type=text]').val()) || 0;
-
-				// Tính tiền gốc hàng tháng
-				let principalPerMonth = loanAmount / loanTermMonths;
-			
-				// Tính tiền lãi hàng tháng (flat interest)
-				let interestPerMonth = loanAmount * interestRate / 12;
-
-				// Tổng trả hàng tháng
-				let monthlyRepayment = Math.round(principalPerMonth + interestPerMonth);
-
-				// Tiền mỗi ngày (chia đều)
-				let dailyRepayment = Math.round(monthlyRepayment / 30); // giả định 30 ngày/tháng
-			
-				// Cập nhật vào HTML
-				$('.repayment-box h2').html(formatCurrency(monthlyRepayment) + ' <span>đ</span>');
-				$('.repayment-box small').text(`(Equivalent to ${formatCurrency(dailyRepayment)} đ / Day)`);
-			}
-
-			// Khi kéo thanh loan amount
-			$('.form-group').eq(0).find('input[type=range]').on('input', function () {
-				let value = parseInt($(this).val());
-				$('.form-group').eq(0).find('input[type=text]').val(formatCurrency(value));
-				calculate();
-			});
-
-			// Khi kéo thanh loan term
-			$('.form-group').eq(1).find('input[type=range]').on('input', function () {
-				let value = parseInt($(this).val());
-				$('.form-group').eq(1).find('input[type=text]').val(value);
-				calculate();
-			});
-
-			// Khi nhập trực tiếp vào input text
-			$('.form-group').find('input[type=text]').on('input', function () {
-				calculate();
-			});
-
-			// Khởi tạo ban đầu
+		// Loan calculation
+		const interestRate = 0.2292;
+		function formatCurrency(num) {
+			return num.toLocaleString('vi-VN');
+		}
+		function calculate() {
+			let loanAmount = parseInt($('.form-group').eq(0).find('input[type=text]').val().replace(/,/g, '')) || 0;
+			let loanTermMonths = parseInt($('.form-group').eq(1).find('input[type=text]').val()) || 0;
+			let principalPerMonth = loanAmount / loanTermMonths;
+			let interestPerMonth = loanAmount * interestRate / 12;
+			let monthlyRepayment = Math.round(principalPerMonth + interestPerMonth);
+			let dailyRepayment = Math.round(monthlyRepayment / 30);
+			$('.repayment-box h2').html(formatCurrency(monthlyRepayment) + ' <span>đ</span>');
+			$('.repayment-box small').text(`(Equivalent to ${formatCurrency(dailyRepayment)} đ / Day)`);
+		}
+		$('.form-group').eq(0).find('input[type=range]').on('input', function () {
+			let value = parseInt($(this).val());
+			$('.form-group').eq(0).find('input[type=text]').val(formatCurrency(value));
 			calculate();
+		});
+		$('.form-group').eq(1).find('input[type=range]').on('input', function () {
+			let value = parseInt($(this).val());
+			$('.form-group').eq(1).find('input[type=text]').val(value);
+			calculate();
+		});
+		$('.form-group').find('input[type=text]').on('input', calculate);
+		calculate();
+
+		// Khởi tạo đúng theo kích thước màn hình
+		initFullpage();
+
+		// Lắng nghe resize để bật/tắt fullpage
+		$(window).on('resize', function () {
+			if ($(window).width() >= 1024) {
+				initFullpage();
+			} else {
+				destroyFullpage();
+			}
+		});
+		// Mở menu
+		$('#mobile-menu-btn').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('#mobile-menu').addClass('active');
+		});
+
+		// Đóng menu khi bấm nút close
+		$('#mobile-menu-close').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('#mobile-menu').removeClass('active');
+		});
 	});
-  </script>
+</script>
 </body>
 </html>
