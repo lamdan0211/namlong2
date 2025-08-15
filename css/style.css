@@ -306,6 +306,7 @@ header button#mobile-menu-btn:hover {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+    margin-bottom: 12px;
 }
 .estimation-box .form-group .label .loan{
 	width: 180px;
@@ -330,34 +331,28 @@ header button#mobile-menu-btn:hover {
   text-align: left;
   font-weight: 500;
 }
-
-
-.input-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.input-group span {
+.estimation-box .input-group span {
   font-size: 0.9rem;
   color: #777;
   white-space: nowrap;
 }
-
-input[type="range"] {
+.estimation-box .input-group .price{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.estimation-box .input-group input[type="range"] {
   flex: 1;
   appearance: none;
   height: 6px;
   background: #ddd;
   border-radius: 4px;
+  width: 100%;
+  margin-bottom: 12px;
 }
-
-
-
 .currency, .unit {
   margin-left: 5px;
 }
-
 .repayment-box {
   background: #f9fafb;
   border-radius: 12px;
