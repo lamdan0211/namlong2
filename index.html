@@ -157,7 +157,7 @@
 				</div>
 			</div>
 			<div class="input-group">
-			  <input type="range" min="3000000" max="40000000" value="5000000" step="1000000" />
+			  <input type="range" min="3000000" max="40000000" value="3000000" step="1000000" />
 			  <div class="price">
 				<span>3,000,000 đ</span>
 				<span>40,000,000 đ</span>
@@ -174,7 +174,7 @@
 				</div>
 			</div>
 			<div class="input-group">
-			  <input type="range" min="3" max="36" value="15" step="1" />
+			  <input type="range" min="3" max="36" value="3" step="1" />
 			  <div class="price">
 				<span>3 months</span>
 				<span>36 months</span>
@@ -196,7 +196,6 @@
 		</div>
 	  </div>
 	</section>
-
 
     <section id="section-steps" class="section-steps section">
 	  <div class="head">
@@ -680,6 +679,56 @@
 				$answer.toggleClass('active');
 				$(this).toggleClass('open');
 			});
+			const interestRate = 0.2292; // Lãi suất phẳng (flat) 22.92%/năm
+			const daysInYear = 365;
+
+			function formatCurrency(num) {
+				return num.toLocaleString('vi-VN');
+			}
+
+			function calculate() {
+				// Lấy giá trị từ input
+				let loanAmount = parseInt($('.form-group').eq(0).find('input[type=text]').val().replace(/,/g, '')) || 0;
+				let loanTermMonths = parseInt($('.form-group').eq(1).find('input[type=text]').val()) || 0;
+
+				// Tính tiền gốc hàng tháng
+				let principalPerMonth = loanAmount / loanTermMonths;
+			
+				// Tính tiền lãi hàng tháng (flat interest)
+				let interestPerMonth = loanAmount * interestRate / 12;
+
+				// Tổng trả hàng tháng
+				let monthlyRepayment = Math.round(principalPerMonth + interestPerMonth);
+
+				// Tiền mỗi ngày (chia đều)
+				let dailyRepayment = Math.round(monthlyRepayment / 30); // giả định 30 ngày/tháng
+			
+				// Cập nhật vào HTML
+				$('.repayment-box h2').html(formatCurrency(monthlyRepayment) + ' <span>đ</span>');
+				$('.repayment-box small').text(`(Equivalent to ${formatCurrency(dailyRepayment)} đ / Day)`);
+			}
+
+			// Khi kéo thanh loan amount
+			$('.form-group').eq(0).find('input[type=range]').on('input', function () {
+				let value = parseInt($(this).val());
+				$('.form-group').eq(0).find('input[type=text]').val(formatCurrency(value));
+				calculate();
+			});
+
+			// Khi kéo thanh loan term
+			$('.form-group').eq(1).find('input[type=range]').on('input', function () {
+				let value = parseInt($(this).val());
+				$('.form-group').eq(1).find('input[type=text]').val(value);
+				calculate();
+			});
+
+			// Khi nhập trực tiếp vào input text
+			$('.form-group').find('input[type=text]').on('input', function () {
+				calculate();
+			});
+
+			// Khởi tạo ban đầu
+			calculate();
 	});
   </script>
 </body>

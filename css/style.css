@@ -296,7 +296,6 @@ header button#mobile-menu-btn:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .estimation-box .form-group {
@@ -350,7 +349,7 @@ header button#mobile-menu-btn:hover {
   width: 100%;
   margin-bottom: 12px;
 }
-.currency, .unit {
+.estimation-box .currency, .estimation-box .unit {
   margin-left: 5px;
 }
 .repayment-box {
