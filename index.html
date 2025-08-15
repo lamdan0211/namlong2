@@ -82,7 +82,7 @@
 		</div>
     </div>
 
-    <div id="section-benefits" class="section">
+    <div id="section-benefits" class="section" style="display: block">
 	    <div class="head">
 		   <img src="image/section-benefits/Decoration/122x58.png" />
 		   <h3>Speed Meets Simplicity</h3>
@@ -125,15 +125,17 @@
 			  </div>
 		   </div>
 		</div>
-		<div class="men">
-		   <img src="image/section-benefits/SpeedMeets-Boy/268x328.png" />
-		</div>
-		<div class="phone">
-			<img src="image/section-hero/Phone/356x718.png" />
-		</div>
-		<div class="women">
-		    <img src="image/section-benefits/SpeedMeets-Girl/268x328.png" />
-		</div>
+		<div class="bg-people">
+			<div class="men">
+			   <img src="image/section-benefits/SpeedMeets-Boy/268x328.png" />
+			</div>
+			<div class="phone">
+				<img src="image/section-hero/Phone/356x718.png" />
+			</div>
+			<div class="women">
+				<img src="image/section-benefits/SpeedMeets-Girl/268x328.png" />
+			</div>
+		</div>		
 		<div class="rainbow">
 		   <img src="image/section-benefits/Vongtron/1920x780.png" />
 		</div>
@@ -196,7 +198,6 @@
 		</div>
 	  </div>
 	</section>
-
     <section id="section-steps" class="section-steps section">
 	  <div class="head">
 		<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
@@ -212,7 +213,9 @@
 
 		<!-- Right side: Steps -->
 		<div class="steps-right">
-		  <div class="step-item active" data-img="image/section-steps/Step 1/Property 1=VN.png">
+		   <div class="step-dots"></div>
+		   <div>
+		    <div class="step-item active" data-img="image/section-steps/Step 1/Property 1=VN.png">
 			<div class="step-number">01</div>
 			<div class="step-content">
 			  <h4>Select “Drawdown via NAPAS 247” in the app</h4>
@@ -243,6 +246,8 @@
 			  <p>And sign the loan agreement for each transaction</p>
 			</div>
 		  </div>
+		   </div>
+		  
 		</div>
 	  </div>
 	</section>
@@ -638,6 +643,7 @@
 
 		function setActiveStep(index, direction, instant) {
 			$(".step-item").removeClass("active").eq(index).addClass("active");
+			$(".step-dot").removeClass("active").eq(index).addClass("active");
 			let imgSrc = $(".step-item").eq(index).data("img");
 			let $img = $("#stepImage");
 
@@ -726,6 +732,40 @@
 			e.preventDefault();
 			e.stopPropagation();
 			$('#mobile-menu').removeClass('active');
+		});
+		var $steps = $('.steps-right .step-item');
+		var $dotsContainer = $('.step-dots');
+
+		// Tạo dot dựa trên số lượng step
+		$steps.each(function (index) {
+			var dot = $('<div class="step-dot"></div>');
+			if ($(this).hasClass('active')) {
+				dot.addClass('active');
+			}
+			$dotsContainer.append(dot);
+		});
+
+		// Khi click vào step => đổi ảnh và dot
+		$steps.on('click', function () {
+			var imgSrc = $(this).data('img');
+			$('#stepImage').attr('src', imgSrc);
+
+			$steps.removeClass('active');
+			$(this).addClass('active');
+
+			var index = $(this).index();
+			$('.step-dot').removeClass('active').eq(index).addClass('active');
+		});
+
+		// Khi click vào dot => đổi step và ảnh
+		$(document).on('click', '.step-dot', function () {
+			var index = $(this).index();
+
+			$steps.removeClass('active').eq(index).addClass('active');
+			$('.step-dot').removeClass('active').eq(index).addClass('active');
+
+			var imgSrc = $steps.eq(index).data('img');
+			$('#stepImage').attr('src', imgSrc);
 		});
 	});
 </script>
