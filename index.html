@@ -247,8 +247,6 @@
 		</div>
 	  </div>
 	</section>
-
-
     <section id="section-faqs" class="section-faqs section">
 	  <div class="head">
 		<img src="image/section-benefits/Decoration/122x58.png" alt="Decoration" />
@@ -496,8 +494,6 @@
             </div>
         </div>
 	</section>
-
-
     <section id="section-download" class="section-download section">
 	  <div class="download-box">
 		<div class="download-left">
@@ -550,143 +546,141 @@
   <!-- fullPage.js script (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
   <script>
-  $(document).ready(function () {
-  var currentStep = 0;
-  var totalSteps = $(".step-item").length;
-  var isScrolling = false;
-  var scrollTimeout;
+	  $(document).ready(function () {
+		  var currentStep = 0;
+		  var totalSteps = $(".step-item").length;
+		  var isScrolling = false;
+		  var scrollTimeout;
 
-  if ($(window).width() >= 1024) {
-    $('#fullpage').fullpage({
-      navigation: false,
-      anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
-      scrollingSpeed: 700,
-      afterLoad: function (origin, destination) {
-        if (destination.anchor === 'steps') {
-          currentStep = 0; // reset khi vào steps
-          setActiveStep(currentStep, 'down', true);
-          fullpage_api.setAllowScrolling(false);
-          attachStepScroll();
-        }
-      },
-      onLeave: function (origin) {
-        if (origin.anchor === 'steps') {
-          detachStepScroll();
-          fullpage_api.setAllowScrolling(true);
-        }
-      }
-    });
-  }
+		  if ($(window).width() >= 1024) {
+			$('#fullpage').fullpage({
+			  navigation: false,
+			  anchors: ['hero', 'benefits', 'estimation', 'steps', 'faqs', 'download'],
+			  scrollingSpeed: 700,
+			  afterLoad: function (origin, destination) {
+				if (destination.anchor === 'steps') {
+				  currentStep = 0; // reset khi vào steps
+				  setActiveStep(currentStep, 'down', true);
+				  fullpage_api.setAllowScrolling(false);
+				  attachStepScroll();
+				}
+			  },
+			  onLeave: function (origin) {
+				if (origin.anchor === 'steps') {
+				  detachStepScroll();
+				  fullpage_api.setAllowScrolling(true);
+				}
+			  }
+			});
+		  }
 
-  function attachStepScroll() {
-    $(window)
-      .off("wheel.stepScroll")
-      .on("wheel.stepScroll", { passive: false }, function (e) {
-        e.preventDefault();
+		  function attachStepScroll() {
+			$(window)
+			  .off("wheel.stepScroll")
+			  .on("wheel.stepScroll", { passive: false }, function (e) {
+				e.preventDefault();
 
-        clearTimeout(scrollTimeout); // chặn inertia scroll liên tiếp
-        scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
+				clearTimeout(scrollTimeout); // chặn inertia scroll liên tiếp
+				scrollTimeout = setTimeout(() => { isScrolling = false; }, 300);
 
-        if (isScrolling) return;
-        isScrolling = true;
+				if (isScrolling) return;
+				isScrolling = true;
 
-        const delta = e.originalEvent.deltaY;
+				const delta = e.originalEvent.deltaY;
 
-        if (delta > 0) {
-          // Scroll xuống
-          if (currentStep < totalSteps - 1) {
-            currentStep++;
-            setActiveStep(currentStep, 'down');
-          } else {
-            // Hết step -> sang section sau
-            goToNextSection();
-          }
-        } else {
-          // Scroll lên
-          if (currentStep > 0) {
-            currentStep--;
-            setActiveStep(currentStep, 'up');
-          } else {
-            // Về section trước
-            goToPrevSection();
-          }
-        }
-      });
-  }
+				if (delta > 0) {
+				  // Scroll xuống
+				  if (currentStep < totalSteps - 1) {
+					currentStep++;
+					setActiveStep(currentStep, 'down');
+				  } else {
+					// Hết step -> sang section sau
+					goToNextSection();
+				  }
+				} else {
+				  // Scroll lên
+				  if (currentStep > 0) {
+					currentStep--;
+					setActiveStep(currentStep, 'up');
+				  } else {
+					// Về section trước
+					goToPrevSection();
+				  }
+				}
+			  });
+		  }
 
-  function goToNextSection() {
-    detachStepScroll();
-    setTimeout(() => {
-      fullpage_api.setAllowScrolling(true);
-      fullpage_api.moveSectionDown();
-    }, 50);
-    setTimeout(() => { isScrolling = false; }, 700);
-  }
+		  function goToNextSection() {
+			detachStepScroll();
+			setTimeout(() => {
+			  fullpage_api.setAllowScrolling(true);
+			  fullpage_api.moveSectionDown();
+			}, 50);
+			setTimeout(() => { isScrolling = false; }, 700);
+		  }
 
-  function goToPrevSection() {
-    detachStepScroll();
-    setTimeout(() => {
-      fullpage_api.setAllowScrolling(true);
-      fullpage_api.moveSectionUp();
-    }, 50);
-    setTimeout(() => { isScrolling = false; }, 700);
-  }
+		  function goToPrevSection() {
+			detachStepScroll();
+			setTimeout(() => {
+			  fullpage_api.setAllowScrolling(true);
+			  fullpage_api.moveSectionUp();
+			}, 50);
+			setTimeout(() => { isScrolling = false; }, 700);
+		  }
 
-  function detachStepScroll() {
-    $(window).off("wheel.stepScroll");
-  }
+		  function detachStepScroll() {
+			$(window).off("wheel.stepScroll");
+		  }
 
-  function setActiveStep(index, direction, instant) {
-    $(".step-item").removeClass("active").eq(index).addClass("active");
+		  function setActiveStep(index, direction, instant) {
+			$(".step-item").removeClass("active").eq(index).addClass("active");
 
-    let imgSrc = $(".step-item").eq(index).data("img");
-    let $img = $("#stepImage");
+			let imgSrc = $(".step-item").eq(index).data("img");
+			let $img = $("#stepImage");
 
-    if (instant) {
-      $img.attr("src", imgSrc).show();
-      return;
-    }
+			if (instant) {
+			  $img.attr("src", imgSrc).show();
+			  return;
+			}
 
-    // Animation ảnh
-    $img.stop(true, true).fadeOut(200, function () {
-      $img.attr("src", imgSrc).fadeIn(200);
-    });
+			// Animation ảnh
+			$img.stop(true, true).fadeOut(200, function () {
+			  $img.attr("src", imgSrc).fadeIn(200);
+			});
 
-    // Animation step
-    $(".step-item").eq(index)
-      .css({
-        transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
-        opacity: 0
-      })
-      .animate({ opacity: 1, translateY: 0 }, 300);
-  }
-  // Tab switching
-  $(".faq-tabs button").on("click", function () {
-    var index = $(this).index();
+			// Animation step
+			$(".step-item").eq(index)
+			  .css({
+				transform: direction === 'down' ? "translateY(20px)" : "translateY(-20px)",
+				opacity: 0
+			  })
+			  .animate({ opacity: 1, translateY: 0 }, 300);
+		  }
+		  // Xử lý chuyển tab
+			$('.faq-tabs button').click(function () {
+				const index = $(this).index();
 
-    // Active tab
-    $(".faq-tabs button").removeClass("active");
-    $(this).addClass("active");
+				// Active tab
+				$('.faq-tabs button').removeClass('active');
+				$(this).addClass('active');
 
-    // Ở đây mình giả sử bạn có nhiều nhóm nội dung faq-content theo thứ tự giống như tab
-    // Ví dụ: .faq-content[data-tab="0"], .faq-content[data-tab="1"], ...
-    $(".faq-content").hide().eq(index).fadeIn(300);
-  });
+				// Ẩn tất cả section và hiển thị section tương ứng
+				$('.faq-section').hide();
+				$('.faq-section').eq(index).show();
+			});
 
-  // Accordion
-  $(".accordion-header").on("click", function () {
-    var $item = $(this).closest(".accordion-item");
+			// Xử lý mở/đóng câu hỏi FAQ dùng CSS transition
+			$('.faq-question').click(function () {
+				const $answer = $(this).next('.faq-answer');
 
-    // Nếu muốn đóng tất cả khi mở cái mới
-    $(".accordion-item").not($item).removeClass("open").find(".accordion-body").slideUp(300);
+				// Nếu muốn đóng các câu khác khi mở câu mới
+				$('.faq-answer').not($answer).removeClass('active');
+				$('.faq-question').not(this).removeClass('open');
 
-    // Toggle hiện tại
-    $item.toggleClass("open");
-    $item.find(".accordion-body").stop(true, true).slideToggle(300);
-  });
-});
-
+				$answer.toggleClass('active');
+				$(this).toggleClass('open');
+			});
+	});
   </script>
-
 </body>
 </html>
