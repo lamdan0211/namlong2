@@ -23,6 +23,15 @@
             <a href="#">PRODUCT</a>
             <a href="#">PRIVACY POLICY</a>
         </nav>
+		<div class="lang-dropdown">
+		  <div class="lang-btn">
+			<img id="langIcon" src="flag-en.png" alt="EN" width="18">
+		  </div>
+		  <div class="lang-menu">
+			<div data-lang="EN" data-flag="flag-en.png">EN</div>
+			<div data-lang="VN" data-flag="flag-vn.png">VN</div>
+		  </div>
+		</div>
 
         <!-- Mobile menu button -->
         <button id="mobile-menu-btn">
@@ -767,6 +776,26 @@
 			var imgSrc = $steps.eq(index).data('img');
 			$('#stepImage').attr('src', imgSrc);
 		});
+		// Toggle dropdown
+	  $(".lang-btn").click(function(){
+		$(".lang-menu").toggle();
+	  });
+
+	  // Click chọn ngôn ngữ
+	  $(".lang-menu div").click(function(){
+		let lang = $(this).data("lang");
+		let flag = $(this).data("flag");
+		$("#langText").text(lang);
+		$("#langIcon").attr("src", flag).attr("alt", lang);
+		$(".lang-menu").hide();
+	  });
+
+	  // Click ra ngoài thì đóng
+	  $(document).click(function(e){
+		if(!$(e.target).closest(".lang-dropdown").length){
+		  $(".lang-menu").hide();
+		}
+	  });
 	});
 </script>
 </body>
